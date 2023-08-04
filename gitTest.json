@@ -76,6 +76,24 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/16x16 Pixel art RPG Items/Collectable items/5344a18114b8923e086ed815c87b6790693e4df78490071c1b120ffc6c00fea9_Gold Coin.png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "dev_floorTexture.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "dev_floorTexture.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "dev_wallTexture.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "dev_wallTexture.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -90,7 +108,20 @@
     }
   ],
   "externalEvents": [],
-  "eventsFunctionsExtensions": [],
+  "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/dev_debugbehavior"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/mousepointerlock"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/withthreejs"
+    }
+  ],
   "externalLayouts": [],
   "externalSourceFiles": []
 }

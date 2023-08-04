@@ -9,48 +9,45 @@
   "title": "",
   "v": 209,
   "uiSettings": {
-    "grid": false,
+    "grid": true,
     "gridType": "rectangular",
     "gridWidth": 32,
     "gridHeight": 32,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
     "gridColor": 10401023,
-    "gridAlpha": 0.8,
-    "snap": false,
-    "zoomFactor": 0.7876290101673755,
+    "gridAlpha": 0.4,
+    "snap": true,
+    "zoomFactor": 1.8046714318873966,
     "windowMask": false
   },
-  "objectsGroups": [],
+  "objectsGroups": [
+    {
+      "name": "dev_collisions",
+      "objects": [
+        {
+          "name": "dev_floor"
+        },
+        {
+          "name": "dev_wall"
+        }
+      ]
+    }
+  ],
   "variables": [],
   "instances": [
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "NewSprite",
-      "persistentUuid": "d035aec8-c68f-40c4-8aea-1d17d312a013",
-      "width": 0,
-      "x": 450,
-      "y": 467,
-      "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 128,
+      "height": 1280,
       "layer": "",
-      "name": "NewSprite",
-      "persistentUuid": "6c5b3347-4f3a-4d15-8d40-24e91192dd38",
-      "width": 128,
-      "x": 644,
-      "y": 275,
-      "zOrder": 1,
+      "name": "dev_floor",
+      "persistentUuid": "35d13539-ce11-46f4-8f2f-8e3cc380806a",
+      "width": 1280,
+      "x": 0,
+      "y": 0,
+      "zOrder": -72,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -60,12 +57,12 @@
       "customSize": false,
       "height": 0,
       "layer": "",
-      "name": "NewSprite",
-      "persistentUuid": "d0da143c-e64d-4721-952b-16a05664649b",
+      "name": "dev_wall",
+      "persistentUuid": "f44560d5-4aac-4a30-93a5-a488e9468a81",
       "width": 0,
-      "x": 239,
-      "y": 184,
-      "zOrder": 1,
+      "x": 768,
+      "y": 256,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -73,68 +70,817 @@
   ],
   "objects": [
     {
-      "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "NewSprite",
+      "height": 64,
+      "name": "dev_floor",
       "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
+      "texture": "dev_floorTexture.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 64,
       "variables": [],
       "effects": [],
-      "behaviors": [],
-      "animations": [
+      "behaviors": [
         {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "5344a18114b8923e086ed815c87b6790693e4df78490071c1b120ffc6c00fea9_Gold Coin.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 2,
-                        "y": 2
-                      },
-                      {
-                        "x": 14,
-                        "y": 2
-                      },
-                      {
-                        "x": 14,
-                        "y": 14
-                      },
-                      {
-                        "x": 2,
-                        "y": 14
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
+          "name": "BoxProjectionFromTiled",
+          "type": "WithThreeJS::BoxProjectionFromTiled",
+          "Id": "",
+          "FirstFrame": true,
+          "Hide": true,
+          "AlphaTest": 0,
+          "AntiAliasing": true,
+          "Depth": 16,
+          "IsCube": false,
+          "TBTextureId": "",
+          "LRTextureId": "",
+          "FRTextureId": "",
+          "TBOffsetV": 0,
+          "LROffsetV": 0,
+          "FROffsetV": 0,
+          "Blend": "Normal"
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 128,
+      "name": "dev_wall",
+      "tags": "",
+      "texture": "dev_wallTexture.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 128,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "BoxProjectionFromTiled",
+          "type": "WithThreeJS::BoxProjectionFromTiled",
+          "Id": "",
+          "FirstFrame": true,
+          "Hide": true,
+          "AlphaTest": 0,
+          "AntiAliasing": true,
+          "Depth": 128,
+          "IsCube": false,
+          "TBTextureId": "",
+          "LRTextureId": "",
+          "FRTextureId": "",
+          "TBOffsetV": 0,
+          "LROffsetV": 0,
+          "FROffsetV": 0,
+          "Blend": "Normal"
         }
       ]
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "INITIALIZE",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Set 3D scene"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetWindowSize"
+              },
+              "parameters": [
+                "",
+                "1280",
+                "720",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "WithThreeJS::Create3DScene"
+              },
+              "parameters": [
+                "",
+                "\"121;202;249\"",
+                "\"\"",
+                "\"\"",
+                "200",
+                "800",
+                "1",
+                "\"Top Down\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "WithThreeJS::Change3DCameraFOV"
+              },
+              "parameters": [
+                "",
+                "1",
+                "\"=\"",
+                "90",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Create Player Hitbox"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "WithThreeJS::Load3DTextureV2"
+              },
+              "parameters": [
+                "",
+                "\"assets\\\\CollisionB.png\"",
+                "\"Texture_Red\"",
+                "1",
+                "1",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "WithThreeJS::Create3DBox"
+              },
+              "parameters": [
+                "",
+                "\"p1_hitbox\"",
+                "512",
+                "0",
+                "320",
+                "0",
+                "0",
+                "0",
+                "32",
+                "72",
+                "32",
+                "\"Texture_Red\"",
+                "0",
+                "0.5",
+                "\"Normal\"",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Layout",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TiledSpriteObject::SetOpacity"
+              },
+              "parameters": [
+                "dev_floor",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "TiledSpriteObject::SetOpacity"
+              },
+              "parameters": [
+                "dev_wall",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "WithThreeJS::CheckExistenceOf3DObject"
+          },
+          "parameters": [
+            "",
+            "dev_floor.BoxProjectionFromTiled::Id()",
+            ""
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "p1_hitbox",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Look",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Mouse Lock (Use \"Mouse Pointer Lock\" Extension)"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "MousePointerLock::isPointerLocked"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MouseButtonPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MousePointerLock::RequestPointerLock"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Rotate Camera (Use \"Mouse Pointer Lock\" Extension)\nUse variables to manage the rotation axis you want to limit."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MousePointerLock::isPointerLocked"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "AngleX",
+                        "+",
+                        "MousePointerLock::MovementY() * -0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "AngleX",
+                        "=",
+                        "clamp(Variable(AngleX), -90, 90)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "AngleY",
+                        "+",
+                        "MousePointerLock::MovementX() * -0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Rotate3DCameraLikeHead"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"=\"",
+                        "Variable(AngleX)",
+                        "Variable(AngleY)",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Rotate3DObjectLikeHead"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"=\"",
+                        "0",
+                        "Variable(AngleY)",
+                        "0",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Fall",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DObject"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"+\"",
+                        "0",
+                        "Variable(Jump) * TimeDelta()",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "Jump",
+                        "-",
+                        "400 * TimeDelta()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Move (Simple but imprecise)",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "w"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_isMoving",
+                        "p1_isMoving"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "w"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DObject"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"+\"",
+                        "0",
+                        "0",
+                        "-192 * TimeDelta()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_isMoving",
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "s"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DObject"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"+\"",
+                        "0",
+                        "0",
+                        "128 * TimeDelta()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_isMoving",
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "a"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DObject"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"+\"",
+                        "-160 * TimeDelta()",
+                        "0",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_isMoving",
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "d"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DObject"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"+\"",
+                        "160 * TimeDelta()",
+                        "0",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_isMoving",
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Bounding Box Collision",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "dev_collisions",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::ResolveBoundingBoxCollision"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "dev_collisions.BoxProjectionFromTiled::Id()",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "WithThreeJS::BoundingBoxCollisionResultNumber(\"Move Y\")",
+                            "!=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Jump",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Jump"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "WithThreeJS::BoundingBoxCollisionResultNumber(\"Move Y\")",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Space"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "Jump",
+                                "=",
+                                "260"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Camera",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DCamera"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"=\"",
+                        "WithThreeJS::ObjectPosition(\"p1_hitbox\", \"X\")",
+                        "WithThreeJS::ObjectPosition(\"p1_hitbox\", \"Y\") + 28",
+                        "WithThreeJS::ObjectPosition(\"p1_hitbox\", \"Z\")",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    }
+  ],
   "layers": [
     {
       "ambientLightColorB": 200,
@@ -164,5 +910,10 @@
       "effects": []
     }
   ],
-  "behaviorsSharedData": []
+  "behaviorsSharedData": [
+    {
+      "name": "BoxProjectionFromTiled",
+      "type": "WithThreeJS::BoxProjectionFromTiled"
+    }
+  ]
 }
