@@ -66,19 +66,6 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "assets/Gold Coin.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "5344a18114b8923e086ed815c87b6790693e4df78490071c1b120ffc6c00fea9_Gold Coin.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/16x16 Pixel art RPG Items/Collectable items/5344a18114b8923e086ed815c87b6790693e4df78490071c1b120ffc6c00fea9_Gold Coin.png",
-          "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "alwaysLoaded": false,
         "file": "dev_floorTexture.png",
         "kind": "image",
         "metadata": "",
@@ -92,6 +79,69 @@
         "kind": "image",
         "metadata": "",
         "name": "dev_wallTexture.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tv_part.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tv_part.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tv_front.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tv_front.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/p1_stand.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\p1_stand.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2d_tile.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2d_tile.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lev_layout.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lev_layout.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/platform_player.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "platform_player",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/platform_player2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "platform_player2",
         "smoothed": false,
         "userAdded": true
       }
