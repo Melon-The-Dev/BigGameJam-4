@@ -62,14 +62,7 @@
       ]
     }
   ],
-  "variables": [
-    {
-      "folded": true,
-      "name": "Printer",
-      "type": "string",
-      "value": "\"Test\""
-    }
-  ],
+  "variables": [],
   "instances": [
     {
       "angle": 0,
@@ -1055,10 +1048,6 @@
           "BulletLayer": "",
           "RandomizedAngle": 0,
           "BulletSpeedVariance": 0
-        },
-        {
-          "name": "Player",
-          "type": "PlayerEvents::Player"
         },
         {
           "name": "TopDownMovement",
@@ -4264,7 +4253,29 @@
               ]
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "hitsound",
+                "",
+                "66",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Enemy",
+                ""
+              ]
+            }
+          ],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -4282,27 +4293,6 @@
                 }
               ],
               "actions": [
-                {
-                  "type": {
-                    "value": "PlaySound"
-                  },
-                  "parameters": [
-                    "",
-                    "hitsound",
-                    "",
-                    "66",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    ""
-                  ]
-                },
                 {
                   "type": {
                     "value": "ModVarScene"
@@ -4331,27 +4321,6 @@
                 }
               ],
               "actions": [
-                {
-                  "type": {
-                    "value": "PlaySound"
-                  },
-                  "parameters": [
-                    "",
-                    "hitsound",
-                    "",
-                    "66",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    ""
-                  ]
-                },
                 {
                   "type": {
                     "value": "ModVarScene"
@@ -4450,7 +4419,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Bullet UI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4466,7 +4434,7 @@
                   "parameters": [
                     "dev_aim",
                     "=",
-                    "\"Ammo: \" + ToString(p1_hitbox.Variable(p1_ammo))"
+                    "\"Ammo: \" + ToString(p1_hitbox.Variable(ammo))"
                   ]
                 }
               ]
@@ -4482,7 +4450,7 @@
                   "parameters": [
                     "ui_bulletReady",
                     "=",
-                    "p1_hitbox.Variable(p1_holdAim)"
+                    "p1_hitbox.Variable(holdAim)"
                   ]
                 },
                 {
@@ -4548,6 +4516,76 @@
                   "parameters": [
                     "ui_bulletReady",
                     "\"bullet_on\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Limit size of holdAim so the max width of bulletReady looks nice"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "holdAim",
+                    "<",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "holdAim",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "holdAim",
+                    ">",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "holdAim",
+                    "=",
+                    "1"
                   ]
                 }
               ]
@@ -4723,6 +4761,7 @@
                     "en1_spawn",
                     "en1_spawnParticles",
                     "en1_hitbox",
+                    "2",
                     ""
                   ]
                 }
@@ -4741,6 +4780,7 @@
                     "en2_spawn",
                     "en2_spawnParticles",
                     "en2_hitbox",
+                    "2",
                     ""
                   ]
                 }
@@ -4825,7 +4865,7 @@
               },
               "parameters": [
                 "p1_hitbox",
-                "p1_ammo",
+                "ammo",
                 "+",
                 "1"
               ]
@@ -4856,6 +4896,7 @@
                 "ammo_spawn",
                 "ammo_spawnParticles",
                 "ammo_pickup",
+                "1",
                 ""
               ]
             }
@@ -4865,609 +4906,489 @@
       "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Bullet Shoot"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Bullet",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "p1_bullet",
-            "dev_wall",
-            "",
-            "",
-            ""
-          ]
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Bullet Collisions",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "p1_bullet",
+                    "dev_wall",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "p1_bullet",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "p1_bullet",
+                    "Enemy",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Activated",
+                        "True"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "hitsound",
+                        "",
+                        "66",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CameraShake::ShakeCamera"
+                      },
+                      "parameters": [
+                        "",
+                        "TimeDelta() * 2",
+                        "TimeDelta() * 2",
+                        "TimeDelta() * 2",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "game_totalScore",
+                        "+",
+                        "100"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Activated",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "p1_bullet",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
         },
         {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Bullet Trail",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "p1_bullet",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "bullet_trail",
+                    "=",
+                    "-128",
+                    "=",
+                    "-128"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "p1_bullet",
+                    ">=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "bullet_trail",
+                    "=",
+                    "p1_bullet.X()",
+                    "=",
+                    "p1_bullet.Y()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Aiming",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "ammo",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseButtonPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "holdAim",
+                    "+",
+                    "TimeDelta()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::LineV2"
+                  },
+                  "parameters": [
+                    "p1_aimLine",
+                    "p1_hitbox.X()",
+                    "p1_hitbox.Y()",
+                    "ui_crosshair.X()",
+                    "ui_crosshair.Y()",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::MaxSpeed"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "TopDownMovement",
+                    "=",
+                    "128"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "ammo",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "MouseButtonPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "holdAim",
+                    "-",
+                    "TimeDelta() * 10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::MaxSpeed"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "TopDownMovement",
+                    "=",
+                    "190"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "ammo",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "holdAim",
+                    ">=",
+                    "0.83"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::FireTowardPosition"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "FireBullet",
+                    "p1_hitbox.X()",
+                    "p1_hitbox.Y()",
+                    "p1_bullet",
+                    "ui_crosshair.X()",
+                    "ui_crosshair.Y()",
+                    "1280",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "ammo",
+                    "-",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "bullet_trail",
+                    "=",
+                    "p1_bullet.Angle()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "ammo",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "holdAim",
+                    ">=",
+                    "0.83"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "holdAim",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ],
           "parameters": []
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "p1_bullet",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "p1_bullet",
-            "en1_hitbox",
-            "",
-            "",
-            ""
-          ]
-        }
-      ],
-      "actions": [],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "en1_hitbox",
-                "\"Active\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlaySound"
-              },
-              "parameters": [
-                "",
-                "hitsound",
-                "",
-                "66",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "en1_hitbox",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "CameraShake::ShakeCamera"
-              },
-              "parameters": [
-                "",
-                "TimeDelta() * 2",
-                "TimeDelta() * 2",
-                "TimeDelta() * 2",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "game_totalScore",
-                "+",
-                "100"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "en1_hitbox",
-                "\"Inactive\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "p1_bullet",
-                ""
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "p1_bullet",
-            "en2_hitbox",
-            "",
-            "",
-            ""
-          ]
-        }
-      ],
-      "actions": [],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "en2_hitbox",
-                "\"Active\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlaySound"
-              },
-              "parameters": [
-                "",
-                "hitsound",
-                "",
-                "66",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "en2_hitbox",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "CameraShake::ShakeCamera"
-              },
-              "parameters": [
-                "",
-                "TimeDelta() * 2",
-                "TimeDelta() * 2",
-                "TimeDelta() * 2",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "game_totalScore",
-                "+",
-                "100"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "en2_hitbox",
-                "\"Inactive\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "p1_bullet",
-                ""
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "VarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_holdAim",
-            "<",
-            "0"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ModVarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_holdAim",
-            "=",
-            "0"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "VarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_holdAim",
-            ">",
-            "1"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ModVarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_holdAim",
-            "=",
-            "1"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "VarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_ammo",
-            ">",
-            "0"
-          ]
-        },
-        {
-          "type": {
-            "value": "MouseButtonPressed"
-          },
-          "parameters": [
-            "",
-            "Left"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ModVarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_holdAim",
-            "+",
-            "TimeDelta()"
-          ]
-        },
-        {
-          "type": {
-            "value": "PrimitiveDrawing::LineV2"
-          },
-          "parameters": [
-            "p1_aimLine",
-            "p1_hitbox.X()",
-            "p1_hitbox.Y()",
-            "ui_crosshair.X()",
-            "ui_crosshair.Y()",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "TopDownMovementBehavior::MaxSpeed"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "TopDownMovement",
-            "=",
-            "128"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "VarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_ammo",
-            ">",
-            "0"
-          ]
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "MouseButtonPressed"
-          },
-          "parameters": [
-            "",
-            "Left"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ModVarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_holdAim",
-            "-",
-            "TimeDelta() * 10"
-          ]
-        },
-        {
-          "type": {
-            "value": "TopDownMovementBehavior::MaxSpeed"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "TopDownMovement",
-            "=",
-            "190"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "VarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_ammo",
-            ">",
-            "0"
-          ]
-        },
-        {
-          "type": {
-            "value": "VarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_holdAim",
-            ">=",
-            "0.83"
-          ]
-        },
-        {
-          "type": {
-            "value": "MouseButtonReleased"
-          },
-          "parameters": [
-            "",
-            "Left"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "FireBullet::FireBullet::FireTowardPosition"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "FireBullet",
-            "p1_hitbox.X()",
-            "p1_hitbox.Y()",
-            "p1_bullet",
-            "ui_crosshair.X()",
-            "ui_crosshair.Y()",
-            "1280",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ModVarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_ammo",
-            "-",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAngle"
-          },
-          "parameters": [
-            "bullet_trail",
-            "=",
-            "p1_bullet.Angle()"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneInstancesCount"
-          },
-          "parameters": [
-            "",
-            "p1_bullet",
-            "=",
-            "0"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "MettreXY"
-          },
-          "parameters": [
-            "bullet_trail",
-            "=",
-            "-128",
-            "=",
-            "-128"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneInstancesCount"
-          },
-          "parameters": [
-            "",
-            "p1_bullet",
-            "=",
-            "1"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "MettreXY"
-          },
-          "parameters": [
-            "bullet_trail",
-            "=",
-            "p1_bullet.X()",
-            "=",
-            "p1_bullet.Y()"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "VarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_ammo",
-            "=",
-            "0"
-          ]
-        },
-        {
-          "type": {
-            "value": "VarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_holdAim",
-            ">=",
-            "0.83"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ModVarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_holdAim",
-            "=",
-            "0"
-          ]
-        }
-      ]
+      "parameters": []
     }
   ],
   "layers": [
@@ -5575,10 +5496,6 @@
     {
       "name": "PathfindingObstacle",
       "type": "PathfindingBehavior::PathfindingObstacleBehavior"
-    },
-    {
-      "name": "Player",
-      "type": "PlayerEvents::Player"
     },
     {
       "name": "TopDownMovement",
