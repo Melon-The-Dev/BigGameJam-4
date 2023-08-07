@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.0973679695629526,
+    "zoomFactor": 1.3389693172845394,
     "windowMask": false
   },
   "objectsGroups": [
@@ -264,7 +264,7 @@
       "name": "dev_wall",
       "persistentUuid": "d8878fb2-f3e5-4acf-b9ec-4024ec6559f7",
       "width": 32,
-      "x": 256,
+      "x": 272,
       "y": 128,
       "zOrder": 0,
       "numberProperties": [],
@@ -328,8 +328,8 @@
       "name": "dev_wall",
       "persistentUuid": "5228f10a-bcbd-497f-8396-4116a5ee3e0d",
       "width": 32,
-      "x": 352,
-      "y": 272,
+      "x": 400,
+      "y": 240,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -937,6 +937,54 @@
       "x": 112,
       "y": 34,
       "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "dev_wall",
+      "persistentUuid": "3e7bda34-b8b6-4922-a6f0-5ca3360720f3",
+      "width": 32,
+      "x": 192,
+      "y": 128,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 16,
+      "layer": "",
+      "name": "wall_red",
+      "persistentUuid": "002114b1-f6bc-47eb-aba3-0c01107af819",
+      "width": 48,
+      "x": 248,
+      "y": 136,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 16,
+      "layer": "",
+      "name": "wall_blu",
+      "persistentUuid": "e623f4b3-407e-4639-8b69-183870f02e4a",
+      "width": 64,
+      "x": 432,
+      "y": 256,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1736,6 +1784,40 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "en_scoreText",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Flash",
+          "type": "Flash::Flash",
+          "HalfPeriodTime": 0.01667,
+          "IsFlashing": false,
+          "FlashDuration": 0
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "string": "Text",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 18,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
     },
     {
       "assetStoreId": "",
@@ -2770,6 +2852,238 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "wall_red",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "wall_on",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\wall_red.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "wall_off",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\wall_off.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "wall_blu",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "wall_on",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\wall_blu.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "wall_off",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\wall_off.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -3041,6 +3355,18 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Up to refactor for multiple inputs"
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3188,6 +3514,98 @@
               "parameters": [
                 "en2_hitbox",
                 "dev_wall",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimationName"
+              },
+              "parameters": [
+                "wall_red",
+                "\"wall_on\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "wall_red",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "en1_hitbox",
+                "wall_red",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "en2_hitbox",
+                "wall_red",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimationName"
+              },
+              "parameters": [
+                "wall_blu",
+                "\"wall_on\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "wall_blu",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "en1_hitbox",
+                "wall_blu",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "en2_hitbox",
+                "wall_blu",
                 "yes"
               ]
             }
@@ -4332,6 +4750,80 @@
                     "125"
                   ]
                 }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Add Score on-screen"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "en_scoreText",
+                        "Enemy.X()",
+                        "Enemy.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "en_scoreText",
+                        "=",
+                        "\"125\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Flash::Flash::Flash"
+                      },
+                      "parameters": [
+                        "en_scoreText",
+                        "Flash",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::AddObjectPositionYTween"
+                      },
+                      "parameters": [
+                        "en_scoreText",
+                        "Tween",
+                        "\"enScore_move\"",
+                        "Enemy.Y() - 16",
+                        "\"easeInQuad\"",
+                        "500",
+                        "yes"
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -4358,6 +4850,80 @@
                     "game_totalScore",
                     "+",
                     "200"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Add Score on-screen"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "en_scoreText",
+                        "Enemy.X()",
+                        "Enemy.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "en_scoreText",
+                        "=",
+                        "\"200\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Flash::Flash::Flash"
+                      },
+                      "parameters": [
+                        "en_scoreText",
+                        "Flash",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::AddObjectPositionYTween"
+                      },
+                      "parameters": [
+                        "en_scoreText",
+                        "Tween",
+                        "\"enScore_move\"",
+                        "Enemy.Y() - 16",
+                        "\"easeInQuad\"",
+                        "500",
+                        "yes"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -4949,7 +5515,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Bullet Collisions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4985,6 +5550,17 @@
                     "p1_bullet",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_bullet",
+                    "bullet_multiplier",
+                    "=",
+                    "0"
+                  ]
                 }
               ]
             },
@@ -5006,6 +5582,18 @@
               ],
               "actions": [],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Calculate Score by adding +1 for every Enemy hit, then multiply 100 by that number."
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -5056,12 +5644,108 @@
                     },
                     {
                       "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "p1_bullet",
+                        "bullet_multiplier",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "ModVarScene"
                       },
                       "parameters": [
                         "game_totalScore",
                         "+",
-                        "100"
+                        "100 * p1_bullet.Variable(bullet_multiplier)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Add Score on-screen"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "en_scoreText",
+                            "Enemy.X()",
+                            "Enemy.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "en_scoreText",
+                            "bullet_score",
+                            "=",
+                            "100 * p1_bullet.Variable(bullet_multiplier)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "en_scoreText",
+                            "=",
+                            "ToString(en_scoreText.Variable(bullet_score))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Flash::Flash::Flash"
+                          },
+                          "parameters": [
+                            "en_scoreText",
+                            "Flash",
+                            "0",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::AddObjectPositionYTween"
+                          },
+                          "parameters": [
+                            "en_scoreText",
+                            "Tween",
+                            "\"enScore_move\"",
+                            "Enemy.Y() - 16",
+                            "\"easeInQuad\"",
+                            "500",
+                            "yes"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -5175,11 +5859,22 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Aiming",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Also sets the Speed of P1, watch out!"
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -5418,6 +6113,214 @@
         }
       ],
       "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Level Objects Settings",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "wall_red",
+                "\"wall_on\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "wall_red",
+                "PathfindingObstacle",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "wall_blu",
+                "\"wall_off\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "wall_blu",
+                "PathfindingObstacle",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "False"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "wall_red",
+                "\"wall_off\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "wall_red",
+                "PathfindingObstacle",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "wall_blu",
+                "\"wall_on\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "wall_blu",
+                "PathfindingObstacle",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionPoint"
+              },
+              "parameters": [
+                "wall_red",
+                "p1_hitbox.CenterX()",
+                "p1_hitbox.CenterY()"
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimationName"
+              },
+              "parameters": [
+                "wall_red",
+                "\"wall_on\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_playerIsDead",
+                "True"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionPoint"
+              },
+              "parameters": [
+                "wall_blu",
+                "p1_hitbox.CenterX()",
+                "p1_hitbox.CenterY()"
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimationName"
+              },
+              "parameters": [
+                "wall_blu",
+                "\"wall_on\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_playerIsDead",
+                "True"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ],
   "layers": [
@@ -5492,7 +6395,7 @@
       "isLocked": false,
       "name": "gameOver",
       "renderingType": "",
-      "visibility": true,
+      "visibility": false,
       "cameras": [],
       "effects": []
     },
@@ -5508,7 +6411,7 @@
       "isLocked": false,
       "name": "start",
       "renderingType": "",
-      "visibility": true,
+      "visibility": false,
       "cameras": [],
       "effects": []
     }
@@ -5517,6 +6420,10 @@
     {
       "name": "FireBullet",
       "type": "FireBullet::FireBullet"
+    },
+    {
+      "name": "Flash",
+      "type": "Flash::Flash"
     },
     {
       "name": "Pathfinding",
@@ -5529,6 +6436,10 @@
     {
       "name": "TopDownMovement",
       "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
     },
     {
       "name": "dev_debugBehavior",

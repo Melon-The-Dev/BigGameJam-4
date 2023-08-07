@@ -407,6 +407,33 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/wall_red.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\wall_red.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/wall_off.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\wall_off.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/wall_blu.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\wall_blu.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -426,6 +453,10 @@
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/flash"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/flashlayer"
