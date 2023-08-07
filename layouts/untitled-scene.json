@@ -1,0 +1,1723 @@
+{
+  "b": 209,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "Untitled_32scene",
+  "name": "Untitled scene",
+  "r": 209,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 209,
+  "uiSettings": {
+    "grid": true,
+    "gridType": "rectangular",
+    "gridWidth": 16,
+    "gridHeight": 16,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.4,
+    "snap": true,
+    "zoomFactor": 1.0615714305220043,
+    "windowMask": false
+  },
+  "objectsGroups": [
+    {
+      "name": "dev_collisions",
+      "objects": [
+        {
+          "name": "dev_floor"
+        },
+        {
+          "name": "dev_wall"
+        }
+      ]
+    }
+  ],
+  "variables": [],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 1280,
+      "layer": "",
+      "locked": true,
+      "name": "dev_floor",
+      "persistentUuid": "35d13539-ce11-46f4-8f2f-8e3cc380806a",
+      "sealed": true,
+      "width": 1280,
+      "x": 0,
+      "y": 0,
+      "zOrder": -72,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "dev_wall",
+      "persistentUuid": "f44560d5-4aac-4a30-93a5-a488e9468a81",
+      "width": 0,
+      "x": 768,
+      "y": 256,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "tvBox",
+      "persistentUuid": "4c7ff261-3fab-433c-94e3-4ebec9d0a877",
+      "width": 0,
+      "x": 800,
+      "y": 352,
+      "zOrder": -32,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "dev_debug",
+      "persistentUuid": "0a4f551f-35a0-45a8-b087-d154559a8cb9",
+      "width": 0,
+      "x": 0,
+      "y": -112,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "p1_stand",
+      "persistentUuid": "73ed24f8-bfc6-4c1e-814a-be391876493f",
+      "width": 0,
+      "x": 832,
+      "y": 560,
+      "zOrder": -63,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 48,
+      "layer": "",
+      "name": "level_layout",
+      "persistentUuid": "19a359c3-0793-4a50-b78a-ce11f9e38936",
+      "width": 64,
+      "x": 832,
+      "y": 472,
+      "zOrder": -24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "2d",
+      "name": "platform_player",
+      "persistentUuid": "80a062ae-6e87-48dd-b41d-f69d1cb51e7e",
+      "width": 0,
+      "x": 704,
+      "y": -176,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "platform_tiles",
+      "persistentUuid": "b4654833-538c-40f0-800f-c8a542dc4e2e",
+      "width": 0,
+      "x": 384,
+      "y": 112,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "platform_tiles",
+      "persistentUuid": "95fabbfa-220a-4e63-b5d8-db23542377b6",
+      "width": 48,
+      "x": 792,
+      "y": -176,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "platform_tiles",
+      "persistentUuid": "094ff252-88a0-4a46-ba4b-74492b5b8f66",
+      "width": 0,
+      "x": 504,
+      "y": -280,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "platform_tiles",
+      "persistentUuid": "4288b2d3-4c4c-4468-9428-8eb4f0bceb21",
+      "width": 240,
+      "x": 696,
+      "y": -144,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 256,
+      "layer": "",
+      "name": "platform_tiles",
+      "persistentUuid": "9369ff12-f42d-43c9-ba7a-e40e071d5a89",
+      "width": 16,
+      "x": 584,
+      "y": -288,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 288,
+      "layer": "",
+      "name": "platform_tiles",
+      "persistentUuid": "3eb81d89-67b7-4135-8969-386097786cbb",
+      "width": 16,
+      "x": 824,
+      "y": -272,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "dev_debug",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "dev_debugBehavior",
+          "type": "dev_debugBehavior::dev_debugBehavior",
+          "dev_layer": "dev",
+          "dev_showDebugLayer": false,
+          "dev_gameCloses": true,
+          "dev_closeAfter": 30,
+          "dev_integerScaling": "3"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 64,
+      "name": "dev_floor",
+      "tags": "",
+      "texture": "dev_floorTexture.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 64,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "BoxProjectionFromTiled",
+          "type": "WithThreeJS::BoxProjectionFromTiled",
+          "Id": "",
+          "FirstFrame": true,
+          "Hide": true,
+          "AlphaTest": 0,
+          "AntiAliasing": true,
+          "Depth": 16,
+          "IsCube": false,
+          "TBTextureId": "",
+          "LRTextureId": "",
+          "FRTextureId": "",
+          "TBOffsetV": 0,
+          "LROffsetV": 0,
+          "FROffsetV": 0,
+          "Blend": "Normal"
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 128,
+      "name": "dev_wall",
+      "tags": "",
+      "texture": "dev_wallTexture.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 128,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "BoxProjectionFromTiled",
+          "type": "WithThreeJS::BoxProjectionFromTiled",
+          "Id": "",
+          "FirstFrame": true,
+          "Hide": true,
+          "AlphaTest": 0,
+          "AntiAliasing": false,
+          "Depth": 128,
+          "IsCube": false,
+          "TBTextureId": "",
+          "LRTextureId": "",
+          "FRTextureId": "",
+          "TBOffsetV": 0,
+          "LROffsetV": 0,
+          "FROffsetV": 0,
+          "Blend": "Normal"
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "tvBox",
+      "tags": "",
+      "type": "WithThreeJS::Box3D",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "Depth": 64
+      },
+      "childrenContent": {
+        "Back": {
+          "height": 64,
+          "texture": "assets\\tv_part.png",
+          "width": 64
+        },
+        "Bottom": {
+          "height": 64,
+          "texture": "assets\\tv_part.png",
+          "width": 64
+        },
+        "Front": {
+          "height": 64,
+          "texture": "assets\\tv_front.png",
+          "width": 64
+        },
+        "Left": {
+          "height": 64,
+          "texture": "assets\\tv_part.png",
+          "width": 64
+        },
+        "Right": {
+          "height": 64,
+          "texture": "assets\\tv_part.png",
+          "width": 64
+        },
+        "Top": {
+          "height": 64,
+          "texture": "assets\\tv_part.png",
+          "width": 64
+        }
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "p1_stand",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "BoardProjection",
+          "type": "WithThreeJS::BoardProjection",
+          "Id": "",
+          "FirstFrame": true,
+          "CurrentTextureId": "",
+          "Hide": true,
+          "AlphaTest": 0.5,
+          "AntiAliasing": false,
+          "AngleAxis": "Z Axis",
+          "Orientation": "Horizontal",
+          "Depth": 32
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\p1_stand.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "level_layout",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "BoardProjection",
+          "type": "WithThreeJS::BoardProjection",
+          "Id": "",
+          "FirstFrame": true,
+          "CurrentTextureId": "",
+          "Hide": true,
+          "AlphaTest": 0.5,
+          "AntiAliasing": false,
+          "AngleAxis": "Z Axis",
+          "Orientation": "Vertical",
+          "Depth": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\lev_layout.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 160,
+                    "y": 120
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 320,
+                        "y": 0
+                      },
+                      {
+                        "x": 320,
+                        "y": 240
+                      },
+                      {
+                        "x": 0,
+                        "y": 240
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "platform_player",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "BoardProjection",
+          "type": "WithThreeJS::BoardProjection",
+          "Id": "",
+          "FirstFrame": true,
+          "CurrentTextureId": "",
+          "Hide": true,
+          "AlphaTest": 0.5,
+          "AntiAliasing": true,
+          "AngleAxis": "Z Axis",
+          "Orientation": "Vertical",
+          "Depth": 0
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "acceleration": 1500,
+          "canGoDownFromJumpthru": true,
+          "canGrabPlatforms": false,
+          "canGrabWithoutMoving": true,
+          "deceleration": 1500,
+          "gravity": 1000,
+          "ignoreDefaultControls": false,
+          "jumpSpeed": 600,
+          "jumpSustainTime": 0.2,
+          "ladderClimbingSpeed": 150,
+          "maxFallingSpeed": 700,
+          "maxSpeed": 250,
+          "slopeMaxAngle": 60,
+          "useLegacyTrajectory": false,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "platform_player",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "platform_player2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "platform_tiles",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "BoardProjection",
+          "type": "WithThreeJS::BoardProjection",
+          "Id": "",
+          "FirstFrame": true,
+          "CurrentTextureId": "",
+          "Hide": true,
+          "AlphaTest": 0.5,
+          "AntiAliasing": true,
+          "AngleAxis": "Z Axis",
+          "Orientation": "Vertical",
+          "Depth": 0
+        },
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "NormalPlatform",
+          "yGrabOffset": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2d_tile.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "INITIALIZE",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Set 3D scene"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetWindowSize"
+              },
+              "parameters": [
+                "",
+                "1280",
+                "720",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "WithThreeJS::Create3DScene"
+              },
+              "parameters": [
+                "",
+                "\"121;202;249\"",
+                "\"\"",
+                "\"\"",
+                "200",
+                "800",
+                "1",
+                "\"Top Down\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "WithThreeJS::Change3DCameraFOV"
+              },
+              "parameters": [
+                "",
+                "1",
+                "\"=\"",
+                "90",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Create Player Hitbox"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "WithThreeJS::Load3DTextureV2"
+              },
+              "parameters": [
+                "",
+                "\"assets\\\\CollisionB.png\"",
+                "\"Texture_Red\"",
+                "1",
+                "1",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "WithThreeJS::Create3DBox"
+              },
+              "parameters": [
+                "",
+                "\"p1_hitbox\"",
+                "512",
+                "0",
+                "320",
+                "0",
+                "0",
+                "0",
+                "32",
+                "72",
+                "32",
+                "\"Texture_Red\"",
+                "0",
+                "0.5",
+                "\"Normal\"",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Layout",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TiledSpriteObject::SetOpacity"
+              },
+              "parameters": [
+                "dev_floor",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "TiledSpriteObject::SetOpacity"
+              },
+              "parameters": [
+                "dev_wall",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "WithThreeJS::CheckExistenceOf3DObject"
+          },
+          "parameters": [
+            "",
+            "dev_floor.BoxProjectionFromTiled::Id()",
+            ""
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "p1_hitbox",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Look",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Mouse Lock (Use \"Mouse Pointer Lock\" Extension)"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "MousePointerLock::isPointerLocked"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MouseButtonPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MousePointerLock::RequestPointerLock"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Rotate Camera (Use \"Mouse Pointer Lock\" Extension)\nUse variables to manage the rotation axis you want to limit."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MousePointerLock::isPointerLocked"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "AngleX",
+                        "+",
+                        "MousePointerLock::MovementY() * -0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "AngleX",
+                        "=",
+                        "clamp(Variable(AngleX), -90, 90)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "AngleY",
+                        "+",
+                        "MousePointerLock::MovementX() * -0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Rotate3DCameraLikeHead"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"=\"",
+                        "Variable(AngleX)",
+                        "Variable(AngleY)",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Rotate3DObjectLikeHead"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"=\"",
+                        "0",
+                        "Variable(AngleY)",
+                        "0",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Fall",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DObject"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"+\"",
+                        "0",
+                        "Variable(Jump) * TimeDelta()",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "Jump",
+                        "-",
+                        "400 * TimeDelta()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Move (Simple but imprecise)",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "w"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_isMoving",
+                        "p1_isMoving"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "w"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DObject"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"+\"",
+                        "0",
+                        "0",
+                        "-192 * TimeDelta()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_isMoving",
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "s"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DObject"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"+\"",
+                        "0",
+                        "0",
+                        "128 * TimeDelta()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_isMoving",
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "a"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DObject"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"+\"",
+                        "-160 * TimeDelta()",
+                        "0",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_isMoving",
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "d"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DObject"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "\"+\"",
+                        "160 * TimeDelta()",
+                        "0",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_isMoving",
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Bounding Box Collision",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "dev_collisions",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::ResolveBoundingBoxCollision"
+                      },
+                      "parameters": [
+                        "",
+                        "\"p1_hitbox\"",
+                        "dev_collisions.BoxProjectionFromTiled::Id()",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "WithThreeJS::BoundingBoxCollisionResultNumber(\"Move Y\")",
+                            "!=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Jump",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Jump"
+                        },
+                        {
+                          "disabled": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "WithThreeJS::BoundingBoxCollisionResultNumber(\"Move Y\")",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Space"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "Jump",
+                                "=",
+                                "260"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Camera",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "WithThreeJS::Move3DCamera"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"=\"",
+                        "WithThreeJS::ObjectPosition(\"p1_hitbox\", \"X\")",
+                        "WithThreeJS::ObjectPosition(\"p1_hitbox\", \"Y\") + 28",
+                        "WithThreeJS::ObjectPosition(\"p1_hitbox\", \"Z\")",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "WithThreeJS::Change3DCameraFOV"
+          },
+          "parameters": [
+            "",
+            "1",
+            "\"=\"",
+            "90",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "level_layout",
+            "BoardProjection",
+            "yes"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "WithThreeJS::CheckBoundingBoxCollision"
+          },
+          "parameters": [
+            "",
+            "\"p1_hitbox\"",
+            "p1_stand.BoardProjection::Id()",
+            ""
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "WithThreeJS::Change3DCameraFOV"
+              },
+              "parameters": [
+                "",
+                "1",
+                "\"=\"",
+                "90",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "level_layout",
+                "BoardProjection",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeLayer"
+              },
+              "parameters": [
+                "level_layout",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "level_layout",
+                "=",
+                "832",
+                "=",
+                "472"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "WithThreeJS::CheckBoundingBoxCollision"
+          },
+          "parameters": [
+            "",
+            "\"p1_hitbox\"",
+            "p1_stand.BoardProjection::Id()",
+            ""
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "WithThreeJS::Change3DCameraFOV"
+              },
+              "parameters": [
+                "",
+                "1",
+                "\"=\"",
+                "50",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "WithThreeJS::CameraLookAt3DObject"
+              },
+              "parameters": [
+                "",
+                "1",
+                "tvBox.Id()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "WithThreeJS::Rotate3DObjectLikeHead"
+              },
+              "parameters": [
+                "",
+                "\"p1_hitbox\"",
+                "\"=\"",
+                "0",
+                "0",
+                "0",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "level_layout",
+                "BoardProjection",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeLayer"
+              },
+              "parameters": [
+                "level_layout",
+                "\"2d\""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "level_layout",
+                "=",
+                "ScreenWidth() / 2",
+                "=",
+                "ScreenHeight() / 2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 0.1,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 0.1,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "2d",
+      "renderingType": "2d",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "BoardProjection",
+      "type": "WithThreeJS::BoardProjection"
+    },
+    {
+      "name": "BoxProjectionFromTiled",
+      "type": "WithThreeJS::BoxProjectionFromTiled"
+    },
+    {
+      "name": "Platform",
+      "type": "PlatformBehavior::PlatformBehavior"
+    },
+    {
+      "name": "PlatformerObject",
+      "type": "PlatformBehavior::PlatformerObjectBehavior"
+    },
+    {
+      "name": "dev_debugBehavior",
+      "type": "dev_debugBehavior::dev_debugBehavior"
+    }
+  ]
+}
