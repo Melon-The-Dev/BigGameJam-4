@@ -1281,6 +1281,8 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
           "acceleration": 0,
           "allowDiagonals": true,
           "angleOffset": 0,
@@ -1291,16 +1293,14 @@
           "gridOffsetX": 0,
           "gridOffsetY": 0,
           "maxSpeed": 48,
-          "name": "Pathfinding",
           "rotateObject": false,
-          "smoothingMaxCellGap": 1,
-          "type": "PathfindingBehavior::PathfindingBehavior"
+          "smoothingMaxCellGap": 1
         },
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ],
       "animations": [
@@ -1520,6 +1520,8 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
           "acceleration": 0,
           "allowDiagonals": true,
           "angleOffset": 0,
@@ -1530,16 +1532,14 @@
           "gridOffsetX": 0,
           "gridOffsetY": 0,
           "maxSpeed": 48,
-          "name": "Pathfinding",
           "rotateObject": false,
-          "smoothingMaxCellGap": 1,
-          "type": "PathfindingBehavior::PathfindingBehavior"
+          "smoothingMaxCellGap": 1
         },
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ],
       "animations": [
@@ -1772,10 +1772,10 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ]
     },
@@ -1994,10 +1994,10 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ],
       "animations": [
@@ -2559,10 +2559,10 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ],
       "animations": [
@@ -4370,557 +4370,499 @@
       "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Crosshair"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "UI",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "value": "MettreXY"
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
           },
-          "parameters": [
-            "ui_crosshair",
-            "=",
-            "CursorX()",
-            "=",
-            "CursorY()"
+          "comment": "Crosshair"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "ui_crosshair",
+                "=",
+                "CursorX()",
+                "=",
+                "CursorY()"
+              ]
+            },
+            {
+              "type": {
+                "value": "CacheSouris"
+              },
+              "parameters": [
+                ""
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "CacheSouris"
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
           },
-          "parameters": [
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "UI"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
+          "comment": "Score"
+        },
         {
-          "type": {
-            "value": "TextObject::String"
-          },
-          "parameters": [
-            "ui_score",
-            "=",
-            "\"Score: \" + ToString(Variable(game_totalScore))"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Spawn Event"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "DepartScene"
-          },
-          "parameters": [
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "Cache"
-          },
-          "parameters": [
-            "en1_spawn"
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "ui_score",
+                "=",
+                "\"Score: \" + ToString(Variable(game_totalScore))"
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "Cache"
-          },
-          "parameters": [
-            "en2_spawn"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_canSpawn",
-            "False"
-          ]
-        },
-        {
-          "type": {
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "game_spawnTimer",
-            "=",
-            "RandomInRange(3, 8)"
-          ]
-        },
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"game_spawn\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CompareTimer"
-          },
-          "parameters": [
-            "",
-            "\"game_spawn\"",
-            ">=",
-            "Variable(game_spawnTimer)"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Bullet UI",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "dev_aim",
+                    "=",
+                    "\"Ammo: \" + ToString(p1_hitbox.Variable(p1_ammo))"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeScaleWidth"
+                  },
+                  "parameters": [
+                    "ui_bulletReady",
+                    "=",
+                    "p1_hitbox.Variable(p1_holdAim)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "ui_bulletReady",
+                    "=",
+                    "p1_hitbox.X()",
+                    "=",
+                    "p1_hitbox.Y() + 12"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "ScaleWidth"
+                  },
+                  "parameters": [
+                    "ui_bulletReady",
+                    ">=",
+                    "0.83"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "ui_bulletReady",
+                    "\"bullet_off\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ScaleWidth"
+                  },
+                  "parameters": [
+                    "ui_bulletReady",
+                    ">=",
+                    "0.83"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "ui_bulletReady",
+                    "\"bullet_on\""
+                  ]
+                }
+              ]
+            }
+          ],
           "parameters": []
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_canSpawn",
-            "True"
-          ]
-        },
-        {
-          "type": {
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "game_spawnTimer",
-            "=",
-            "RandomInRange(3, 8)"
-          ]
-        },
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"game_spawn\""
-          ]
-        }
-      ]
+      "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Enemy Spawning",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_canSpawn",
-            "True"
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "en1_spawn"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "en2_spawn"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_canSpawn",
+                "False"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "game_spawnTimer",
+                "=",
+                "RandomInRange(3, 8)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"game_spawn\""
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "AjoutHasard"
-          },
-          "parameters": [
-            "",
-            "en1_spawn"
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"game_spawn\"",
+                ">=",
+                "Variable(game_spawnTimer)"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_canSpawn",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "game_spawnTimer",
+                "=",
+                "RandomInRange(3, 8)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"game_spawn\""
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "Montre"
-          },
-          "parameters": [
-            "en1_spawn",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "en1_spawnParticles",
-            "en1_spawn.X()",
-            "en1_spawn.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAngle"
-          },
-          "parameters": [
-            "en1_spawnParticles",
-            "=",
-            "270"
-          ]
-        },
-        {
-          "type": {
-            "value": "Wait"
-          },
-          "parameters": [
-            "2"
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "en1_hitbox",
-            "en1_spawn.X()",
-            "en1_spawn.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "en1_spawnParticles",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Cache"
-          },
-          "parameters": [
-            "en1_spawn"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_canSpawn",
-            "False"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_canSpawn",
-            "True"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "AjoutHasard"
-          },
-          "parameters": [
-            "",
-            "en2_spawn"
-          ]
-        },
-        {
-          "type": {
-            "value": "Montre"
-          },
-          "parameters": [
-            "en2_spawn",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "en2_spawnParticles",
-            "en2_spawn.X()",
-            "en2_spawn.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAngle"
-          },
-          "parameters": [
-            "en2_spawnParticles",
-            "=",
-            "270"
-          ]
-        },
-        {
-          "type": {
-            "value": "Wait"
-          },
-          "parameters": [
-            "2"
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "en2_hitbox",
-            "en2_spawn.X()",
-            "en2_spawn.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "en2_spawnParticles",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Cache"
-          },
-          "parameters": [
-            "en2_spawn"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_canSpawn",
-            "False"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Ammo spawn"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "DepartScene"
-          },
-          "parameters": [
-            ""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_canSpawn",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_canSpawn",
+                "False"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Spawning::Spawn"
+                  },
+                  "parameters": [
+                    "",
+                    "en1_spawn",
+                    "en1_spawnParticles",
+                    "en1_hitbox",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Spawning::Spawn"
+                  },
+                  "parameters": [
+                    "",
+                    "en2_spawn",
+                    "en2_spawnParticles",
+                    "en2_hitbox",
+                    ""
+                  ]
+                }
+              ]
+            }
           ]
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "value": "Cache"
-          },
-          "parameters": [
-            "ammo_spawn"
-          ]
-        }
-      ]
+      "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Ammo Spawning",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "value": "CollisionNP"
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
           },
-          "parameters": [
-            "p1_hitbox",
-            "ammo_pickup",
-            "",
-            "",
-            "yes"
+          "comment": "Ammo spawn"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "ammo_spawn"
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "ammo_pickup",
+                "",
+                "",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "p1_ammo",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "ammo_pickup",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "5"
+              ]
+            },
+            {
+              "type": {
+                "value": "Spawning::Spawn"
+              },
+              "parameters": [
+                "",
+                "ammo_spawn",
+                "ammo_spawnParticles",
+                "ammo_pickup",
+                ""
+              ]
+            }
+          ]
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "value": "ModVarObjet"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "p1_ammo",
-            "+",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "ammo_pickup",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Wait"
-          },
-          "parameters": [
-            "5"
-          ]
-        },
-        {
-          "type": {
-            "value": "AjoutHasard"
-          },
-          "parameters": [
-            "",
-            "ammo_spawn"
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "ammo_spawnParticles",
-            "ammo_spawn.X()",
-            "ammo_spawn.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAngle"
-          },
-          "parameters": [
-            "ammo_spawnParticles",
-            "=",
-            "270"
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "ammo_pickup",
-            "ammo_spawn.X()",
-            "ammo_spawn.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Wait"
-          },
-          "parameters": [
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "ammo_spawnParticles",
-            ""
-          ]
-        }
-      ]
+      "parameters": []
     },
     {
       "type": "BuiltinCommonInstructions::Comment",
@@ -5523,132 +5465,6 @@
             "p1_holdAim",
             "=",
             "0"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Bullet UI"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "TextObject::String"
-          },
-          "parameters": [
-            "dev_aim",
-            "=",
-            "\"Ammo: \" + ToString(p1_hitbox.Variable(p1_ammo))"
-          ]
-        }
-      ]
-    },
-    {
-      "disabled": true,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "TextObject::String"
-          },
-          "parameters": [
-            "dev_aim",
-            "=",
-            "\"Ammo: \" + ToString(p1_hitbox.Variable(p1_ammo)) + NewLine() + \n\"Aim: \" + ToString(p1_hitbox.Variable(p1_holdAim))"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "ChangeScaleWidth"
-          },
-          "parameters": [
-            "ui_bulletReady",
-            "=",
-            "p1_hitbox.Variable(p1_holdAim)"
-          ]
-        },
-        {
-          "type": {
-            "value": "MettreXY"
-          },
-          "parameters": [
-            "ui_bulletReady",
-            "=",
-            "p1_hitbox.X()",
-            "=",
-            "p1_hitbox.Y() + 12"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": true,
-            "value": "ScaleWidth"
-          },
-          "parameters": [
-            "ui_bulletReady",
-            ">=",
-            "0.83"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "ui_bulletReady",
-            "\"bullet_off\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "ScaleWidth"
-          },
-          "parameters": [
-            "ui_bulletReady",
-            ">=",
-            "0.83"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "ui_bulletReady",
-            "\"bullet_on\""
           ]
         }
       ]
