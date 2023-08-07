@@ -440,10 +440,6 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/eventsFunctionsExtensions/navmeshpathfinding"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/dev_debugbehavior"
     },
     {

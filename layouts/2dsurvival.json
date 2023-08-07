@@ -18,11 +18,58 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.2121641972173687,
+    "zoomFactor": 1.0973679695629526,
     "windowMask": false
   },
-  "objectsGroups": [],
-  "variables": [],
+  "objectsGroups": [
+    {
+      "name": "Hazard",
+      "objects": [
+        {
+          "name": "en1_hitbox"
+        },
+        {
+          "name": "en2_hitbox"
+        },
+        {
+          "name": "dev_trap"
+        },
+        {
+          "name": "trap_laser"
+        }
+      ]
+    },
+    {
+      "name": "Enemy",
+      "objects": [
+        {
+          "name": "en1_hitbox"
+        },
+        {
+          "name": "en2_hitbox"
+        }
+      ]
+    },
+    {
+      "name": "Trap",
+      "objects": [
+        {
+          "name": "trap_laser"
+        },
+        {
+          "name": "dev_trap"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "folded": true,
+      "name": "Printer",
+      "type": "string",
+      "value": "\"Test\""
+    }
+  ],
   "instances": [
     {
       "angle": 0,
@@ -307,21 +354,6 @@
       "x": 496,
       "y": 208,
       "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "dev_navmesh",
-      "persistentUuid": "e2793c94-182d-4d21-b102-fa0a12c65743",
-      "width": 0,
-      "x": 112,
-      "y": -96,
-      "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -964,31 +996,6 @@
     },
     {
       "assetStoreId": "",
-      "name": "dev_navmesh",
-      "tags": "",
-      "type": "PrimitiveDrawing::Drawer",
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "fillOpacity": 50,
-      "outlineSize": 1,
-      "outlineOpacity": 200,
-      "fillColor": {
-        "b": 35,
-        "g": 166,
-        "r": 245
-      },
-      "outlineColor": {
-        "b": 0,
-        "g": 0,
-        "r": 255
-      },
-      "absoluteCoordinates": true,
-      "clearBetweenFrames": true,
-      "antialiasing": "none"
-    },
-    {
-      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "ui_score",
@@ -1048,6 +1055,10 @@
           "BulletLayer": "",
           "RandomizedAngle": 0,
           "BulletSpeedVariance": 0
+        },
+        {
+          "name": "Player",
+          "type": "PlayerEvents::Player"
         },
         {
           "name": "TopDownMovement",
@@ -1270,20 +1281,31 @@
       "effects": [],
       "behaviors": [
         {
-          "name": "NavMeshPathfindingBehavior",
-          "type": "NavMeshPathfinding::NavMeshPathfindingBehavior",
-          "Acceleration": 12800,
-          "MaxSpeed": 48,
-          "AngularMaxSpeed": 180,
-          "RotateObject": false,
-          "AngleOffset": 0,
-          "CollisionShape": "Dot at center",
-          "ExtraBorder": 4
+          "acceleration": 0,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "cellHeight": 20,
+          "cellWidth": 20,
+          "extraBorder": 4,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 48,
+          "name": "Pathfinding",
+          "rotateObject": false,
+          "smoothingMaxCellGap": 1,
+          "type": "PathfindingBehavior::PathfindingBehavior"
+        },
+        {
+          "cost": 2,
+          "impassable": true,
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
         }
       ],
       "animations": [
         {
-          "name": "en1_active",
+          "name": "Active",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1331,7 +1353,7 @@
           ]
         },
         {
-          "name": "en1_inactive",
+          "name": "Inactive",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1498,20 +1520,31 @@
       "effects": [],
       "behaviors": [
         {
-          "name": "NavMeshPathfindingBehavior",
-          "type": "NavMeshPathfinding::NavMeshPathfindingBehavior",
-          "Acceleration": 12800,
-          "MaxSpeed": 48,
-          "AngularMaxSpeed": 180,
-          "RotateObject": false,
-          "AngleOffset": 0,
-          "CollisionShape": "Dot at center",
-          "ExtraBorder": 4
+          "acceleration": 0,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "cellHeight": 20,
+          "cellWidth": 20,
+          "extraBorder": 4,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 48,
+          "name": "Pathfinding",
+          "rotateObject": false,
+          "smoothingMaxCellGap": 1,
+          "type": "PathfindingBehavior::PathfindingBehavior"
+        },
+        {
+          "cost": 2,
+          "impassable": true,
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
         }
       ],
       "animations": [
         {
-          "name": "en2_active",
+          "name": "Active",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1559,7 +1592,7 @@
           ]
         },
         {
-          "name": "en2_inactive",
+          "name": "Inactive",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1739,8 +1772,10 @@
       "effects": [],
       "behaviors": [
         {
-          "name": "NavMeshPathfindingObstacleBehavior",
-          "type": "NavMeshPathfinding::NavMeshPathfindingObstacleBehavior"
+          "cost": 2,
+          "impassable": true,
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
         }
       ]
     },
@@ -1959,13 +1994,15 @@
       "effects": [],
       "behaviors": [
         {
-          "name": "NavMeshPathfindingObstacleBehavior",
-          "type": "NavMeshPathfinding::NavMeshPathfindingObstacleBehavior"
+          "cost": 2,
+          "impassable": true,
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
         }
       ],
       "animations": [
         {
-          "name": "trap_closed",
+          "name": "Inactive",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -2013,7 +2050,7 @@
           ]
         },
         {
-          "name": "trap_open",
+          "name": "Active",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -2520,10 +2557,17 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "cost": 2,
+          "impassable": true,
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+        }
+      ],
       "animations": [
         {
-          "name": "laser_off",
+          "name": "Inactive",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -2571,7 +2615,7 @@
           ]
         },
         {
-          "name": "laser_on",
+          "name": "Active",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -2741,1089 +2785,124 @@
   ],
   "events": [
     {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Start game"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "DepartScene"
-          },
-          "parameters": [
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_playerIsDead",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_isStarted",
-            "False"
-          ]
-        },
-        {
-          "type": {
-            "value": "ChangeLayerTimeScale"
-          },
-          "parameters": [
-            "",
-            "",
-            "0"
-          ]
-        },
-        {
-          "type": {
-            "value": "ShowLayer"
-          },
-          "parameters": [
-            "",
-            "\"start\""
-          ]
-        },
-        {
-          "type": {
-            "value": "HideLayer"
-          },
-          "parameters": [
-            "",
-            "\"ui\""
-          ]
-        },
-        {
-          "type": {
-            "value": "HideLayer"
-          },
-          "parameters": [
-            "",
-            "\"flash\""
-          ]
-        },
-        {
-          "type": {
-            "value": "HideLayer"
-          },
-          "parameters": [
-            "",
-            "\"gameOver\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "LayerVisible"
-          },
-          "parameters": [
-            "",
-            "\"start\""
-          ]
-        },
-        {
-          "type": {
-            "value": "AnyKeyPressed"
-          },
-          "parameters": [
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_isStarted",
-            "True"
-          ]
-        },
-        {
-          "type": {
-            "value": "ChangeLayerTimeScale"
-          },
-          "parameters": [
-            "",
-            "",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "HideLayer"
-          },
-          "parameters": [
-            "",
-            "\"start\""
-          ]
-        },
-        {
-          "type": {
-            "value": "ShowLayer"
-          },
-          "parameters": [
-            "",
-            "\"ui\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Controls"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyPressed"
-          },
-          "parameters": [
-            "",
-            "w"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "TopDownMovementBehavior::SimulateControl"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "TopDownMovement",
-            "\"Up\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyPressed"
-          },
-          "parameters": [
-            "",
-            "a"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "TopDownMovementBehavior::SimulateControl"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "TopDownMovement",
-            "\"Left\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyPressed"
-          },
-          "parameters": [
-            "",
-            "s"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "TopDownMovementBehavior::SimulateControl"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "TopDownMovement",
-            "\"Down\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyPressed"
-          },
-          "parameters": [
-            "",
-            "d"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "TopDownMovementBehavior::SimulateControl"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "TopDownMovement",
-            "\"Right\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Collisions"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "dev_wall",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "dev_wall",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "dev_wall",
-            "yes"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "en1_hitbox",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "en2_hitbox",
-            "yes"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "en1_hitbox",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "en2_hitbox",
-            "yes"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "NavMeshPathfindingBehavior",
-            "p1_hitbox.X()",
-            "p1_hitbox.Y()",
-            "p1_hitbox.Y()"
-          ]
-        },
-        {
-          "type": {
-            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "NavMeshPathfindingBehavior",
-            "p1_hitbox.X()",
-            "p1_hitbox.Y()",
-            "p1_hitbox.Y()"
-          ]
-        }
-      ]
-    },
-    {
-      "disabled": true,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::DrawNavMesh"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "NavMeshPathfindingBehavior",
-            "dev_navmesh",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::DrawNavMesh"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "NavMeshPathfindingBehavior",
-            "dev_navmesh",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Game Over State"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "en1_hitbox",
-            "",
-            "",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "AnimationName"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "\"en1_active\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "death",
-            "",
-            "50",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "CameraShake::ShakeCamera"
-          },
-          "parameters": [
-            "",
-            "TimeDelta() * 2",
-            "TimeDelta() * 2",
-            "TimeDelta() * 2",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "FlashLayer::FlashLayer"
-          },
-          "parameters": [
-            "",
-            "\"flash\"",
-            "TimeDelta() * 2",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "en1_spawnParticles",
-            "p1_hitbox.X()",
-            "p1_hitbox.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAngle"
-          },
-          "parameters": [
-            "en1_spawnParticles",
-            "=",
-            "270"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "p1_hitbox",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "NavMeshPathfindingBehavior",
-            "no"
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "NavMeshPathfindingBehavior",
-            "no"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_playerIsDead",
-            "True"
-          ]
-        },
-        {
-          "type": {
-            "value": "Wait"
-          },
-          "parameters": [
-            "0.2"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "en1_spawnParticles",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "en2_hitbox",
-            "",
-            "",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "AnimationName"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "\"en2_active\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "death",
-            "",
-            "50",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "CameraShake::ShakeCamera"
-          },
-          "parameters": [
-            "",
-            "TimeDelta() * 2",
-            "TimeDelta() * 2",
-            "TimeDelta() * 2",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "FlashLayer::FlashLayer"
-          },
-          "parameters": [
-            "",
-            "\"flash\"",
-            "TimeDelta() * 2",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "en1_spawnParticles",
-            "p1_hitbox.X()",
-            "p1_hitbox.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAngle"
-          },
-          "parameters": [
-            "en1_spawnParticles",
-            "=",
-            "270"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "p1_hitbox",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "NavMeshPathfindingBehavior",
-            "no"
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "NavMeshPathfindingBehavior",
-            "no"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_playerIsDead",
-            "True"
-          ]
-        },
-        {
-          "type": {
-            "value": "Wait"
-          },
-          "parameters": [
-            "0.2"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "en1_spawnParticles",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "dev_trap",
-            "",
-            "",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "AnimationName"
-          },
-          "parameters": [
-            "dev_trap",
-            "\"trap_open\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "death",
-            "",
-            "50",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "CameraShake::ShakeCamera"
-          },
-          "parameters": [
-            "",
-            "TimeDelta() * 2",
-            "TimeDelta() * 2",
-            "TimeDelta() * 2",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "FlashLayer::FlashLayer"
-          },
-          "parameters": [
-            "",
-            "\"flash\"",
-            "TimeDelta() * 2",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "en1_spawnParticles",
-            "p1_hitbox.X()",
-            "p1_hitbox.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAngle"
-          },
-          "parameters": [
-            "en1_spawnParticles",
-            "=",
-            "270"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "p1_hitbox",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "NavMeshPathfindingBehavior",
-            "no"
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "NavMeshPathfindingBehavior",
-            "no"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_playerIsDead",
-            "True"
-          ]
-        },
-        {
-          "type": {
-            "value": "Wait"
-          },
-          "parameters": [
-            "0.2"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "en1_spawnParticles",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "trap_laser",
-            "",
-            "",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "AnimationName"
-          },
-          "parameters": [
-            "trap_laser",
-            "\"laser_on\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "death",
-            "",
-            "50",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "CameraShake::ShakeCamera"
-          },
-          "parameters": [
-            "",
-            "TimeDelta() * 2",
-            "TimeDelta() * 2",
-            "TimeDelta() * 2",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "FlashLayer::FlashLayer"
-          },
-          "parameters": [
-            "",
-            "\"flash\"",
-            "TimeDelta() * 2",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "en1_spawnParticles",
-            "p1_hitbox.X()",
-            "p1_hitbox.Y()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAngle"
-          },
-          "parameters": [
-            "en1_spawnParticles",
-            "=",
-            "270"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "p1_hitbox",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "NavMeshPathfindingBehavior",
-            "no"
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "NavMeshPathfindingBehavior",
-            "no"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_playerIsDead",
-            "True"
-          ]
-        },
-        {
-          "type": {
-            "value": "Wait"
-          },
-          "parameters": [
-            "0.2"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "en1_spawnParticles",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_playerIsDead",
-            "True"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "HideLayer"
-          },
-          "parameters": [
-            "",
-            "\"ui\""
-          ]
-        },
-        {
-          "type": {
-            "value": "ShowLayer"
-          },
-          "parameters": [
-            "",
-            "\"gameOver\""
-          ]
-        },
-        {
-          "type": {
-            "value": "TextObject::String"
-          },
-          "parameters": [
-            "gameover_text",
-            "=",
-            "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R TO RESTART --\""
-          ]
-        }
-      ],
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Initialise game",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "At the beginning of the game, hide unused layers, freeze game in background and display game info."
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "VarScene"
+                "value": "DepartScene"
               },
               "parameters": [
-                "game_totalScore",
-                ">",
-                "GlobalVariable(game_highScore)"
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_playerIsDead",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_isStarted",
+                "False"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeLayerTimeScale"
+              },
+              "parameters": [
+                "",
+                "",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"start\""
+              ]
+            },
+            {
+              "type": {
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"ui\""
+              ]
+            },
+            {
+              "type": {
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"flash\""
+              ]
+            },
+            {
+              "type": {
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"gameOver\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "",
+                "\"start\""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnyKeyPressed"
+              },
+              "parameters": [
+                ""
               ]
             },
             {
@@ -3836,800 +2915,164 @@
           "actions": [
             {
               "type": {
-                "value": "ModVarGlobal"
+                "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
-                "game_highScore",
-                "=",
-                "Variable(game_totalScore)"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Toggle Red/Blu gamestates"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "game_isStarted",
-            "True"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "enRedState",
-            "True"
-          ]
-        },
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"game_changeState\""
-          ]
-        }
-      ]
-    },
-    {
-      "disabled": true,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyPressed"
-          },
-          "parameters": [
-            "",
-            "Space"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ToggleSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "enRedState"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "enRedState",
-            "True"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "NavMeshPathfindingBehavior",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "NavMeshPathfindingBehavior",
-            "no"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "\"en1_active\""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "\"en2_inactive\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "enRedState",
-            "False"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "NavMeshPathfindingBehavior",
-            "no"
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "NavMeshPathfindingBehavior",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "\"en1_inactive\""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "\"en2_active\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CompareTimer"
-          },
-          "parameters": [
-            "",
-            "\"game_changeState\"",
-            ">",
-            "10"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ToggleSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "enRedState"
-          ]
-        },
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"game_changeState\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "UI Bar"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "ChangeScaleWidth"
-          },
-          "parameters": [
-            "ui_stateBar",
-            "=",
-            "TimerElapsedTime(\"game_changeState\") / 10"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "enRedState",
-            "True"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "ui_stateBar",
-            "\"bar_red\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "enRedState",
-            "False"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "ui_stateBar",
-            "\"bar_blu\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Push en_hitboxes if inactive"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "enRedState",
-            "False"
-          ]
-        },
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "en1_hitbox",
-            "",
-            "",
-            "no"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "AddForceAL"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "p1_hitbox.TopDownMovement::Angle()",
-            "p1_hitbox.TopDownMovement::Speed()",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "enRedState",
-            "True"
-          ]
-        },
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "p1_hitbox",
-            "en2_hitbox",
-            "",
-            "",
-            "no"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "AddForceAL"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "p1_hitbox.TopDownMovement::Angle()",
-            "p1_hitbox.TopDownMovement::Speed()",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Trap Settings"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Or"
-          },
-          "parameters": [],
-          "subInstructions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "dev_trap_button",
-                "",
-                "",
-                "no"
+                "game_isStarted",
+                "True"
               ]
             },
             {
               "type": {
-                "value": "CollisionNP"
+                "value": "ChangeLayerTimeScale"
               },
               "parameters": [
-                "p1_bullet",
-                "dev_trap_button",
                 "",
                 "",
-                "no"
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"start\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"ui\""
               ]
             }
           ]
         },
         {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
           },
-          "parameters": []
+          "comment": "Set the activated variable to false for all hazards"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Hazard",
+                "Activated",
+                "False"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Set the type variable of traps to their respective values"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "dev_trap",
+                "Type",
+                "=",
+                "\"Floor\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "trap_laser",
+                "Type",
+                "=",
+                "\"Laser\""
+              ]
+            }
+          ]
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "dev_trap_button",
-            "\"trapButton_on\""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "dev_trap",
-            "\"trap_open\""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "trap_laser",
-            "\"laser_on\""
-          ]
-        },
-        {
-          "type": {
-            "value": "Wait"
-          },
-          "parameters": [
-            "3"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "dev_trap_button",
-            "\"trapButton_off\""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "dev_trap",
-            "\"trap_closed\""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetAnimationName"
-          },
-          "parameters": [
-            "trap_laser",
-            "\"laser_off\""
-          ]
-        }
-      ]
+      "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "AnimationName"
-          },
-          "parameters": [
-            "dev_trap",
-            "\"trap_closed\""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "dev_trap",
-            "NavMeshPathfindingObstacleBehavior",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "trap_laser",
-            "NavMeshPathfindingObstacleBehavior",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "AnimationName"
-          },
-          "parameters": [
-            "dev_trap",
-            "\"trap_open\""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "dev_trap",
-            "NavMeshPathfindingObstacleBehavior",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "ActivateBehavior"
-          },
-          "parameters": [
-            "trap_laser",
-            "NavMeshPathfindingObstacleBehavior",
-            "yes"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "en1_hitbox",
-            "dev_trap",
-            "",
-            "",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "AnimationName"
-          },
-          "parameters": [
-            "dev_trap",
-            "\"trap_open\""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "hitsound",
-            "",
-            "66",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "en1_hitbox",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "game_totalScore",
-            "+",
-            "200"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "en2_hitbox",
-            "dev_trap",
-            "",
-            "",
-            "yes"
-          ]
-        },
-        {
-          "type": {
-            "value": "AnimationName"
-          },
-          "parameters": [
-            "dev_trap",
-            "\"trap_open\""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "hitsound",
-            "",
-            "66",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "en2_hitbox",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "game_totalScore",
-            "+",
-            "200"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "AnimationName"
-          },
-          "parameters": [
-            "trap_laser",
-            "\"laser_on\""
-          ]
-        }
-      ],
-      "actions": [],
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Controls",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "CollisionNP"
+                "value": "KeyPressed"
               },
               "parameters": [
-                "en1_hitbox",
-                "trap_laser",
                 "",
-                "",
-                "yes"
+                "w"
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "PlaySound"
+                "value": "TopDownMovementBehavior::SimulateControl"
               },
               "parameters": [
-                "",
-                "hitsound",
-                "",
-                "66",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "en1_hitbox",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "game_totalScore",
-                "+",
-                "125"
+                "p1_hitbox",
+                "TopDownMovement",
+                "\"Up\""
               ]
             }
           ]
@@ -4639,15 +3082,314 @@
           "conditions": [
             {
               "type": {
-                "value": "CollisionNP"
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "a"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TopDownMovementBehavior::SimulateControl"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "TopDownMovement",
+                "\"Left\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "s"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TopDownMovementBehavior::SimulateControl"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "TopDownMovement",
+                "\"Down\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "d"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TopDownMovementBehavior::SimulateControl"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "TopDownMovement",
+                "\"Right\""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Collisions",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "dev_wall",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "en1_hitbox",
+                "dev_wall",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
               },
               "parameters": [
                 "en2_hitbox",
-                "trap_laser",
+                "dev_wall",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "en1_hitbox",
+                "en1_hitbox",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "en1_hitbox",
+                "en2_hitbox",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "en2_hitbox",
+                "en1_hitbox",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "en2_hitbox",
+                "en2_hitbox",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Push inactive enemies"
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Enemy",
+          "conditions": [
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Enemy",
+                "Activated",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "Enemy",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AddForceAL"
+              },
+              "parameters": [
+                "Enemy",
+                "p1_hitbox.TopDownMovement::Angle()",
+                "p1_hitbox.TopDownMovement::Speed()",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Trigger death when player in collision with an active hazard"
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Hazard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "Hazard",
                 "",
                 "",
                 "yes"
               ]
+            },
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Hazard",
+                "Activated",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_playerIsDead",
+                "True"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Game Over States",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_playerIsDead",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -4657,10 +3399,55 @@
               },
               "parameters": [
                 "",
-                "hitsound",
+                "death",
                 "",
-                "66",
-                "1"
+                "50",
+                "RandomFloatInRange(0.9,1.1)"
+              ]
+            },
+            {
+              "type": {
+                "value": "CameraShake::ShakeCamera"
+              },
+              "parameters": [
+                "",
+                "TimeDelta() * 2",
+                "TimeDelta() * 2",
+                "TimeDelta() * 2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FlashLayer::FlashLayer"
+              },
+              "parameters": [
+                "",
+                "\"flash\"",
+                "TimeDelta() * 2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "en1_spawnParticles",
+                "p1_hitbox.X()",
+                "p1_hitbox.Y()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "en1_spawnParticles",
+                "=",
+                "270"
               ]
             },
             {
@@ -4668,23 +3455,919 @@
                 "value": "Delete"
               },
               "parameters": [
-                "en2_hitbox",
+                "p1_hitbox",
                 ""
               ]
             },
             {
               "type": {
-                "value": "ModVarScene"
+                "value": "ActivateBehavior"
               },
               "parameters": [
-                "game_totalScore",
-                "+",
-                "125"
+                "Enemy",
+                "Pathfinding",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_playerIsDead",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"ui\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "gameover_text",
+                "=",
+                "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R TO RESTART --\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"gameOver\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.2"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "en1_spawnParticles",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "game_totalScore",
+                    ">",
+                    "GlobalVariable(game_highScore)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "game_highScore",
+                    "=",
+                    "Variable(game_totalScore)"
+                  ]
+                }
               ]
             }
           ]
         }
-      ]
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Red/Blue States",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Initialise changeState timer when game starts"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_isStarted",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"game_changeState\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"game_changeState\"",
+                ">",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ToggleSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"game_changeState\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Toggle active states when needed"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "en1_hitbox",
+                "Activated",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "en2_hitbox",
+                "Activated",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "False"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "en1_hitbox",
+                "Activated",
+                "False"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "en2_hitbox",
+                "Activated",
+                "True"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "UI Bar"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeScaleWidth"
+              },
+              "parameters": [
+                "ui_stateBar",
+                "=",
+                "TimerElapsedTime(\"game_changeState\") / 10"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "ui_stateBar",
+                "\"bar_red\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "False"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "ui_stateBar",
+                "\"bar_blu\""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Activated states",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Hazard",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Hazard",
+                    "Activated",
+                    "False"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Hazard",
+                    "\"Inactive\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Hazard",
+                    "Activated",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Hazard",
+                    "\"Active\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Start and stop path finding depending on whether an enemy is activated or not. Note that while the player is dead, that path finding of enemies stops"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_playerIsDead",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Enemy",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Activated",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Pathfinding",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "PathfindingObstacle",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Activated",
+                        "True"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Pathfinding",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "PathfindingObstacle",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::SetDestination"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Pathfinding",
+                        "",
+                        "p1_hitbox.X()",
+                        "p1_hitbox.Y()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Pathfinding",
+                        "=",
+                        "48"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Start and stop path obstacle behaviour of a trap depending on whether is it active or not"
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Trap",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Trap",
+                    "Activated",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Trap",
+                    "PathfindingObstacle",
+                    "no"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Trap",
+                    "Activated",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Trap",
+                    "PathfindingObstacle",
+                    "yes"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Trap Settings",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Trigger both traps when play is on trap button"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "dev_trap_button",
+                    "",
+                    "",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "p1_bullet",
+                    "dev_trap_button",
+                    "",
+                    "",
+                    "no"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "dev_trap_button",
+                "\"trapButton_on\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Trap",
+                "Activated",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "dev_trap_button",
+                "\"trapButton_off\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Trap",
+                "Activated",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Trap",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Enemy",
+                "Trap",
+                "",
+                "",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Trap",
+                "Activated",
+                "True"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "Trap",
+                    "Type",
+                    "=",
+                    "\"Laser\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "hitsound",
+                    "",
+                    "66",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "game_totalScore",
+                    "+",
+                    "125"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "Trap",
+                    "Type",
+                    "=",
+                    "\"Floor\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "hitsound",
+                    "",
+                    "66",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "game_totalScore",
+                    "+",
+                    "200"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
     },
     {
       "type": "BuiltinCommonInstructions::Comment",
@@ -4697,42 +4380,6 @@
         "textR": 0
       },
       "comment": "Crosshair"
-    },
-    {
-      "disabled": true,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "AdvancedWindow::IsFocused"
-          },
-          "parameters": [
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "MettreXY"
-          },
-          "parameters": [
-            "ui_crosshair",
-            "=",
-            "CursorX()",
-            "=",
-            "CursorY()"
-          ]
-        },
-        {
-          "type": {
-            "value": "CacheSouris"
-          },
-          "parameters": [
-            ""
-          ]
-        }
-      ]
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -5348,7 +4995,7 @@
               },
               "parameters": [
                 "en1_hitbox",
-                "\"en1_active\""
+                "\"Active\""
               ]
             }
           ],
@@ -5407,7 +5054,7 @@
               },
               "parameters": [
                 "en1_hitbox",
-                "\"en1_inactive\""
+                "\"Inactive\""
               ]
             }
           ],
@@ -5452,7 +5099,7 @@
               },
               "parameters": [
                 "en2_hitbox",
-                "\"en2_active\""
+                "\"Active\""
               ]
             }
           ],
@@ -5511,7 +5158,7 @@
               },
               "parameters": [
                 "en2_hitbox",
-                "\"en2_inactive\""
+                "\"Inactive\""
               ]
             }
           ],
@@ -6106,19 +5753,16 @@
       "type": "FireBullet::FireBullet"
     },
     {
-      "name": "NavMeshPathfindingBehavior",
-      "type": "NavMeshPathfinding::NavMeshPathfindingBehavior"
+      "name": "Pathfinding",
+      "type": "PathfindingBehavior::PathfindingBehavior"
     },
     {
-      "name": "NavMeshPathfindingObstacleBehavior",
-      "type": "NavMeshPathfinding::NavMeshPathfindingObstacleBehavior",
-      "Viewpoint": "Top-Down",
-      "CellSize": 10,
-      "AreaLeftBound": 0,
-      "AreaTopBound": 0,
-      "AreaRightBound": 0,
-      "AreaBottomBound": 0,
-      "IsometricRatio": 0
+      "name": "PathfindingObstacle",
+      "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+    },
+    {
+      "name": "Player",
+      "type": "PlayerEvents::Player"
     },
     {
       "name": "TopDownMovement",
