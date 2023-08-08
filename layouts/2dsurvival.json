@@ -5401,6 +5401,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Bullet Collisions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5569,6 +5570,44 @@
                         ""
                       ]
                     }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "p1_bullet",
+                    "Wall",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Activatable::Activatable::IsActivated"
+                  },
+                  "parameters": [
+                    "Wall",
+                    "Activatable",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "p1_bullet",
+                    ""
                   ]
                 }
               ]
