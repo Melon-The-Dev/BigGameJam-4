@@ -185,7 +185,7 @@
         "alwaysLoaded": false,
         "file": "assets/2dSurvival/en1_hitbox.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/2dSurvival/en1_hitbox.png\",\"extension\":\".png\"}",
         "name": "assets\\2dSurvival\\en1_hitbox.png",
         "smoothed": false,
         "userAdded": false
@@ -194,7 +194,7 @@
         "alwaysLoaded": false,
         "file": "assets/2dSurvival/en2_hitbox.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/2dSurvival/en2_hitbox.png\",\"extension\":\".png\"}",
         "name": "assets\\2dSurvival\\en2_hitbox.png",
         "smoothed": false,
         "userAdded": false
@@ -460,6 +460,24 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Multitouch joysticks/10167ade22c4a6b48324e6c1d1bd6dc74179d7bed0775890903f418b4a05c8a1_Flat dark joystick thumb.png",
           "name": "Flat dark joystick thumb.png"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Active.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Active.png\"}",
+        "name": "Active",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Active2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Active2",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

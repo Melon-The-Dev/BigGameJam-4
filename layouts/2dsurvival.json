@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.2121641972173687,
+    "zoomFactor": 1.134371579716097,
     "windowMask": false
   },
   "objectsGroups": [
@@ -26,16 +26,28 @@
       "name": "Hazard",
       "objects": [
         {
-          "name": "en1_hitbox"
+          "name": "en1_grunt"
         },
         {
-          "name": "en2_hitbox"
+          "name": "en2_grunt"
         },
         {
           "name": "dev_trap"
         },
         {
           "name": "trap_laser"
+        },
+        {
+          "name": "en1_tank"
+        },
+        {
+          "name": "en1_trapper"
+        },
+        {
+          "name": "en2_tank"
+        },
+        {
+          "name": "en2_trapper"
         }
       ]
     },
@@ -43,10 +55,22 @@
       "name": "Enemy",
       "objects": [
         {
-          "name": "en1_hitbox"
+          "name": "en1_grunt"
         },
         {
-          "name": "en2_hitbox"
+          "name": "en2_grunt"
+        },
+        {
+          "name": "en1_tank"
+        },
+        {
+          "name": "en1_trapper"
+        },
+        {
+          "name": "en2_tank"
+        },
+        {
+          "name": "en2_trapper"
         }
       ]
     },
@@ -65,10 +89,16 @@
       "name": "Red",
       "objects": [
         {
-          "name": "en1_hitbox"
+          "name": "en1_grunt"
         },
         {
           "name": "wall_red"
+        },
+        {
+          "name": "en1_tank"
+        },
+        {
+          "name": "en1_trapper"
         }
       ]
     },
@@ -76,10 +106,16 @@
       "name": "Blue",
       "objects": [
         {
-          "name": "en2_hitbox"
+          "name": "en2_grunt"
         },
         {
           "name": "wall_blu"
+        },
+        {
+          "name": "en2_tank"
+        },
+        {
+          "name": "en2_trapper"
         }
       ]
     },
@@ -91,6 +127,39 @@
         },
         {
           "name": "wall_blu"
+        }
+      ]
+    },
+    {
+      "name": "Grunt",
+      "objects": [
+        {
+          "name": "en1_grunt"
+        },
+        {
+          "name": "en2_grunt"
+        }
+      ]
+    },
+    {
+      "name": "Tank",
+      "objects": [
+        {
+          "name": "en1_tank"
+        },
+        {
+          "name": "en2_tank"
+        }
+      ]
+    },
+    {
+      "name": "Trapper",
+      "objects": [
+        {
+          "name": "en1_trapper"
+        },
+        {
+          "name": "en2_trapper"
         }
       ]
     }
@@ -132,7 +201,7 @@
       "customSize": false,
       "height": 0,
       "layer": "",
-      "name": "en1_hitbox",
+      "name": "en1_grunt",
       "persistentUuid": "4fcd21bc-1c50-4009-88fa-30a33709be6e",
       "width": 0,
       "x": 72,
@@ -389,7 +458,7 @@
       "customSize": false,
       "height": 0,
       "layer": "",
-      "name": "en2_hitbox",
+      "name": "en2_grunt",
       "persistentUuid": "e9b134fe-2e6a-44c4-be1c-6ea03611a9dd",
       "width": 0,
       "x": 216,
@@ -397,14 +466,21 @@
       "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Alive",
+          "type": "boolean",
+          "value": true
+        }
+      ]
     },
     {
       "angle": 0,
       "customSize": false,
       "height": 0,
       "layer": "",
-      "name": "en1_hitbox",
+      "name": "en1_grunt",
       "persistentUuid": "0d0885bf-5e5e-4195-a3d4-bd013e532056",
       "width": 0,
       "x": 56,
@@ -419,41 +495,11 @@
       "customSize": false,
       "height": 0,
       "layer": "",
-      "name": "en2_hitbox",
-      "persistentUuid": "09eeaa6b-09d5-4b91-b29b-cc6a3471430e",
-      "width": 0,
-      "x": 440,
-      "y": 296,
-      "zOrder": 3,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en1_hitbox",
+      "name": "en1_grunt",
       "persistentUuid": "aa789f1f-ac3e-48f2-893c-491a62dab39f",
       "width": 0,
       "x": 88,
       "y": 136,
-      "zOrder": 3,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_hitbox",
-      "persistentUuid": "9ed2af85-4095-41e0-ad08-ede1b668d7ff",
-      "width": 0,
-      "x": 504,
-      "y": 56,
       "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
@@ -1053,6 +1099,36 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en2_tank",
+      "persistentUuid": "b998a27e-aef2-49ab-8059-6eca5671e610",
+      "width": 0,
+      "x": 504,
+      "y": 40,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_tank",
+      "persistentUuid": "5e5b4677-ddf2-4ca8-86a8-3cced4f1cd03",
+      "width": 0,
+      "x": 568,
+      "y": 120,
+      "zOrder": 24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -1375,7 +1451,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "en1_hitbox",
+      "name": "en1_grunt",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -1423,11 +1499,301 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
                   "image": "assets\\2dSurvival\\en1_hitbox.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\en_inactive.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "en1_tank",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
+          "name": "Enemy",
+          "type": "Enemy::Enemy",
+          "Score": 2.143215748875e-312,
+          "Alive": true,
+          "Health": 3
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
+          "cellHeight": 16,
+          "cellWidth": 16,
+          "acceleration": 0,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "extraBorder": 4,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 48,
+          "rotateObject": false,
+          "smoothingMaxCellGap": 1
+        },
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Active",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\en_inactive.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "en1_trapper",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
+          "name": "Enemy",
+          "type": "Enemy::Enemy",
+          "Score": 2.143215748875e-312,
+          "Alive": true
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
+          "cellHeight": 16,
+          "cellWidth": 16,
+          "acceleration": 0,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "extraBorder": 4,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 48,
+          "rotateObject": false,
+          "smoothingMaxCellGap": 1
+        },
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Active",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1625,7 +1991,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "en2_hitbox",
+      "name": "en2_grunt",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -1680,6 +2046,310 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\en2_hitbox.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\en_inactive.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "en2_tank",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "Alive",
+          "type": "boolean",
+          "value": true
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
+          "name": "Enemy",
+          "type": "Enemy::Enemy",
+          "Score": 2.143215748875e-312,
+          "Alive": true,
+          "Health": 3
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
+          "cellHeight": 16,
+          "cellWidth": 16,
+          "acceleration": 0,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "extraBorder": 4,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 48,
+          "rotateObject": false,
+          "smoothingMaxCellGap": 1
+        },
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Active2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\en_inactive.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "en2_trapper",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "Alive",
+          "type": "boolean",
+          "value": true
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
+          "name": "Enemy",
+          "type": "Enemy::Enemy",
+          "Score": 2.143215748875e-312,
+          "Alive": true
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
+          "cellHeight": 16,
+          "cellWidth": 16,
+          "acceleration": 0,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "extraBorder": 4,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 48,
+          "rotateObject": false,
+          "smoothingMaxCellGap": 1
+        },
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
@@ -3497,7 +4167,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Change info texts depending on device",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3629,6 +4298,17 @@
               "parameters": [
                 "",
                 "\"start\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "ammo",
+                "=",
+                "3"
               ]
             },
             {
@@ -4037,7 +4717,7 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_hitbox",
+                "en1_grunt",
                 "dev_wall",
                 "yes"
               ]
@@ -4047,7 +4727,7 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en2_hitbox",
+                "en2_grunt",
                 "dev_wall",
                 "yes"
               ]
@@ -4063,8 +4743,8 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_hitbox",
-                "en1_hitbox",
+                "en1_grunt",
+                "en1_grunt",
                 "yes"
               ]
             },
@@ -4073,8 +4753,8 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_hitbox",
-                "en2_hitbox",
+                "en1_grunt",
+                "en2_grunt",
                 "yes"
               ]
             }
@@ -4089,8 +4769,8 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en2_hitbox",
-                "en1_hitbox",
+                "en2_grunt",
+                "en1_grunt",
                 "yes"
               ]
             },
@@ -4099,8 +4779,8 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en2_hitbox",
-                "en2_hitbox",
+                "en2_grunt",
+                "en2_grunt",
                 "yes"
               ]
             }
@@ -4136,7 +4816,7 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_hitbox",
+                "en1_grunt",
                 "Wall",
                 "yes"
               ]
@@ -4146,7 +4826,7 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en2_hitbox",
+                "en2_grunt",
                 "Wall",
                 "yes"
               ]
@@ -4735,6 +5415,7 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -4796,6 +5477,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5078,10 +5760,21 @@
                         "value": "PathfindingBehavior::Speed"
                       },
                       "parameters": [
-                        "Enemy",
+                        "Grunt",
                         "Pathfinding",
                         "=",
                         "48"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "Tank",
+                        "Pathfinding",
+                        "=",
+                        "16"
                       ]
                     }
                   ]
@@ -5305,7 +5998,7 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Enemy::Enemy::KillEnemy"
+                    "value": "Enemy::Enemy::HitEnemy"
                   },
                   "parameters": [
                     "Enemy",
@@ -5334,7 +6027,7 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Enemy::Enemy::KillEnemy"
+                    "value": "Enemy::Enemy::HitEnemy"
                   },
                   "parameters": [
                     "Enemy",
@@ -5841,14 +6534,15 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Spawning::Spawn"
+                    "value": "Spawning::Spawn2"
                   },
                   "parameters": [
                     "",
                     "en1_spawn",
                     "en1_spawnParticles",
-                    "en1_hitbox",
                     "2",
+                    "en1_grunt",
+                    "en1_tank",
                     ""
                   ]
                 }
@@ -5860,14 +6554,15 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Spawning::Spawn"
+                    "value": "Spawning::Spawn2"
                   },
                   "parameters": [
                     "",
                     "en2_spawn",
                     "en2_spawnParticles",
-                    "en2_hitbox",
                     "2",
+                    "en2_grunt",
+                    "en2_tank",
                     ""
                   ]
                 }
@@ -5982,8 +6677,8 @@
                 "",
                 "ammo_spawn",
                 "ammo_spawnParticles",
-                "ammo_pickup",
                 "1",
+                "ammo_pickup",
                 ""
               ]
             }
@@ -6058,7 +6753,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Enemy",
               "conditions": [
@@ -6174,7 +6868,7 @@
                     },
                     {
                       "type": {
-                        "value": "Enemy::Enemy::KillEnemy"
+                        "value": "Enemy::Enemy::HitEnemy"
                       },
                       "parameters": [
                         "Enemy",
@@ -6719,6 +7413,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Walls",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
