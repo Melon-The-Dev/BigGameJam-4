@@ -3490,6 +3490,91 @@
                 "\"gameOver\""
               ]
             }
+          ],
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Change info texts depending on device",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "gameover_text",
+                        "=",
+                        "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- TOUCH TO RESTART --\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "start_text",
+                        "=",
+                        "\"-- GameThingPrototype --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with the left touchpad, hold the right touchpad button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- TOUCH TO CONTINUE --\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "gameover_text",
+                        "=",
+                        "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R OR CLICK TO RESTART --\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "start_text",
+                        "=",
+                        "\"-- GameThingPrototype --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with WASD, hold the Mouse left button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- PRESS ANY KEY OR CLICK TO CONTINUE --\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
           ]
         },
         {
@@ -3661,90 +3746,6 @@
               ]
             }
           ]
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Change info texts depending on device",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SystemInfo::HasTouchScreen"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "gameover_text",
-                    "=",
-                    "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- TOUCH TO RESTART --\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "start_text",
-                    "=",
-                    "\"-- GameThingPrototype --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with the left touchpad, hold the right touchpad button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- TOUCH TO CONTINUE --\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "SystemInfo::HasTouchScreen"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "gameover_text",
-                    "=",
-                    "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R OR CLICK TO RESTART --\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "start_text",
-                    "=",
-                    "\"-- GameThingPrototype --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with WASD, hold the Mouse left button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- PRESS ANY KEY OR CLICK TO CONTINUE --\""
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
         }
       ],
       "parameters": []
