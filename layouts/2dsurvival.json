@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.3389693172845394,
+    "zoomFactor": 1.2121641972173687,
     "windowMask": false
   },
   "objectsGroups": [
@@ -2935,7 +2935,7 @@
         }
       ],
       "behaviors": [],
-      "string": "-- GAME OVER --\n\nYour score: \n\nHighest Score:\n\n-- PRESS R TO RESTART --",
+      "string": "-- GAME OVER --\n\nYour score: \n\nHighest Score:\n\n-- CLICK OR TOUCH TO RESTART --",
       "font": "",
       "textAlignment": "center",
       "characterSize": 16,
@@ -3512,52 +3512,19 @@
               "subInstructions": [
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::And"
+                    "value": "MouseButtonPressed"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "SystemInfo::HasTouchScreen"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MouseButtonPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "Left"
-                      ]
-                    }
+                  "parameters": [
+                    "",
+                    "Left"
                   ]
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::And"
+                    "value": "AnyKeyPressed"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "SystemInfo::HasTouchScreen"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AnyKeyPressed"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
+                  "parameters": [
+                    ""
                   ]
                 }
               ]
@@ -3691,6 +3658,166 @@
                 "Type",
                 "=",
                 "\"Laser\""
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Change info texts depending on device",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SystemInfo::HasTouchScreen"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "gameover_text",
+                    "=",
+                    "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- TOUCH TO RESTART --\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "start_text",
+                    "=",
+                    "\"-- GameThingPrototype --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with the left touchpad, hold the right touchpad button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- TOUCH TO CONTINUE --\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "SystemInfo::HasTouchScreen"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "gameover_text",
+                    "=",
+                    "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R OR CLICK TO RESTART --\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "start_text",
+                    "=",
+                    "\"-- GameThingPrototype --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with WASD, hold the Mouse left button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- PRESS ANY KEY OR CLICK TO CONTINUE --\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Restart Game",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Restart game when r is pressed or a new touch is started to prevent accidentally starting the level again"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "",
+                "\"gameOver\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "r"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "HasAnyTouchOrMouseStarted"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"2Dsurvival\"",
+                ""
               ]
             }
           ]
@@ -4169,16 +4296,6 @@
               "parameters": [
                 "",
                 "\"ui\""
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "gameover_text",
-                "=",
-                "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R TO RESTART --\""
               ]
             },
             {
@@ -5195,6 +5312,15 @@
               "parameters": [
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_playerIsDead",
+                "False"
+              ]
             }
           ],
           "actions": [
@@ -5205,6 +5331,17 @@
               "parameters": [
                 "",
                 "\"MobileControls\""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreAutour"
+              },
+              "parameters": [
+                "ui_crosshair",
+                "p1_hitbox",
+                "90",
+                "SpriteMultitouchJoystick::StickAngle(1, \"Secondary\")"
               ]
             }
           ]
@@ -5222,7 +5359,6 @@
           "comment": "Crosshair"
         },
         {
-          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5235,66 +5371,34 @@
               ]
             }
           ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "ui_crosshair",
-                    "=",
-                    "CursorX()",
-                    "=",
-                    "CursorY()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CacheSouris"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "actions": [
             {
               "type": {
-                "inverted": true,
-                "value": "SystemInfo::HasTouchScreen"
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"MobileControls\""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "ui_crosshair",
+                "=",
+                "CursorX()",
+                "=",
+                "CursorY()"
+              ]
+            },
+            {
+              "type": {
+                "value": "CacheSouris"
               },
               "parameters": [
                 ""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreAutour"
-                  },
-                  "parameters": [
-                    "ui_crosshair",
-                    "p1_hitbox",
-                    "90",
-                    "SpriteMultitouchJoystick::StickAngle(1, \"Secondary\")"
-                  ]
-                }
               ]
             }
           ]
@@ -6059,6 +6163,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Bullet Trail",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6131,6 +6236,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Aiming",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6175,7 +6281,6 @@
                       "subInstructions": [
                         {
                           "type": {
-                            "inverted": true,
                             "value": "SystemInfo::HasTouchScreen"
                           },
                           "parameters": [
@@ -6189,6 +6294,32 @@
                           "parameters": [
                             "ShootJoystick",
                             ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "SystemInfo::HasTouchScreen"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MouseButtonPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
                           ]
                         }
                       ]
@@ -6780,18 +6911,6 @@
         }
       ],
       "parameters": []
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "just a random comment"
     }
   ],
   "layers": [
