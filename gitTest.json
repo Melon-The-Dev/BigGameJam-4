@@ -478,6 +478,60 @@
         "name": "Active2",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_conveyorBelt.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_conveyorBelt.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_conveyorBelt2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_conveyorBelt2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_conveyorBelt_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_conveyorBelt_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_conveyorBelt_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_conveyorBelt_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/lvl_layout00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\lvl_layout00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold Coin.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Gold Coin.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -489,14 +543,14 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/2dsurvival"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/untitled-scene"
     }
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/hazard_conveyorbelt"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/spritemultitouchjoystick"

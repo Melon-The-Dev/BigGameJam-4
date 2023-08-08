@@ -1,0 +1,436 @@
+{
+  "author": "",
+  "category": "",
+  "extensionNamespace": "",
+  "fullName": "hazard_conveyorBelt",
+  "helpPath": "",
+  "iconUrl": "",
+  "name": "hazard_conveyorBelt",
+  "previewIconUrl": "",
+  "shortDescription": "",
+  "version": "",
+  "description": "Originally automatically extracted from events of the project",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "blablabla",
+      "fullName": "Create Conveyor Belt",
+      "functionType": "Action",
+      "name": "create_conveyorBelt",
+      "sentence": "Take _PARAM1_ , which moves in the _PARAM3_ direction, and create a Tiled Object _PARAM2_ on top of it.",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Show the correct Arrows for the Belts and define the right Angles."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"belt_direction\"",
+                "=",
+                "\"Right\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "hazard_belt",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "hazard_belt",
+                "\"belt_horizontal\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_angle",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"belt_direction\"",
+                "=",
+                "\"Down\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "hazard_belt",
+                "\"belt_vertical\""
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipY"
+              },
+              "parameters": [
+                "hazard_belt",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_angle",
+                "=",
+                "90"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"belt_direction\"",
+                "=",
+                "\"Left\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "hazard_belt",
+                "\"belt_horizontal\""
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "hazard_belt",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_angle",
+                "=",
+                "180"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"belt_direction\"",
+                "=",
+                "\"Up\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "hazard_belt",
+                "\"belt_vertical\""
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipY"
+              },
+              "parameters": [
+                "hazard_belt",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_angle",
+                "=",
+                "270"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Create a Tiled Object on top, resize it  and place it correctly."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "CompareArgumentAsString"
+                  },
+                  "parameters": [
+                    "\"belt_direction\"",
+                    "=",
+                    "\"Right\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareArgumentAsString"
+                  },
+                  "parameters": [
+                    "\"belt_direction\"",
+                    "=",
+                    "\"Left\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "tiled_belt",
+                "hazard_belt.X()",
+                "hazard_belt.Y()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "tiled_belt",
+                "=",
+                "hazard_belt.Variable(belt_angle)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TiledSpriteObject::SetSize"
+              },
+              "parameters": [
+                "tiled_belt",
+                "hazard_belt.Width()",
+                "hazard_belt.Height()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetCenter"
+              },
+              "parameters": [
+                "tiled_belt",
+                "=",
+                "hazard_belt.X()",
+                "=",
+                "hazard_belt.Y()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "tiled_belt",
+                "=",
+                "hazard_belt.ZOrder() + 1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "CompareArgumentAsString"
+                  },
+                  "parameters": [
+                    "\"belt_direction\"",
+                    "=",
+                    "\"Down\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareArgumentAsString"
+                  },
+                  "parameters": [
+                    "\"belt_direction\"",
+                    "=",
+                    "\"Up\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "tiled_belt",
+                "hazard_belt.X()",
+                "hazard_belt.Y()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "tiled_belt",
+                "=",
+                "hazard_belt.Variable(belt_angle)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TiledSpriteObject::SetSize"
+              },
+              "parameters": [
+                "tiled_belt",
+                "hazard_belt.Height()",
+                "hazard_belt.Width()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetCenter"
+              },
+              "parameters": [
+                "tiled_belt",
+                "=",
+                "hazard_belt.X()",
+                "=",
+                "hazard_belt.Y()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "tiled_belt",
+                "=",
+                "hazard_belt.ZOrder() + 1"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "belt object",
+          "name": "hazard_belt",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "tiled object on top",
+          "name": "tiled_belt",
+          "supplementaryInformation": "TiledSpriteObject::TiledSprite",
+          "type": "objectList"
+        },
+        {
+          "description": "belt_direction",
+          "name": "belt_direction",
+          "supplementaryInformation": "[\"Right\",\"Down\",\"Left\",\"Up\"]",
+          "type": "stringWithSelector"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}
