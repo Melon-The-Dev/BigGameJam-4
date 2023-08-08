@@ -60,6 +60,39 @@
           "name": "dev_trap"
         }
       ]
+    },
+    {
+      "name": "Red",
+      "objects": [
+        {
+          "name": "en1_hitbox"
+        },
+        {
+          "name": "wall_red"
+        }
+      ]
+    },
+    {
+      "name": "Blue",
+      "objects": [
+        {
+          "name": "en2_hitbox"
+        },
+        {
+          "name": "wall_blu"
+        }
+      ]
+    },
+    {
+      "name": "Wall",
+      "objects": [
+        {
+          "name": "wall_red"
+        },
+        {
+          "name": "wall_blu"
+        }
+      ]
     }
   ],
   "variables": [],
@@ -1314,16 +1347,20 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [
-        {
-          "folded": true,
-          "name": "Alive",
-          "type": "boolean",
-          "value": true
-        }
-      ],
+      "variables": [],
       "effects": [],
       "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
+          "name": "Enemy",
+          "type": "Enemy::Enemy",
+          "Score": 2.143215748875e-312,
+          "Alive": true
+        },
         {
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
@@ -1570,6 +1607,17 @@
       ],
       "effects": [],
       "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
+          "name": "Enemy",
+          "type": "Enemy::Enemy",
+          "Score": 2.143215748875e-312,
+          "Alive": true
+        },
         {
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
@@ -2078,6 +2126,11 @@
       "variables": [],
       "effects": [],
       "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
         {
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
@@ -2644,6 +2697,11 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
           "cost": 2,
@@ -2878,6 +2936,11 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
           "cost": 2,
@@ -2993,6 +3056,11 @@
       "variables": [],
       "effects": [],
       "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
         {
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
@@ -3296,11 +3364,11 @@
           "actions": [
             {
               "type": {
-                "value": "SetObjectVariableAsBoolean"
+                "value": "Activatable::Activatable::Deactivate"
               },
               "parameters": [
                 "Hazard",
-                "Activated",
+                "Activatable",
                 "False"
               ]
             }
@@ -3535,98 +3603,6 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "wall_red",
-                "\"wall_on\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "wall_red",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en1_hitbox",
-                "wall_red",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en2_hitbox",
-                "wall_red",
-                "yes"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "wall_blu",
-                "\"wall_on\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "wall_blu",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en1_hitbox",
-                "wall_blu",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en2_hitbox",
-                "wall_blu",
-                "yes"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
@@ -3672,6 +3648,53 @@
               "parameters": [
                 "en2_hitbox",
                 "en2_hitbox",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Activatable::Activatable::IsActivated"
+              },
+              "parameters": [
+                "Wall",
+                "Activatable",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "Wall",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "en1_hitbox",
+                "Wall",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "en2_hitbox",
+                "Wall",
                 "yes"
               ]
             }
@@ -4011,21 +4034,21 @@
           "actions": [
             {
               "type": {
-                "value": "SetObjectVariableAsBoolean"
+                "value": "Activatable::Activatable::Activate"
               },
               "parameters": [
-                "en1_hitbox",
-                "Activated",
+                "Red",
+                "Activatable",
                 "True"
               ]
             },
             {
               "type": {
-                "value": "SetObjectVariableAsBoolean"
+                "value": "Activatable::Activatable::Deactivate"
               },
               "parameters": [
-                "en2_hitbox",
-                "Activated",
+                "Blue",
+                "Activatable",
                 ""
               ]
             }
@@ -4047,22 +4070,22 @@
           "actions": [
             {
               "type": {
-                "value": "SetObjectVariableAsBoolean"
+                "value": "Activatable::Activatable::Deactivate"
               },
               "parameters": [
-                "en1_hitbox",
-                "Activated",
-                "False"
+                "Red",
+                "Activatable",
+                ""
               ]
             },
             {
               "type": {
-                "value": "SetObjectVariableAsBoolean"
+                "value": "Activatable::Activatable::Activate"
               },
               "parameters": [
-                "en2_hitbox",
-                "Activated",
-                "True"
+                "Blue",
+                "Activatable",
+                ""
               ]
             }
           ]
@@ -4185,11 +4208,12 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "ObjectVariableAsBoolean"
+                    "inverted": true,
+                    "value": "Activatable::Activatable::IsActivated"
                   },
                   "parameters": [
                     "Enemy",
-                    "Activated",
+                    "Activatable",
                     ""
                   ]
                 }
@@ -4245,11 +4269,11 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "ObjectVariableAsBoolean"
+                    "value": "Activatable::Activatable::IsActivated"
                   },
                   "parameters": [
                     "Hazard",
-                    "Activated",
+                    "Activatable",
                     "True"
                   ]
                 }
@@ -4316,11 +4340,12 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "ObjectVariableAsBoolean"
+                    "inverted": true,
+                    "value": "Activatable::Activatable::IsActivated"
                   },
                   "parameters": [
                     "Hazard",
-                    "Activated",
+                    "Activatable",
                     "False"
                   ]
                 }
@@ -4342,11 +4367,11 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "ObjectVariableAsBoolean"
+                    "value": "Activatable::Activatable::IsActivated"
                   },
                   "parameters": [
                     "Hazard",
-                    "Activated",
+                    "Activatable",
                     "True"
                   ]
                 }
@@ -4393,11 +4418,11 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "ObjectVariableAsBoolean"
+                    "value": "Activatable::Activatable::IsActivated"
                   },
                   "parameters": [
                     "Trap",
-                    "Activated",
+                    "Activatable",
                     "True"
                   ]
                 }
@@ -4420,11 +4445,12 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "ObjectVariableAsBoolean"
+                    "inverted": true,
+                    "value": "Activatable::Activatable::IsActivated"
                   },
                   "parameters": [
                     "Trap",
-                    "Activated",
+                    "Activatable",
                     ""
                   ]
                 }
@@ -4474,11 +4500,11 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "ObjectVariableAsBoolean"
+                        "value": "Activatable::Activatable::IsActivated"
                       },
                       "parameters": [
                         "Enemy",
-                        "Activated",
+                        "Activatable",
                         "True"
                       ]
                     }
@@ -4534,11 +4560,12 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "ObjectVariableAsBoolean"
+                        "inverted": true,
+                        "value": "Activatable::Activatable::IsActivated"
                       },
                       "parameters": [
                         "Enemy",
-                        "Activated",
+                        "Activatable",
                         ""
                       ]
                     }
@@ -4650,11 +4677,11 @@
             },
             {
               "type": {
-                "value": "SetObjectVariableAsBoolean"
+                "value": "Activatable::Activatable::Activate"
               },
               "parameters": [
                 "Trap",
-                "Activated",
+                "Activatable",
                 "True"
               ]
             },
@@ -4677,11 +4704,11 @@
             },
             {
               "type": {
-                "value": "SetObjectVariableAsBoolean"
+                "value": "Activatable::Activatable::Deactivate"
               },
               "parameters": [
                 "Trap",
-                "Activated",
+                "Activatable",
                 ""
               ]
             }
@@ -4705,11 +4732,11 @@
             },
             {
               "type": {
-                "value": "ObjectVariableAsBoolean"
+                "value": "Activatable::Activatable::IsActivated"
               },
               "parameters": [
                 "Trap",
-                "Activated",
+                "Activatable",
                 "True"
               ]
             }
@@ -4725,16 +4752,6 @@
                 "",
                 "66",
                 "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "Enemy",
-                "Alive",
-                "False"
               ]
             }
           ],
@@ -4757,12 +4774,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "ModVarObjet"
+                    "value": "Enemy::Enemy::KillEnemy"
                   },
                   "parameters": [
                     "Enemy",
-                    "Score",
-                    "=",
+                    "Enemy",
+                    "125",
                     "125"
                   ]
                 }
@@ -4786,12 +4803,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "ModVarObjet"
+                    "value": "Enemy::Enemy::KillEnemy"
                   },
                   "parameters": [
                     "Enemy",
-                    "Score",
-                    "=",
+                    "Enemy",
+                    "200",
                     "200"
                   ]
                 }
@@ -5384,7 +5401,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Bullet Collisions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5470,11 +5486,12 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "ObjectVariableAsBoolean"
+                        "inverted": true,
+                        "value": "Activatable::Activatable::IsActivated"
                       },
                       "parameters": [
                         "Enemy",
-                        "Activated",
+                        "Activatable",
                         ""
                       ]
                     }
@@ -5496,11 +5513,11 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "ObjectVariableAsBoolean"
+                        "value": "Activatable::Activatable::IsActivated"
                       },
                       "parameters": [
                         "Enemy",
-                        "Activated",
+                        "Activatable",
                         "True"
                       ]
                     }
@@ -5531,17 +5548,6 @@
                     },
                     {
                       "type": {
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Enemy",
-                        "Score",
-                        "+",
-                        "100*p1_bullet.Variable(bullet_multiplier)"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "PlaySound"
                       },
                       "parameters": [
@@ -5554,12 +5560,13 @@
                     },
                     {
                       "type": {
-                        "value": "SetObjectVariableAsBoolean"
+                        "value": "Enemy::Enemy::KillEnemy"
                       },
                       "parameters": [
                         "Enemy",
-                        "Alive",
-                        "False"
+                        "Enemy",
+                        "100*p1_bullet.Variable(bullet_multiplier)",
+                        ""
                       ]
                     }
                   ]
@@ -5909,7 +5916,7 @@
       "colorR": 74,
       "creationTime": 0,
       "folded": true,
-      "name": "Level Objects Settings",
+      "name": "Walls",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -5918,11 +5925,12 @@
           "conditions": [
             {
               "type": {
-                "value": "SceneVariableAsBoolean"
+                "value": "Activatable::Activatable::IsActivated"
               },
               "parameters": [
-                "enRedState",
-                "True"
+                "Wall",
+                "Activatable",
+                ""
               ]
             }
           ],
@@ -5932,7 +5940,7 @@
                 "value": "SetAnimationName"
               },
               "parameters": [
-                "wall_red",
+                "Wall",
                 "\"wall_on\""
               ]
             },
@@ -5941,28 +5949,9 @@
                 "value": "ActivateBehavior"
               },
               "parameters": [
-                "wall_red",
+                "Wall",
                 "PathfindingObstacle",
                 "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetAnimationName"
-              },
-              "parameters": [
-                "wall_blu",
-                "\"wall_off\""
-              ]
-            },
-            {
-              "type": {
-                "value": "ActivateBehavior"
-              },
-              "parameters": [
-                "wall_blu",
-                "PathfindingObstacle",
-                "no"
               ]
             }
           ]
@@ -5972,11 +5961,13 @@
           "conditions": [
             {
               "type": {
-                "value": "SceneVariableAsBoolean"
+                "inverted": true,
+                "value": "Activatable::Activatable::IsActivated"
               },
               "parameters": [
-                "enRedState",
-                "False"
+                "Wall",
+                "Activatable",
+                ""
               ]
             }
           ],
@@ -5986,7 +5977,7 @@
                 "value": "SetAnimationName"
               },
               "parameters": [
-                "wall_red",
+                "Wall",
                 "\"wall_off\""
               ]
             },
@@ -5995,28 +5986,9 @@
                 "value": "ActivateBehavior"
               },
               "parameters": [
-                "wall_red",
+                "Wall",
                 "PathfindingObstacle",
-                "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetAnimationName"
-              },
-              "parameters": [
-                "wall_blu",
-                "\"wall_on\""
-              ]
-            },
-            {
-              "type": {
-                "value": "ActivateBehavior"
-              },
-              "parameters": [
-                "wall_blu",
-                "PathfindingObstacle",
-                "yes"
+                ""
               ]
             }
           ]
@@ -6029,7 +6001,7 @@
                 "value": "CollisionPoint"
               },
               "parameters": [
-                "wall_red",
+                "Wall",
                 "p1_hitbox.CenterX()",
                 "p1_hitbox.CenterY()"
               ]
@@ -6039,48 +6011,7 @@
                 "value": "AnimationName"
               },
               "parameters": [
-                "wall_red",
-                "\"wall_on\""
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "game_playerIsDead",
-                "True"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionPoint"
-              },
-              "parameters": [
-                "wall_blu",
-                "p1_hitbox.CenterX()",
-                "p1_hitbox.CenterY()"
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "wall_blu",
+                "Wall",
                 "\"wall_on\""
               ]
             },
@@ -6122,11 +6053,11 @@
           "conditions": [
             {
               "type": {
-                "value": "ObjectVariableAsBoolean"
+                "value": "Enemy::Enemy::IsDead"
               },
               "parameters": [
                 "Enemy",
-                "Alive",
+                "Enemy",
                 ""
               ]
             }
@@ -6156,7 +6087,7 @@
                   "parameters": [
                     "game_totalScore",
                     "+",
-                    "Enemy.Variable(Score)"
+                    "Enemy.Enemy::Score()"
                   ]
                 },
                 {
@@ -6212,7 +6143,7 @@
                   "parameters": [
                     "en_scoreText",
                     "=",
-                    "ToString(Enemy.Variable(Score))"
+                    "ToString(Enemy.Enemy::Score())"
                   ]
                 },
                 {
@@ -6342,6 +6273,14 @@
     }
   ],
   "behaviorsSharedData": [
+    {
+      "name": "Activatable",
+      "type": "Activatable::Activatable"
+    },
+    {
+      "name": "Enemy",
+      "type": "Enemy::Enemy"
+    },
     {
       "name": "FireBullet",
       "type": "FireBullet::FireBullet"
