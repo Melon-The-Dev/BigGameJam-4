@@ -434,6 +434,32 @@
         "name": "assets\\2dSurvival\\wall_blu.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Flat dark joystick border.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Flat dark joystick border.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Multitouch joysticks/1db606cabd7372d1494ba5934bc25bcdd72f5a213c4a27509be57c3f4d5aecca_Flat dark joystick border.png",
+          "name": "Flat dark joystick border.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Flat dark joystick thumb.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Flat dark joystick thumb.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Multitouch joysticks/10167ade22c4a6b48324e6c1d1bd6dc74179d7bed0775890903f418b4a05c8a1_Flat dark joystick thumb.png",
+          "name": "Flat dark joystick thumb.png"
+        }
       }
     ],
     "resourceFolders": []
@@ -453,6 +479,10 @@
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/spritemultitouchjoystick"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/flash"

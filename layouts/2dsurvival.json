@@ -1021,6 +1021,38 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 32,
+      "height": 80,
+      "layer": "MobileControls",
+      "name": "MovementJoystick",
+      "persistentUuid": "e2280d93-82f9-44b3-879c-f286a5578310",
+      "width": 80,
+      "x": 56,
+      "y": 296,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 32,
+      "height": 80,
+      "layer": "MobileControls",
+      "name": "ShootJoystick",
+      "persistentUuid": "11254bd4-aafc-4ff5-85f0-f3b739bd5268",
+      "width": 80,
+      "x": 584,
+      "y": 296,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -2868,7 +2900,7 @@
         }
       ],
       "behaviors": [],
-      "string": "-- GameThingPrototype --\n\nSurvive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\n\nMove with WASD, hold the Mouse left button to aim and release it for shooting.\n\nPress or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\n\n-- PRESS ANY KEY TO CONTINUE --",
+      "string": "-- GameThingPrototype --\n\nSurvive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\n\nMove with WASD, hold the Mouse left button to aim and release it for shooting.\n\nPress or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\n\n-- PRESS ANY KEY OR TOUCH(MOBILE) TO CONTINUE --",
       "font": "",
       "textAlignment": "center",
       "characterSize": 16,
@@ -3166,6 +3198,196 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "e71bd69f896d6c7531b48c65ceb5da25071d4fbdeb518aeceecba8d21f34ed8d",
+      "name": "MovementJoystick",
+      "tags": "",
+      "type": "SpriteMultitouchJoystick::SpriteMultitouchJoystick",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 1,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 2,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "content": {
+        "JoystickIdentifier": "Primary"
+      },
+      "childrenContent": {
+        "Border": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Flat dark joystick border.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Thumb": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Flat dark joystick thumb.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assetStoreId": "e71bd69f896d6c7531b48c65ceb5da25071d4fbdeb518aeceecba8d21f34ed8d",
+      "name": "ShootJoystick",
+      "tags": "",
+      "type": "SpriteMultitouchJoystick::SpriteMultitouchJoystick",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "leftEdgeAnchor": 2,
+          "bottomEdgeAnchor": 0,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 2,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "content": {
+        "JoystickIdentifier": "Secondary"
+      },
+      "childrenContent": {
+        "Border": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Flat dark joystick border.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Thumb": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Flat dark joystick thumb.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ],
   "events": [
@@ -3284,10 +3506,60 @@
             },
             {
               "type": {
-                "value": "AnyKeyPressed"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                ""
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MouseButtonPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnyKeyPressed"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -3453,11 +3725,29 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyPressed"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "",
-                "w"
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "w"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                  },
+                  "parameters": [
+                    "MovementJoystick",
+                    "\"Up\"",
+                    ""
+                  ]
+                }
               ]
             }
           ],
@@ -3479,11 +3769,29 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyPressed"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "",
-                "a"
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "a"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                  },
+                  "parameters": [
+                    "MovementJoystick",
+                    "\"Left\"",
+                    ""
+                  ]
+                }
               ]
             }
           ],
@@ -3505,11 +3813,29 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyPressed"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "",
-                "s"
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "s"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                  },
+                  "parameters": [
+                    "MovementJoystick",
+                    "\"Down\"",
+                    ""
+                  ]
+                }
               ]
             }
           ],
@@ -3531,11 +3857,29 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyPressed"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "",
-                "d"
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "d"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                  },
+                  "parameters": [
+                    "MovementJoystick",
+                    "\"Right\"",
+                    ""
+                  ]
+                }
               ]
             }
           ],
@@ -4839,30 +5183,118 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Crosshair"
+          "comment": "mobilecontrols\n"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+          "conditions": [
             {
               "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "ui_crosshair",
-                "=",
-                "CursorX()",
-                "=",
-                "CursorY()"
-              ]
-            },
-            {
-              "type": {
-                "value": "CacheSouris"
+                "value": "SystemInfo::HasTouchScreen"
               },
               "parameters": [
                 ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"MobileControls\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Crosshair"
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SystemInfo::HasTouchScreen"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "ui_crosshair",
+                    "=",
+                    "CursorX()",
+                    "=",
+                    "CursorY()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CacheSouris"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SystemInfo::HasTouchScreen"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreAutour"
+                  },
+                  "parameters": [
+                    "ui_crosshair",
+                    "p1_hitbox",
+                    "90",
+                    "SpriteMultitouchJoystick::StickAngle(1, \"Secondary\")"
+                  ]
+                }
               ]
             }
           ]
@@ -5452,6 +5884,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Enemy",
               "conditions": [
@@ -5466,6 +5899,12 @@
                     "",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [],
@@ -5620,7 +6059,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Bullet Trail",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5693,7 +6131,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Aiming",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5726,11 +6163,36 @@
                 },
                 {
                   "type": {
-                    "value": "MouseButtonPressed"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "",
-                    "Left"
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "SystemInfo::HasTouchScreen"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                          },
+                          "parameters": [
+                            "ShootJoystick",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ],
@@ -5788,12 +6250,63 @@
                 },
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "MouseButtonPressed"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "",
-                    "Left"
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "SystemInfo::HasTouchScreen"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                          },
+                          "parameters": [
+                            "ShootJoystick",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "SystemInfo::HasTouchScreen"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "MouseButtonPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ],
@@ -5849,11 +6362,62 @@
                 },
                 {
                   "type": {
-                    "value": "MouseButtonReleased"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "",
-                    "Left"
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "SystemInfo::HasTouchScreen"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                          },
+                          "parameters": [
+                            "ShootJoystick",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "SystemInfo::HasTouchScreen"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MouseButtonReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
@@ -6216,6 +6780,18 @@
         }
       ],
       "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "just a random comment"
     }
   ],
   "layers": [
@@ -6258,7 +6834,7 @@
       "isLocked": false,
       "name": "ui",
       "renderingType": "",
-      "visibility": false,
+      "visibility": true,
       "cameras": [],
       "effects": []
     },
@@ -6309,12 +6885,32 @@
       "visibility": false,
       "cameras": [],
       "effects": []
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 0.1,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "MobileControls",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
     }
   ],
   "behaviorsSharedData": [
     {
       "name": "Activatable",
       "type": "Activatable::Activatable"
+    },
+    {
+      "name": "Anchor",
+      "type": "AnchorBehavior::AnchorBehavior"
     },
     {
       "name": "Enemy",
