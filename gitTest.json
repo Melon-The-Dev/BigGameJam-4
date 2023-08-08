@@ -532,6 +532,87 @@
         "name": "assets\\Gold Coin.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Active3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Active3",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Inactive.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Inactive",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Active4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Active4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Inactive.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Inactive.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_2dSurvival_en1_spawn.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\2dSurvival\\en1_spawn",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tank_healthbar_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/tank_healthbar_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tank_healthbar_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/tank_healthbar_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tank_healthbar_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/tank_healthbar_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tank_healthbar_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/tank_healthbar_4.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

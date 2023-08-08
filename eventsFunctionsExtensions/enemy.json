@@ -165,6 +165,46 @@
             }
           ],
           "objectGroups": []
+        },
+        {
+          "description": "Returns health of the enemy",
+          "fullName": "Health",
+          "functionType": "Expression",
+          "name": "Health",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyHealth()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "Enemy::Enemy",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
         }
       ],
       "propertyDescriptors": [

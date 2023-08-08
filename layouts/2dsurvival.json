@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.6337626779315035,
+    "zoomFactor": 1.3389693172845394,
     "windowMask": false
   },
   "objectsGroups": [
@@ -646,81 +646,6 @@
       "customSize": false,
       "height": 0,
       "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "5ebbc1c5-d467-4192-9f3d-06d6b0fa4f58",
-      "width": 0,
-      "x": 360,
-      "y": 248,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "f749dafd-4251-41f0-9eb3-0e3491300a68",
-      "width": 0,
-      "x": 136,
-      "y": 296,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "3398c2a1-6068-4851-b8f7-b887c09571c1",
-      "width": 0,
-      "x": 216,
-      "y": 104,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "2b958693-210f-49f6-a420-4f4b9b62b92b",
-      "width": 0,
-      "x": 584,
-      "y": 168,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "87a97da6-9410-4bcb-a80a-cfb79537e040",
-      "width": 0,
-      "x": 584,
-      "y": 296,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
       "name": "ammo_pickup",
       "persistentUuid": "e4ddb9da-7a35-4357-8306-7f87737b9525",
       "width": 0,
@@ -891,36 +816,6 @@
       "width": 0,
       "x": 584,
       "y": 40,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "9a85885f-a55c-4c8d-9593-b5ebbde1a3a3",
-      "width": 0,
-      "x": 392,
-      "y": 56,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "86bdea00-e725-4f01-95eb-69467fced80a",
-      "width": 0,
-      "x": 184,
-      "y": 312,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -1214,6 +1109,111 @@
           "value": 2
         }
       ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "963a4094-5428-4001-abfd-c69789c3b79a",
+      "width": 0,
+      "x": 584,
+      "y": 296,
+      "zOrder": 2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "72afd7e3-73c0-4bdd-896c-02428818b3a1",
+      "width": 0,
+      "x": 136,
+      "y": 296,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "81a2bc77-2bfa-4157-a6ed-3b6d2e4bd78c",
+      "width": 0,
+      "x": 184,
+      "y": 312,
+      "zOrder": 26,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "41b073ac-5061-40e8-9906-e976ad461c9a",
+      "width": 0,
+      "x": 216,
+      "y": 88,
+      "zOrder": 27,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "43f381fa-1c09-43f5-8fe0-ba865ff045dc",
+      "width": 0,
+      "x": 360,
+      "y": 248,
+      "zOrder": 28,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "b9312d6e-ce17-4f50-a19e-3c20ea57d89d",
+      "width": 0,
+      "x": 392,
+      "y": 58,
+      "zOrder": 29,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "08b923e7-fe03-4e3e-899c-ab24a165e792",
+      "width": 0,
+      "x": 584,
+      "y": 168,
+      "zOrder": 30,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -1734,7 +1734,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Active",
+                  "image": "Active3",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1754,16 +1754,16 @@
                         "y": 0
                       },
                       {
-                        "x": 16,
+                        "x": 24,
                         "y": 0
                       },
                       {
-                        "x": 16,
-                        "y": 16
+                        "x": 24,
+                        "y": 24
                       },
                       {
                         "x": 0,
-                        "y": 16
+                        "y": 24
                       }
                     ]
                   ]
@@ -1778,11 +1778,12 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\2dSurvival\\en_inactive.png",
+                  "image": "Inactive",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1802,16 +1803,16 @@
                         "y": 0
                       },
                       {
-                        "x": 16,
+                        "x": 24,
                         "y": 0
                       },
                       {
-                        "x": 16,
-                        "y": 16
+                        "x": 24,
+                        "y": 24
                       },
                       {
                         "x": 0,
-                        "y": 16
+                        "y": 24
                       }
                     ]
                   ]
@@ -1978,16 +1979,17 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "assets\\2dSurvival\\en1_spawn",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\2dSurvival\\en1_spawn.png",
+                  "image": "assets\\2dSurvival\\en1_spawn",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2288,7 +2290,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Active2",
+                  "image": "Active4",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2308,16 +2310,16 @@
                         "y": 0
                       },
                       {
-                        "x": 16,
+                        "x": 24,
                         "y": 0
                       },
                       {
-                        "x": 16,
-                        "y": 16
+                        "x": 24,
+                        "y": 24
                       },
                       {
                         "x": 0,
-                        "y": 16
+                        "y": 24
                       }
                     ]
                   ]
@@ -2336,7 +2338,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\2dSurvival\\en_inactive.png",
+                  "image": "assets/Inactive.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2356,16 +2358,16 @@
                         "y": 0
                       },
                       {
-                        "x": 16,
+                        "x": 24,
                         "y": 0
                       },
                       {
-                        "x": 16,
-                        "y": 16
+                        "x": 24,
+                        "y": 24
                       },
                       {
                         "x": 0,
-                        "y": 16
+                        "y": 24
                       }
                     ]
                   ]
@@ -4297,6 +4299,211 @@
       ],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "en_tank_healthbar",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "3",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/tank_healthbar_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 5
+                      },
+                      {
+                        "x": 1,
+                        "y": 5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/tank_healthbar_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 5
+                      },
+                      {
+                        "x": 1,
+                        "y": 5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/tank_healthbar_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 5
+                      },
+                      {
+                        "x": 1,
+                        "y": 5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "0",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/tank_healthbar_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 5
+                      },
+                      {
+                        "x": 1,
+                        "y": 5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -4406,6 +4613,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Change info texts depending on device",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4643,6 +4851,92 @@
                 "Type",
                 "=",
                 "\"Laser\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Add a constant boolean to every hazard that can be used to check instances"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Hazard",
+                "TRUE",
+                "True"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Customise pitch for the hitsound to be played for each enemy group"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Grunt",
+                "PITCH",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Tank",
+                "PITCH",
+                "=",
+                "0.25"
               ]
             }
           ]
@@ -4956,17 +5250,7 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_grunt",
-                "dev_wall",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en2_grunt",
+                "Enemy",
                 "dev_wall",
                 "yes"
               ]
@@ -4982,8 +5266,8 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_grunt",
-                "en1_grunt",
+                "Grunt",
+                "Grunt",
                 "yes"
               ]
             },
@@ -4992,8 +5276,8 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_grunt",
-                "en2_grunt",
+                "Tank",
+                "Tank",
                 "yes"
               ]
             }
@@ -5002,28 +5286,7 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en2_grunt",
-                "en1_grunt",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en2_grunt",
-                "en2_grunt",
-                "yes"
-              ]
-            }
-          ]
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -5055,17 +5318,7 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_grunt",
-                "Wall",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en2_grunt",
+                "Enemy",
                 "Wall",
                 "yes"
               ]
@@ -5654,8 +5907,8 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Enemy",
               "conditions": [
                 {
                   "type": {
@@ -5702,13 +5955,42 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "AddForceAL"
+                        "value": "SeparateFromObjects"
                       },
                       "parameters": [
+                        "p1_hitbox",
                         "Enemy",
-                        "p1_hitbox.TopDownMovement::Angle()",
-                        "p1_hitbox.TopDownMovement::Speed()",
                         ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Grunt",
+                            "TRUE",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "p1_hitbox.TopDownMovement::Angle()",
+                            "p1_hitbox.TopDownMovement::Speed()",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -6214,7 +6496,7 @@
                 "hitsound",
                 "",
                 "66",
-                "1"
+                "Enemy.Variable(PITCH)"
               ]
             }
           ],
@@ -6438,6 +6720,132 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
+          "name": "Tank Health Bars",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Tank",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "Tank",
+                        "en_tank_healthbar",
+                        "Tank",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "en_tank_healthbar",
+                        "Tank.X()-4",
+                        "Tank.Y()+16",
+                        "\"ui\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "LinkedObjects::LinkObjects"
+                      },
+                      "parameters": [
+                        "",
+                        "Tank",
+                        "en_tank_healthbar"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Change the animation of the healthbar to match that of the tank"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "Tank",
+                        "en_tank_healthbar",
+                        "Tank",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "en_tank_healthbar",
+                        "=",
+                        "Tank.X()-4",
+                        "=",
+                        "Tank.Y()+16"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Tank",
+                        "Health",
+                        "=",
+                        "Tank.Enemy::Health()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "en_tank_healthbar",
+                        "ToString(Tank.Variable(Health))"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
           "name": "Bullet UI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6648,14 +7056,6 @@
             },
             {
               "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "en2_spawn"
-              ]
-            },
-            {
-              "type": {
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
@@ -6769,40 +7169,76 @@
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
+              "conditions": [
                 {
                   "type": {
-                    "value": "Spawning::Spawn2"
+                    "value": "SceneVariableAsBoolean"
                   },
                   "parameters": [
-                    "",
-                    "en1_spawn",
-                    "en1_spawnParticles",
-                    "2",
-                    "en1_grunt",
-                    "en1_tank",
-                    ""
+                    "enRedState",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "2",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Spawning::Spawn2"
+                      },
+                      "parameters": [
+                        "",
+                        "en1_spawn",
+                        "en1_spawnParticles",
+                        "2",
+                        "en1_grunt",
+                        "en1_tank",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
+              "conditions": [
                 {
                   "type": {
-                    "value": "Spawning::Spawn2"
+                    "value": "SceneVariableAsBoolean"
                   },
                   "parameters": [
-                    "",
-                    "en2_spawn",
-                    "en2_spawnParticles",
-                    "2",
-                    "en2_grunt",
-                    "en2_tank",
+                    "enRedState",
                     ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "2",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Spawning::Spawn2"
+                      },
+                      "parameters": [
+                        "",
+                        "en1_spawn",
+                        "en2_spawnParticles",
+                        "2",
+                        "en2_grunt",
+                        "en2_tank",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
@@ -7102,7 +7538,7 @@
                         "hitsound",
                         "",
                         "66",
-                        "1"
+                        "Enemy.Variable(PITCH)"
                       ]
                     },
                     {
@@ -7785,6 +8221,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Enemy",
           "conditions": [
@@ -7826,13 +8263,43 @@
                     "+",
                     "Enemy.Enemy::Score()"
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Remove health bars for dead enemies"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "en_tank_healthbar",
+                    "Tank",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "value": "Delete"
                   },
                   "parameters": [
-                    "Enemy",
+                    "en_tank_healthbar",
                     ""
                   ]
                 }
@@ -7906,6 +8373,33 @@
                     "\"easeInQuad\"",
                     "500",
                     "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Finally, delete enemy"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    ""
                   ]
                 }
               ]
@@ -8615,11 +9109,6 @@
         }
       ],
       "parameters": []
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
     }
   ],
   "layers": [
