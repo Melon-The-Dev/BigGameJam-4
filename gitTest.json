@@ -66,100 +66,10 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "dev_floorTexture.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "dev_floorTexture.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "dev_wallTexture.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "dev_wallTexture.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tv_part.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\tv_part.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tv_front.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\tv_front.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/p1_stand.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\p1_stand.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/2d_tile.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\2d_tile.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/lev_layout.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\lev_layout.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/platform_player.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "platform_player",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/platform_player2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "platform_player2",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/2dSurvival/p1_hitbox.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\2dSurvival\\p1_hitbox.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/2dSurvival/en_hitbox.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\2dSurvival\\en_hitbox.png",
         "smoothed": false,
         "userAdded": true
       },
@@ -250,15 +160,6 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\2dSurvival\\ui_crosshair.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/2dSurvival/en1_spawn.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\2dSurvival\\en1_spawn.png",
         "smoothed": false,
         "userAdded": true
       },
@@ -472,15 +373,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Active2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Active2",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/2dSurvival/hazard_conveyorBelt.png",
         "kind": "image",
         "metadata": "",
@@ -512,24 +404,6 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\2dSurvival\\hazard_conveyorBelt_2.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/2dSurvival/lvl_layout00.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\2dSurvival\\lvl_layout00.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Gold Coin.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\Gold Coin.png",
         "smoothed": false,
         "userAdded": true
       },
@@ -613,21 +487,119 @@
         "name": "assets/tank_healthbar_4.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Transparent Button With White Blue Border_Hovered.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Transparent Button With White Blue Border_Hovered.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/6d8e529f898d0d1cfc8e94ba10ae0a01e0a31b08bc0d11ec35074a34f3485f55_Transparent Button With White Blue Border_Hovered.png",
+          "name": "Transparent Button With White Blue Border_Hovered.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Transparent Button With White Blue Border_Idle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Transparent Button With White Blue Border_Idle.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/7311d88d62c25c9a5e7ed4f2031f4d58fabe564e093b203e62e467a1a995ed32_Transparent Button With White Blue Border_Idle.png",
+          "name": "Transparent Button With White Blue Border_Idle.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Transparent Button With White Blue Border_Pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Transparent Button With White Blue Border_Pressed.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/c18e2e342a2cce350f068208df2b7f5549dc600d2201609b1d3d76c497fffd30_Transparent Button With White Blue Border_Pressed.png",
+          "name": "Transparent Button With White Blue Border_Pressed.png"
+        }
+      },
+      {
+        "file": "assets/Kenney Mini Square.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Kenney Mini Square.ttf",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/5e2e3fcc57885d5e510934e621be5f8dd7a5b6425cf46ef38073e3d2c3b04048_Kenney Mini Square.ttf",
+          "name": "Kenney Mini Square.ttf"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_deathzone.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_deathzone.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
   },
-  "objects": [],
+  "objects": [
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "dev_debug",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "dev_debugBehavior",
+          "type": "dev_debugBehavior::dev_debugBehavior",
+          "dev_layer": "dev",
+          "dev_showDebugLayer": false,
+          "dev_gameCloses": false,
+          "dev_closeAfter": 30,
+          "dev_integerScaling": "x4"
+        }
+      ],
+      "animations": []
+    }
+  ],
   "objectsGroups": [],
   "variables": [],
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/2dsurvival"
+      "referenceTo": "/layouts/mainmenu"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/gamescene"
     }
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/smoothcamera"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/followobjectswithcamera"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/panelspritebutton"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/hazard_conveyorbelt"
@@ -677,6 +649,19 @@
       "referenceTo": "/eventsFunctionsExtensions/enemy"
     }
   ],
-  "externalLayouts": [],
+  "externalLayouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/level_empty"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/level_1"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/level_2"
+    }
+  ],
   "externalSourceFiles": []
 }
