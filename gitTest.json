@@ -185,7 +185,7 @@
         "alwaysLoaded": false,
         "file": "assets/2dSurvival/en1_hitbox.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/2dSurvival/en1_hitbox.png\",\"extension\":\".png\"}",
         "name": "assets\\2dSurvival\\en1_hitbox.png",
         "smoothed": false,
         "userAdded": false
@@ -194,7 +194,7 @@
         "alwaysLoaded": false,
         "file": "assets/2dSurvival/en2_hitbox.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/2dSurvival/en2_hitbox.png\",\"extension\":\".png\"}",
         "name": "assets\\2dSurvival\\en2_hitbox.png",
         "smoothed": false,
         "userAdded": false
@@ -460,6 +460,159 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Multitouch joysticks/10167ade22c4a6b48324e6c1d1bd6dc74179d7bed0775890903f418b4a05c8a1_Flat dark joystick thumb.png",
           "name": "Flat dark joystick thumb.png"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Active.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Active.png\"}",
+        "name": "Active",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Active2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Active2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_conveyorBelt.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_conveyorBelt.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_conveyorBelt2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_conveyorBelt2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_conveyorBelt_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_conveyorBelt_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_conveyorBelt_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_conveyorBelt_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/lvl_layout00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\lvl_layout00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold Coin.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Gold Coin.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Active3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Active3",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Inactive.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Inactive",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Active4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Active4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Inactive.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Inactive.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_2dSurvival_en1_spawn.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\2dSurvival\\en1_spawn",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tank_healthbar_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/tank_healthbar_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tank_healthbar_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/tank_healthbar_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tank_healthbar_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/tank_healthbar_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tank_healthbar_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/tank_healthbar_4.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -471,14 +624,14 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/2dsurvival"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/untitled-scene"
     }
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/hazard_conveyorbelt"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/spritemultitouchjoystick"

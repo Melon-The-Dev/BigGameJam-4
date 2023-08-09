@@ -19,7 +19,7 @@
       "fullName": "",
       "functionType": "Action",
       "name": "Spawn",
-      "sentence": "Spawn _PARAM3_ after _PARAM4_ seconds while emitting _PARAM2_ from _PARAM1_ ",
+      "sentence": "Spawn _PARAM4_ after _PARAM3_ seconds while emitting _PARAM2_ from _PARAM1_ ",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -75,18 +75,6 @@
             },
             {
               "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Spawn",
-                "Spawner.X()",
-                "Spawner.Y()",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "Delete"
               },
               "parameters": [
@@ -100,6 +88,18 @@
               },
               "parameters": [
                 "Spawner"
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Spawn0",
+                "Spawner.X()",
+                "Spawner.Y()",
+                ""
               ]
             }
           ]
@@ -119,15 +119,147 @@
           "type": "objectList"
         },
         {
+          "description": "Delay (in seconds)",
+          "name": "Delay",
+          "type": "expression"
+        },
+        {
           "description": "Object To Spawn",
-          "name": "Spawn",
+          "name": "Spawn0",
           "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Spawn an item",
+      "fullName": "Spawn one of two objects",
+      "functionType": "Action",
+      "name": "Spawn2",
+      "sentence": "Spawn _PARAM4_ or _PARAM5_ after _PARAM3_ seconds while emitting _PARAM2_ from _PARAM1_ ",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AjoutHasard"
+              },
+              "parameters": [
+                "",
+                "Spawner"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Spawner",
+                "SpawnState",
+                "=",
+                "RandomInRange(0,1)"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Spawner",
+                    "SpawnState",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Spawning::Spawn"
+                  },
+                  "parameters": [
+                    "",
+                    "Spawner",
+                    "Particles",
+                    "GetArgumentAsNumber(\"Delay\")",
+                    "Spawn0",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Spawner",
+                    "SpawnState",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Spawning::Spawn"
+                  },
+                  "parameters": [
+                    "",
+                    "Spawner",
+                    "Particles",
+                    "GetArgumentAsNumber(\"Delay\")",
+                    "Spawn1",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "Spawner",
+          "name": "Spawner",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "Particles",
+          "name": "Particles",
+          "supplementaryInformation": "ParticleSystem::ParticleEmitter",
           "type": "objectList"
         },
         {
           "description": "Delay (in seconds)",
           "name": "Delay",
           "type": "expression"
+        },
+        {
+          "description": "Object To Spawn",
+          "name": "Spawn0",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "Object to spawn",
+          "name": "Spawn1",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
         }
       ],
       "objectGroups": []

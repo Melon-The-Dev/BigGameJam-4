@@ -26,16 +26,28 @@
       "name": "Hazard",
       "objects": [
         {
-          "name": "en1_hitbox"
+          "name": "en1_grunt"
         },
         {
-          "name": "en2_hitbox"
+          "name": "en2_grunt"
         },
         {
           "name": "dev_trap"
         },
         {
           "name": "trap_laser"
+        },
+        {
+          "name": "en1_tank"
+        },
+        {
+          "name": "en1_trapper"
+        },
+        {
+          "name": "en2_tank"
+        },
+        {
+          "name": "en2_trapper"
         }
       ]
     },
@@ -43,10 +55,22 @@
       "name": "Enemy",
       "objects": [
         {
-          "name": "en1_hitbox"
+          "name": "en1_grunt"
         },
         {
-          "name": "en2_hitbox"
+          "name": "en2_grunt"
+        },
+        {
+          "name": "en1_tank"
+        },
+        {
+          "name": "en1_trapper"
+        },
+        {
+          "name": "en2_tank"
+        },
+        {
+          "name": "en2_trapper"
         }
       ]
     },
@@ -65,10 +89,16 @@
       "name": "Red",
       "objects": [
         {
-          "name": "en1_hitbox"
+          "name": "en1_grunt"
         },
         {
           "name": "wall_red"
+        },
+        {
+          "name": "en1_tank"
+        },
+        {
+          "name": "en1_trapper"
         }
       ]
     },
@@ -76,10 +106,16 @@
       "name": "Blue",
       "objects": [
         {
-          "name": "en2_hitbox"
+          "name": "en2_grunt"
         },
         {
           "name": "wall_blu"
+        },
+        {
+          "name": "en2_tank"
+        },
+        {
+          "name": "en2_trapper"
         }
       ]
     },
@@ -91,6 +127,39 @@
         },
         {
           "name": "wall_blu"
+        }
+      ]
+    },
+    {
+      "name": "Grunt",
+      "objects": [
+        {
+          "name": "en1_grunt"
+        },
+        {
+          "name": "en2_grunt"
+        }
+      ]
+    },
+    {
+      "name": "Tank",
+      "objects": [
+        {
+          "name": "en1_tank"
+        },
+        {
+          "name": "en2_tank"
+        }
+      ]
+    },
+    {
+      "name": "Trapper",
+      "objects": [
+        {
+          "name": "en1_trapper"
+        },
+        {
+          "name": "en2_trapper"
         }
       ]
     }
@@ -107,7 +176,7 @@
       "width": 0,
       "x": 312,
       "y": 184,
-      "zOrder": 1,
+      "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -132,7 +201,7 @@
       "customSize": false,
       "height": 0,
       "layer": "",
-      "name": "en1_hitbox",
+      "name": "en1_grunt",
       "persistentUuid": "4fcd21bc-1c50-4009-88fa-30a33709be6e",
       "width": 0,
       "x": 72,
@@ -389,7 +458,7 @@
       "customSize": false,
       "height": 0,
       "layer": "",
-      "name": "en2_hitbox",
+      "name": "en2_grunt",
       "persistentUuid": "e9b134fe-2e6a-44c4-be1c-6ea03611a9dd",
       "width": 0,
       "x": 216,
@@ -397,14 +466,21 @@
       "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Alive",
+          "type": "boolean",
+          "value": true
+        }
+      ]
     },
     {
       "angle": 0,
       "customSize": false,
       "height": 0,
       "layer": "",
-      "name": "en1_hitbox",
+      "name": "en1_grunt",
       "persistentUuid": "0d0885bf-5e5e-4195-a3d4-bd013e532056",
       "width": 0,
       "x": 56,
@@ -419,41 +495,11 @@
       "customSize": false,
       "height": 0,
       "layer": "",
-      "name": "en2_hitbox",
-      "persistentUuid": "09eeaa6b-09d5-4b91-b29b-cc6a3471430e",
-      "width": 0,
-      "x": 440,
-      "y": 296,
-      "zOrder": 3,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en1_hitbox",
+      "name": "en1_grunt",
       "persistentUuid": "aa789f1f-ac3e-48f2-893c-491a62dab39f",
       "width": 0,
       "x": 88,
       "y": 136,
-      "zOrder": 3,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_hitbox",
-      "persistentUuid": "9ed2af85-4095-41e0-ad08-ede1b668d7ff",
-      "width": 0,
-      "x": 504,
-      "y": 56,
       "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
@@ -590,81 +636,6 @@
       "width": 0,
       "x": 312,
       "y": 312,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "5ebbc1c5-d467-4192-9f3d-06d6b0fa4f58",
-      "width": 0,
-      "x": 360,
-      "y": 248,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "f749dafd-4251-41f0-9eb3-0e3491300a68",
-      "width": 0,
-      "x": 136,
-      "y": 296,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "3398c2a1-6068-4851-b8f7-b887c09571c1",
-      "width": 0,
-      "x": 216,
-      "y": 104,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "2b958693-210f-49f6-a420-4f4b9b62b92b",
-      "width": 0,
-      "x": 584,
-      "y": 168,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "87a97da6-9410-4bcb-a80a-cfb79537e040",
-      "width": 0,
-      "x": 584,
-      "y": 296,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -855,36 +826,6 @@
       "customSize": false,
       "height": 0,
       "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "9a85885f-a55c-4c8d-9593-b5ebbde1a3a3",
-      "width": 0,
-      "x": 392,
-      "y": 56,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "en2_spawn",
-      "persistentUuid": "86bdea00-e725-4f01-95eb-69467fced80a",
-      "width": 0,
-      "x": 184,
-      "y": 312,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
       "name": "en1_spawn",
       "persistentUuid": "ac2b896e-caef-4a26-a2ca-ebd4240b9f74",
       "width": 0,
@@ -1050,6 +991,226 @@
       "x": 584,
       "y": 296,
       "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en2_tank",
+      "persistentUuid": "b998a27e-aef2-49ab-8059-6eca5671e610",
+      "width": 0,
+      "x": 504,
+      "y": 40,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_tank",
+      "persistentUuid": "5e5b4677-ddf2-4ca8-86a8-3cced4f1cd03",
+      "width": 0,
+      "x": 568,
+      "y": 120,
+      "zOrder": 24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 192,
+      "layer": "",
+      "name": "hazard_belt",
+      "persistentUuid": "5c77b6e5-609f-407c-bfbb-f6584fd1aa0f",
+      "width": 32,
+      "x": 32,
+      "y": 112,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "belt_direction",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "hazard_belt",
+      "persistentUuid": "08078e32-1ce9-4a1d-9f4f-e90bc778d661",
+      "width": 80,
+      "x": 472,
+      "y": 176,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "hazard_belt",
+      "persistentUuid": "0c25443a-b9e5-4306-a566-de2e2a753d2e",
+      "width": 80,
+      "x": 376,
+      "y": 304,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "belt_direction",
+          "type": "number",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 64,
+      "layer": "",
+      "name": "hazard_belt",
+      "persistentUuid": "62a7fdef-3b03-4856-9b7b-d7ac91793c39",
+      "width": 32,
+      "x": 272,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "belt_direction",
+          "type": "number",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "963a4094-5428-4001-abfd-c69789c3b79a",
+      "width": 0,
+      "x": 584,
+      "y": 296,
+      "zOrder": 2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "72afd7e3-73c0-4bdd-896c-02428818b3a1",
+      "width": 0,
+      "x": 136,
+      "y": 296,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "81a2bc77-2bfa-4157-a6ed-3b6d2e4bd78c",
+      "width": 0,
+      "x": 184,
+      "y": 312,
+      "zOrder": 26,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "41b073ac-5061-40e8-9906-e976ad461c9a",
+      "width": 0,
+      "x": 216,
+      "y": 88,
+      "zOrder": 27,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "43f381fa-1c09-43f5-8fe0-ba865ff045dc",
+      "width": 0,
+      "x": 360,
+      "y": 248,
+      "zOrder": 28,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "b9312d6e-ce17-4f50-a19e-3c20ea57d89d",
+      "width": 0,
+      "x": 392,
+      "y": 58,
+      "zOrder": 29,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "en1_spawn",
+      "persistentUuid": "08b923e7-fe03-4e3e-899c-ab24a165e792",
+      "width": 0,
+      "x": 584,
+      "y": 168,
+      "zOrder": 30,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1375,7 +1536,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "en1_hitbox",
+      "name": "en1_grunt",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -1390,7 +1551,7 @@
         {
           "name": "Enemy",
           "type": "Enemy::Enemy",
-          "Score": 2.143215748875e-312,
+          "Score": 100,
           "Alive": true
         },
         {
@@ -1423,11 +1584,302 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
                   "image": "assets\\2dSurvival\\en1_hitbox.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\en_inactive.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "en1_tank",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
+          "name": "Enemy",
+          "type": "Enemy::Enemy",
+          "Score": 800,
+          "Alive": true,
+          "Health": 3
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
+          "cellHeight": 16,
+          "cellWidth": 16,
+          "acceleration": 0,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "extraBorder": 4,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 48,
+          "rotateObject": false,
+          "smoothingMaxCellGap": 1
+        },
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Active3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Inactive",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "en1_trapper",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
+          "name": "Enemy",
+          "type": "Enemy::Enemy",
+          "Score": 100,
+          "Alive": true
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
+          "cellHeight": 16,
+          "cellWidth": 16,
+          "acceleration": 0,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "extraBorder": 4,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 48,
+          "rotateObject": false,
+          "smoothingMaxCellGap": 1
+        },
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Active",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1527,16 +1979,17 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "assets\\2dSurvival\\en1_spawn",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\2dSurvival\\en1_spawn.png",
+                  "image": "assets\\2dSurvival\\en1_spawn",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1625,7 +2078,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "en2_hitbox",
+      "name": "en2_grunt",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -1647,7 +2100,7 @@
         {
           "name": "Enemy",
           "type": "Enemy::Enemy",
-          "Score": 2.143215748875e-312,
+          "Score": 100,
           "Alive": true
         },
         {
@@ -1680,6 +2133,310 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\en2_hitbox.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\en_inactive.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "en2_tank",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "Alive",
+          "type": "boolean",
+          "value": true
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
+          "name": "Enemy",
+          "type": "Enemy::Enemy",
+          "Score": 800,
+          "Alive": true,
+          "Health": 3
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
+          "cellHeight": 16,
+          "cellWidth": 16,
+          "acceleration": 0,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "extraBorder": 4,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 48,
+          "rotateObject": false,
+          "smoothingMaxCellGap": 1
+        },
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Active4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Inactive.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "en2_trapper",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "Alive",
+          "type": "boolean",
+          "value": true
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Activatable",
+          "type": "Activatable::Activatable",
+          "Property": false
+        },
+        {
+          "name": "Enemy",
+          "type": "Enemy::Enemy",
+          "Score": 100,
+          "Alive": true
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
+          "cellHeight": 16,
+          "cellWidth": 16,
+          "acceleration": 0,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "extraBorder": 4,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 48,
+          "rotateObject": false,
+          "smoothingMaxCellGap": 1
+        },
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
@@ -2935,7 +3692,7 @@
         }
       ],
       "behaviors": [],
-      "string": "-- GAME OVER --\n\nYour score: \n\nHighest Score:\n\n-- PRESS R TO RESTART --",
+      "string": "-- GAME OVER --\n\nYour score: \n\nHighest Score:\n\n-- CLICK OR TOUCH TO RESTART --",
       "font": "",
       "textAlignment": "center",
       "characterSize": 16,
@@ -3388,6 +4145,365 @@
           ]
         }
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "hazard_belt",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "belt_direction",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "belt_horizontal",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\hazard_conveyorBelt.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "belt_vertical",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\hazard_conveyorBelt2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 16,
+      "name": "tiled_beltRed",
+      "tags": "",
+      "texture": "assets\\2dSurvival\\hazard_conveyorBelt_1.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 16,
+      "variables": [
+        {
+          "folded": true,
+          "name": "hazard_direction",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 16,
+      "name": "tiled_beltBlu",
+      "tags": "",
+      "texture": "assets\\2dSurvival\\hazard_conveyorBelt_2.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 16,
+      "variables": [
+        {
+          "folded": true,
+          "name": "hazard_direction",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "en_tank_healthbar",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "3",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/tank_healthbar_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 5
+                      },
+                      {
+                        "x": 1,
+                        "y": 5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/tank_healthbar_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 5
+                      },
+                      {
+                        "x": 1,
+                        "y": 5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/tank_healthbar_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 5
+                      },
+                      {
+                        "x": 1,
+                        "y": 5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "0",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/tank_healthbar_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 1
+                      },
+                      {
+                        "x": 15,
+                        "y": 5
+                      },
+                      {
+                        "x": 1,
+                        "y": 5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -3490,6 +4606,72 @@
                 "\"gameOver\""
               ]
             }
+          ],
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Change info texts depending on device",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "start_text",
+                        "=",
+                        "\"-- GameThingPrototype --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with the left touchpad, hold the right touchpad button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- TOUCH TO CONTINUE --\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "start_text",
+                        "=",
+                        "\"-- GameThingPrototype --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with WASD, hold the Mouse left button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- PRESS ANY KEY OR CLICK TO CONTINUE --\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
           ]
         },
         {
@@ -3512,52 +4694,19 @@
               "subInstructions": [
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::And"
+                    "value": "MouseButtonPressed"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "SystemInfo::HasTouchScreen"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MouseButtonPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "Left"
-                      ]
-                    }
+                  "parameters": [
+                    "",
+                    "Left"
                   ]
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::And"
+                    "value": "AnyKeyPressed"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "SystemInfo::HasTouchScreen"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AnyKeyPressed"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
+                  "parameters": [
+                    ""
                   ]
                 }
               ]
@@ -3596,6 +4745,17 @@
               "parameters": [
                 "",
                 "\"start\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "ammo",
+                "=",
+                "3"
               ]
             },
             {
@@ -3691,6 +4851,168 @@
                 "Type",
                 "=",
                 "\"Laser\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Add a constant boolean to every hazard that can be used to check instances"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Hazard",
+                "TRUE",
+                "True"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Customise pitch for the hitsound to be played for each enemy group"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Grunt",
+                "PITCH",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Tank",
+                "PITCH",
+                "=",
+                "0.25"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Restart Game",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Restart game when r is pressed or a new touch is started to prevent accidentally starting the level again"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "",
+                "\"gameOver\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "r"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "HasAnyTouchOrMouseStarted"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"2Dsurvival\"",
+                ""
               ]
             }
           ]
@@ -3928,17 +5250,7 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_hitbox",
-                "dev_wall",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en2_hitbox",
+                "Enemy",
                 "dev_wall",
                 "yes"
               ]
@@ -3954,8 +5266,8 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_hitbox",
-                "en1_hitbox",
+                "Grunt",
+                "Grunt",
                 "yes"
               ]
             },
@@ -3964,8 +5276,8 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_hitbox",
-                "en2_hitbox",
+                "Tank",
+                "Tank",
                 "yes"
               ]
             }
@@ -3974,28 +5286,7 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en2_hitbox",
-                "en1_hitbox",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en2_hitbox",
-                "en2_hitbox",
-                "yes"
-              ]
-            }
-          ]
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -4027,17 +5318,7 @@
                 "value": "SeparateFromObjects"
               },
               "parameters": [
-                "en1_hitbox",
-                "Wall",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "en2_hitbox",
+                "Enemy",
                 "Wall",
                 "yes"
               ]
@@ -4170,42 +5451,6 @@
                 "",
                 "\"ui\""
               ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "gameover_text",
-                "=",
-                "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R TO RESTART --\""
-              ]
-            },
-            {
-              "type": {
-                "value": "ShowLayer"
-              },
-              "parameters": [
-                "",
-                "\"gameOver\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "0.2"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "en1_spawnParticles",
-                ""
-              ]
             }
           ],
           "events": [
@@ -4238,6 +5483,120 @@
                     "game_highScore",
                     "=",
                     "Variable(game_totalScore)"
+                  ]
+                }
+              ]
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Display gameOver layer",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "gameover_text",
+                        "=",
+                        "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- TOUCH TO RESTART --\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SystemInfo::HasTouchScreen"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "gameover_text",
+                        "=",
+                        "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R OR CLICK TO RESTART --\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ShowLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"gameOver\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Delete particles after processing highscore and gameOver layer to make the transition to gameOver look more smooth"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "en1_spawnParticles",
+                    ""
                   ]
                 }
               ]
@@ -4548,7 +5907,8 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Enemy",
               "conditions": [
                 {
                   "type": {
@@ -4595,13 +5955,42 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "AddForceAL"
+                        "value": "SeparateFromObjects"
                       },
                       "parameters": [
+                        "p1_hitbox",
                         "Enemy",
-                        "p1_hitbox.TopDownMovement::Angle()",
-                        "p1_hitbox.TopDownMovement::Speed()",
                         ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Grunt",
+                            "TRUE",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "p1_hitbox.TopDownMovement::Angle()",
+                            "p1_hitbox.TopDownMovement::Speed()",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -4609,6 +5998,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -4891,10 +6281,21 @@
                         "value": "PathfindingBehavior::Speed"
                       },
                       "parameters": [
-                        "Enemy",
+                        "Grunt",
                         "Pathfinding",
                         "=",
                         "48"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "Tank",
+                        "Pathfinding",
+                        "=",
+                        "16"
                       ]
                     }
                   ]
@@ -5095,7 +6496,7 @@
                 "hitsound",
                 "",
                 "66",
-                "1"
+                "Enemy.Variable(PITCH)"
               ]
             }
           ],
@@ -5118,7 +6519,7 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Enemy::Enemy::KillEnemy"
+                    "value": "Enemy::Enemy::HitEnemy"
                   },
                   "parameters": [
                     "Enemy",
@@ -5147,7 +6548,7 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Enemy::Enemy::KillEnemy"
+                    "value": "Enemy::Enemy::HitEnemy"
                   },
                   "parameters": [
                     "Enemy",
@@ -5195,6 +6596,15 @@
               "parameters": [
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "game_playerIsDead",
+                "False"
+              ]
             }
           ],
           "actions": [
@@ -5205,6 +6615,17 @@
               "parameters": [
                 "",
                 "\"MobileControls\""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreAutour"
+              },
+              "parameters": [
+                "ui_crosshair",
+                "p1_hitbox",
+                "90",
+                "SpriteMultitouchJoystick::StickAngle(1, \"Secondary\")"
               ]
             }
           ]
@@ -5222,7 +6643,6 @@
           "comment": "Crosshair"
         },
         {
-          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5235,66 +6655,34 @@
               ]
             }
           ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "ui_crosshair",
-                    "=",
-                    "CursorX()",
-                    "=",
-                    "CursorY()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CacheSouris"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "actions": [
             {
               "type": {
-                "inverted": true,
-                "value": "SystemInfo::HasTouchScreen"
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"MobileControls\""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "ui_crosshair",
+                "=",
+                "CursorX()",
+                "=",
+                "CursorY()"
+              ]
+            },
+            {
+              "type": {
+                "value": "CacheSouris"
               },
               "parameters": [
                 ""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreAutour"
-                  },
-                  "parameters": [
-                    "ui_crosshair",
-                    "p1_hitbox",
-                    "90",
-                    "SpriteMultitouchJoystick::StickAngle(1, \"Secondary\")"
-                  ]
-                }
               ]
             }
           ]
@@ -5332,6 +6720,131 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
+          "name": "Tank Health Bars",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Tank",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "Tank",
+                        "en_tank_healthbar",
+                        "Tank",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "en_tank_healthbar",
+                        "Tank.X()-4",
+                        "Tank.Y()+16",
+                        "\"ui\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "LinkedObjects::LinkObjects"
+                      },
+                      "parameters": [
+                        "",
+                        "Tank",
+                        "en_tank_healthbar"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Change the animation of the healthbar to match that of the tank"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "Tank",
+                        "en_tank_healthbar",
+                        "Tank",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "en_tank_healthbar",
+                        "=",
+                        "Tank.X()-4",
+                        "=",
+                        "Tank.Y()+16"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Tank",
+                        "Health",
+                        "=",
+                        "Tank.Enemy::Health()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "en_tank_healthbar",
+                        "ToString(Tank.Variable(Health))"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
           "name": "Bullet UI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5542,14 +7055,6 @@
             },
             {
               "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "en2_spawn"
-              ]
-            },
-            {
-              "type": {
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
@@ -5663,38 +7168,76 @@
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
+              "conditions": [
                 {
                   "type": {
-                    "value": "Spawning::Spawn"
+                    "value": "SceneVariableAsBoolean"
                   },
                   "parameters": [
-                    "",
-                    "en1_spawn",
-                    "en1_spawnParticles",
-                    "en1_hitbox",
-                    "2",
-                    ""
+                    "enRedState",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "2",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Spawning::Spawn2"
+                      },
+                      "parameters": [
+                        "",
+                        "en1_spawn",
+                        "en1_spawnParticles",
+                        "2",
+                        "en1_grunt",
+                        "en1_tank",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
+              "conditions": [
                 {
                   "type": {
-                    "value": "Spawning::Spawn"
+                    "value": "SceneVariableAsBoolean"
                   },
                   "parameters": [
-                    "",
-                    "en2_spawn",
-                    "en2_spawnParticles",
-                    "en2_hitbox",
-                    "2",
+                    "enRedState",
                     ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "2",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Spawning::Spawn2"
+                      },
+                      "parameters": [
+                        "",
+                        "en1_spawn",
+                        "en2_spawnParticles",
+                        "2",
+                        "en2_grunt",
+                        "en2_tank",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
@@ -5808,8 +7351,8 @@
                 "",
                 "ammo_spawn",
                 "ammo_spawnParticles",
-                "ammo_pickup",
                 "1",
+                "ammo_pickup",
                 ""
               ]
             }
@@ -5823,7 +7366,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Bullet",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5833,7 +7375,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Bullet Collisions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5884,7 +7425,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Enemy",
               "conditions": [
@@ -5995,17 +7535,17 @@
                         "hitsound",
                         "",
                         "66",
-                        "1"
+                        "Enemy.Variable(PITCH)"
                       ]
                     },
                     {
                       "type": {
-                        "value": "Enemy::Enemy::KillEnemy"
+                        "value": "Enemy::Enemy::HitEnemy"
                       },
                       "parameters": [
                         "Enemy",
                         "Enemy",
-                        "100*p1_bullet.Variable(bullet_multiplier)",
+                        "Enemy.Enemy::Score()*p1_bullet.Variable(bullet_multiplier)",
                         ""
                       ]
                     }
@@ -6059,6 +7599,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Bullet Trail",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6131,6 +7672,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Aiming",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6175,7 +7717,6 @@
                       "subInstructions": [
                         {
                           "type": {
-                            "inverted": true,
                             "value": "SystemInfo::HasTouchScreen"
                           },
                           "parameters": [
@@ -6189,6 +7730,32 @@
                           "parameters": [
                             "ShootJoystick",
                             ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "SystemInfo::HasTouchScreen"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MouseButtonPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
                           ]
                         }
                       ]
@@ -6645,7 +8212,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Enemy Death",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -6692,13 +8258,43 @@
                     "+",
                     "Enemy.Enemy::Score()"
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Remove health bars for dead enemies"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "en_tank_healthbar",
+                    "Tank",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "value": "Delete"
                   },
                   "parameters": [
-                    "Enemy",
+                    "en_tank_healthbar",
                     ""
                   ]
                 }
@@ -6775,6 +8371,33 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Finally, delete enemy"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    ""
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -6782,16 +8405,705 @@
       "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "just a random comment"
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Conveyor Belts",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Initial Properties"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_strength",
+                "=",
+                "80"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Create a Tiled Belt Object on top of every single one, defined by its \"belt_direction\" variable placed in-editor, and use the function to define the movement. ( Angles: East=0°; South=90°; West=180°; North=270° )"
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "hazard_belt",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "hazard_conveyorBelt::create_conveyorBelt"
+                  },
+                  "parameters": [
+                    "",
+                    "hazard_belt",
+                    "tiled_beltRed",
+                    "\"Right\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "hazard_conveyorBelt::create_conveyorBelt"
+                  },
+                  "parameters": [
+                    "",
+                    "hazard_belt",
+                    "tiled_beltRed",
+                    "\"Down\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "hazard_conveyorBelt::create_conveyorBelt"
+                  },
+                  "parameters": [
+                    "",
+                    "hazard_belt",
+                    "tiled_beltBlu",
+                    "\"Left\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "hazard_conveyorBelt::create_conveyorBelt"
+                  },
+                  "parameters": [
+                    "",
+                    "hazard_belt",
+                    "tiled_beltBlu",
+                    "\"Up\"",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Move the Offset of the Tiled objects, giving the illusion of movement"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TiledSpriteObject::XOffset"
+              },
+              "parameters": [
+                "tiled_beltRed",
+                "-",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "TiledSpriteObject::XOffset"
+              },
+              "parameters": [
+                "tiled_beltBlu",
+                "-",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Collision with Belts, move Player and Enemies"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "hazard_belt",
+                "",
+                "",
+                "yes"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "0",
+                    "hazard_belt.Variable(belt_strength)",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "90",
+                    "hazard_belt.Variable(belt_strength)",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "180",
+                    "hazard_belt.Variable(belt_strength)",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "270",
+                    "hazard_belt.Variable(belt_strength)",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Enemy",
+                "hazard_belt",
+                "",
+                "",
+                "yes"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "0",
+                    "hazard_belt.Variable(belt_strength)",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "90",
+                    "hazard_belt.Variable(belt_strength)",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "180",
+                    "hazard_belt.Variable(belt_strength)",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "hazard_belt",
+                    "belt_direction",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "270",
+                    "hazard_belt.Variable(belt_strength)",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Change Belt Direction every time there's a Switch State: from East to West, From South to North."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_direction",
+                "=",
+                "2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_direction",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_direction",
+                "=",
+                "3"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_direction",
+                "=",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "False"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_direction",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_direction",
+                "=",
+                "2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "False"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_direction",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "hazard_belt",
+                "belt_direction",
+                "=",
+                "3"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
     }
   ],
   "layers": [
@@ -6898,7 +9210,7 @@
       "isLocked": false,
       "name": "MobileControls",
       "renderingType": "",
-      "visibility": true,
+      "visibility": false,
       "cameras": [],
       "effects": []
     }

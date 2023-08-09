@@ -33,12 +33,13 @@
               "conditions": [
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "Enemy::Enemy::PropertyAlive"
+                    "value": "Enemy::Enemy::PropertyHealth"
                   },
                   "parameters": [
                     "Object",
-                    "Behavior"
+                    "Behavior",
+                    "<=",
+                    "0"
                   ]
                 }
               ],
@@ -70,11 +71,11 @@
           "objectGroups": []
         },
         {
-          "description": "Kills the enemy and gives it a score",
-          "fullName": "Kill enemy",
+          "description": "Hits an enemy and gives it a score",
+          "fullName": "Hit enemy",
           "functionType": "Action",
-          "name": "KillEnemy",
-          "sentence": "Kill _PARAM0_ and add a score of _PARAM2_",
+          "name": "HitEnemy",
+          "sentence": "Hit _PARAM0_ and add a score of _PARAM2_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -82,12 +83,13 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Enemy::Enemy::SetPropertyAlive"
+                    "value": "Enemy::Enemy::SetPropertyHealth"
                   },
                   "parameters": [
                     "Object",
                     "Behavior",
-                    "no"
+                    "-",
+                    "1"
                   ]
                 },
                 {
@@ -163,11 +165,51 @@
             }
           ],
           "objectGroups": []
+        },
+        {
+          "description": "Returns health of the enemy",
+          "fullName": "Health",
+          "functionType": "Expression",
+          "name": "Health",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyHealth()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "Enemy::Enemy",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
         }
       ],
       "propertyDescriptors": [
         {
-          "value": "",
+          "value": "100",
           "type": "Number",
           "label": "Score",
           "description": "Determines the score that is awarded when the enemy is killed",
@@ -177,14 +219,14 @@
           "name": "Score"
         },
         {
-          "value": "true",
-          "type": "Boolean",
-          "label": "Alive",
-          "description": "Determines whether enemy is alive or not",
+          "value": "1",
+          "type": "Number",
+          "label": "Health",
+          "description": "Enemies with health >0 are alive",
           "group": "",
           "extraInformation": [],
-          "hidden": true,
-          "name": "Alive"
+          "hidden": false,
+          "name": "Health"
         }
       ],
       "sharedPropertyDescriptors": []
