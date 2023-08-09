@@ -1551,7 +1551,7 @@
         {
           "name": "Enemy",
           "type": "Enemy::Enemy",
-          "Score": 2.143215748875e-312,
+          "Score": 100,
           "Alive": true
         },
         {
@@ -1695,7 +1695,7 @@
         {
           "name": "Enemy",
           "type": "Enemy::Enemy",
-          "Score": 2.143215748875e-312,
+          "Score": 800,
           "Alive": true,
           "Health": 3
         },
@@ -1841,7 +1841,7 @@
         {
           "name": "Enemy",
           "type": "Enemy::Enemy",
-          "Score": 2.143215748875e-312,
+          "Score": 100,
           "Alive": true
         },
         {
@@ -2100,7 +2100,7 @@
         {
           "name": "Enemy",
           "type": "Enemy::Enemy",
-          "Score": 2.143215748875e-312,
+          "Score": 100,
           "Alive": true
         },
         {
@@ -2251,7 +2251,7 @@
         {
           "name": "Enemy",
           "type": "Enemy::Enemy",
-          "Score": 2.143215748875e-312,
+          "Score": 800,
           "Alive": true,
           "Health": 3
         },
@@ -2403,7 +2403,7 @@
         {
           "name": "Enemy",
           "type": "Enemy::Enemy",
-          "Score": 2.143215748875e-312,
+          "Score": 100,
           "Alive": true
         },
         {
@@ -6726,7 +6726,6 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Tank",
               "conditions": [],
@@ -7367,7 +7366,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Bullet",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -7377,7 +7375,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Bullet Collisions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7548,7 +7545,7 @@
                       "parameters": [
                         "Enemy",
                         "Enemy",
-                        "100*p1_bullet.Variable(bullet_multiplier)",
+                        "Enemy.Enemy::Score()*p1_bullet.Variable(bullet_multiplier)",
                         ""
                       ]
                     }
@@ -8215,13 +8212,11 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Enemy Death",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Enemy",
           "conditions": [

@@ -209,13 +209,13 @@
       ],
       "propertyDescriptors": [
         {
-          "value": "",
+          "value": "100",
           "type": "Number",
           "label": "Score",
           "description": "Determines the score that is awarded when the enemy is killed",
           "group": "",
           "extraInformation": [],
-          "hidden": true,
+          "hidden": false,
           "name": "Score"
         },
         {
