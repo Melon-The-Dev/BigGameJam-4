@@ -391,5 +391,10 @@
       "effects": []
     }
   ],
-  "behaviorsSharedData": []
+  "behaviorsSharedData": [
+    {
+      "name": "dev_debugBehavior",
+      "type": "dev_debugBehavior::dev_debugBehavior"
+    }
+  ]
 }

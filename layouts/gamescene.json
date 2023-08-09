@@ -511,10 +511,10 @@
           "WaitingSpeedYMax": 0,
           "WaitingEnd": 0,
           "CameraDelayCatchUpDuration": 0,
-          "LeftwardSpeedMax": 9000,
-          "RightwardSpeedMax": 9000,
-          "UpwardSpeedMax": 9000,
-          "DownwardSpeedMax": 9000,
+          "LeftwardSpeedMax": 12800,
+          "RightwardSpeedMax": 12800,
+          "UpwardSpeedMax": 12800,
+          "DownwardSpeedMax": 12800,
           "OldX": 9000,
           "OldY": 9000,
           "IsCalledManually": false
@@ -3745,7 +3745,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Initialise game",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3888,6 +3887,20 @@
                 "p1_hitbox",
                 "SmoothCamera",
                 "dev_camera",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ClampCamera"
+              },
+              "parameters": [
+                "",
+                "0",
+                "0",
+                "800",
+                "560",
+                "",
                 ""
               ]
             }
