@@ -546,6 +546,42 @@
         "name": "assets\\2dSurvival\\hazard_deathzone.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/lev_layout2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\lev_layout2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_teleport_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_teleport_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_teleport_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_teleport_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/hazard_teleport_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\hazard_teleport_2.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

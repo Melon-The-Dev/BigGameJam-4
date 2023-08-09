@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 0.7130377630690412,
+    "zoomFactor": 0.6672773998329988,
     "windowMask": false
   },
   "objectsGroups": [
@@ -99,6 +99,9 @@
         },
         {
           "name": "en1_trapper"
+        },
+        {
+          "name": "hazard_teleportRed"
         }
       ]
     },
@@ -116,6 +119,9 @@
         },
         {
           "name": "en2_trapper"
+        },
+        {
+          "name": "hazard_teleportBlu"
         }
       ]
     },
@@ -3737,6 +3743,224 @@
       "absoluteCoordinates": true,
       "clearBetweenFrames": true,
       "antialiasing": "none"
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "hazard_teleportRed",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\hazard_teleport_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\hazard_teleport_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "hazard_teleportBlu",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\hazard_teleport_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\hazard_teleport_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -3745,6 +3969,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Initialise game",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3783,6 +4008,50 @@
                 "GlobalVariableString(game_selectLevel)",
                 "0",
                 "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Press ESC to get back to Main Menu."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Escape"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"mainMenu\"",
+                "yes"
               ]
             }
           ]
@@ -4999,7 +5268,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Red/Blue States",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5279,7 +5547,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Activated states",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5448,7 +5715,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Change animations based on activated state",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5514,7 +5780,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Change use in pathfinding based on activated state",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8583,41 +8848,198 @@
       "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Teleporters",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "value": "KeyPressed"
-          },
-          "parameters": [
-            "",
-            "Escape"
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "hazard_teleportRed",
+                "\"Active\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "hazard_teleportBlu",
+                "\"Inactive\""
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "False"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "hazard_teleportRed",
+                "\"Inactive\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "hazard_teleportBlu",
+                "\"Active\""
+              ]
+            }
+          ]
+        },
         {
-          "type": {
-            "value": "Scene"
-          },
-          "parameters": [
-            "",
-            "\"mainMenu\"",
-            "yes"
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimationName"
+              },
+              "parameters": [
+                "hazard_teleportRed",
+                "\"Active\""
+              ]
+            },
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "hazard_teleportRed",
+                "",
+                "",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FlashLayer::FlashLayer"
+              },
+              "parameters": [
+                "",
+                "\"flash\"",
+                "0.1",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "=",
+                "hazard_teleportBlu.X()",
+                "=",
+                "hazard_teleportBlu.Y()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimationName"
+              },
+              "parameters": [
+                "hazard_teleportBlu",
+                "\"Active\""
+              ]
+            },
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "hazard_teleportBlu",
+                "",
+                "",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FlashLayer::FlashLayer"
+              },
+              "parameters": [
+                "",
+                "\"flash\"",
+                "0.1",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "=",
+                "hazard_teleportRed.X()",
+                "=",
+                "hazard_teleportRed.Y()"
+              ]
+            }
           ]
         }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
+      ],
+      "parameters": []
     }
   ],
   "layers": [
