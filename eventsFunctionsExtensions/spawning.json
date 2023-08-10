@@ -137,7 +137,7 @@
       "fullName": "Spawn one of two objects",
       "functionType": "Action",
       "name": "Spawn2",
-      "sentence": "Spawn _PARAM4_ or _PARAM5_ after _PARAM3_ seconds while emitting _PARAM2_ from _PARAM1_ ",
+      "sentence": "Spawn _PARAM4_, _PARAM5_ or _PARAM6_, with relative frequencies _PARAM7_, _PARAM8_ and _PARAM9_ respectively, after _PARAM3_ seconds while emitting _PARAM2_ from _PARAM1_ ",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -161,7 +161,7 @@
                 "Spawner",
                 "SpawnState",
                 "=",
-                "RandomInRange(0,1)"
+                "RandomFloatInRange(0,GetArgumentAsNumber(\"FrequencySpawn0\")+GetArgumentAsNumber(\"FrequencySpawn1\")+GetArgumentAsNumber(\"FrequencySpawn2\"))"
               ]
             }
           ],
@@ -176,8 +176,8 @@
                   "parameters": [
                     "Spawner",
                     "SpawnState",
-                    "=",
-                    "0"
+                    "<=",
+                    "GetArgumentAsNumber(\"FrequencySpawn0\")"
                   ]
                 }
               ],
@@ -207,8 +207,19 @@
                   "parameters": [
                     "Spawner",
                     "SpawnState",
-                    "=",
-                    "1"
+                    ">",
+                    "GetArgumentAsNumber(\"FrequencySpawn0\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Spawner",
+                    "SpawnState",
+                    "<=",
+                    "GetArgumentAsNumber(\"FrequencySpawn0\")+GetArgumentAsNumber(\"FrequencySpawn1\")"
                   ]
                 }
               ],
@@ -223,6 +234,37 @@
                     "Particles",
                     "GetArgumentAsNumber(\"Delay\")",
                     "Spawn1",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Spawner",
+                    "SpawnState",
+                    ">",
+                    "GetArgumentAsNumber(\"FrequencySpawn0\")+GetArgumentAsNumber(\"FrequencySpawn1\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Spawning::Spawn"
+                  },
+                  "parameters": [
+                    "",
+                    "Spawner",
+                    "Particles",
+                    "GetArgumentAsNumber(\"Delay\")",
+                    "Spawn2",
                     ""
                   ]
                 }
@@ -250,16 +292,37 @@
           "type": "expression"
         },
         {
-          "description": "Object To Spawn",
+          "description": "First object To Spawn",
           "name": "Spawn0",
           "supplementaryInformation": "Sprite",
           "type": "objectList"
         },
         {
-          "description": "Object to spawn",
+          "description": "Second object to spawn",
           "name": "Spawn1",
           "supplementaryInformation": "Sprite",
           "type": "objectList"
+        },
+        {
+          "description": "Third object to spawn",
+          "name": "Spawn2",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "Relative frequency at which the first object spawns",
+          "name": "FrequencySpawn0",
+          "type": "expression"
+        },
+        {
+          "description": "Relative frequency at which the second object spawns",
+          "name": "FrequencySpawn1",
+          "type": "expression"
+        },
+        {
+          "description": "Relative frequency at which the third object spawns",
+          "name": "FrequencySpawn2",
+          "type": "expression"
         }
       ],
       "objectGroups": []
