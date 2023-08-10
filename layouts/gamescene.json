@@ -470,14 +470,7 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [
-        {
-          "folded": true,
-          "name": "p1_activeWeapon",
-          "type": "number",
-          "value": 0
-        }
-      ],
+      "variables": [],
       "effects": [],
       "behaviors": [
         {
@@ -4046,6 +4039,129 @@
   ],
   "events": [
     {
+      "colorB": 5,
+      "colorG": 117,
+      "colorR": 65,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Dev Commands",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "God Mode"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "dev_godMode",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "dev_text"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "F8"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "dev_godMode",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "dev_text",
+                "=",
+                "\"dev_godMode ON\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "dev_text",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "dev_text"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
       "colorB": 228,
       "colorG": 176,
       "colorR": 74,
@@ -4252,116 +4368,6 @@
                 "560",
                 "",
                 ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Dev Commands"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetGlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "dev_godMode",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "dev_text"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "F8"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetGlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "dev_godMode",
-                "True"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "dev_text",
-                "=",
-                "\"dev_godMode ON\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Montre"
-              },
-              "parameters": [
-                "dev_text",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "2"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "dev_text"
               ]
             }
           ]
@@ -7112,7 +7118,7 @@
           "colorG": 199,
           "colorR": 243,
           "creationTime": 0,
-          "name": "1) Ammo Spawning",
+          "name": "1) Start with Weapon Loadout",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -7126,7 +7132,73 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Ammo spawn - give +3 ammo, pick a random weapon"
+              "comment": "Give Starting Weapon from loadouts"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "p1_equipWeapon",
+                    "=",
+                    "GlobalVariable(game_weaponStart)"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 126,
+          "colorG": 199,
+          "colorR": 243,
+          "creationTime": 0,
+          "name": "2) Weapon Spawning",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Weapon spawn object - give +3 ammo, pick a random weapon"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "dev_text2",
+                    "=",
+                    "\"pickup: \" + ToString(p1_hitbox.Variable(p1_pickup)) + NewLine() +\n\"equipped: \" + ToString(p1_hitbox.Variable(p1_equipWeapon))"
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -7148,21 +7220,16 @@
                   "parameters": [
                     "ammo_spawn"
                   ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
+                },
                 {
                   "type": {
-                    "value": "TextObject::String"
+                    "value": "ModVarObjet"
                   },
                   "parameters": [
-                    "dev_text2",
+                    "p1_hitbox",
+                    "p1_pickup",
                     "=",
-                    "ToString(ammo_pickup.Variable(pickup_weapon))"
+                    "RandomInRange(1,3)"
                   ]
                 }
               ]
@@ -7195,10 +7262,10 @@
                     "value": "ModVarObjet"
                   },
                   "parameters": [
-                    "ammo_pickup",
-                    "pickup_weapon",
+                    "p1_hitbox",
+                    "p1_equipWeapon",
                     "=",
-                    "RandomInRange(0, 2)"
+                    "p1_hitbox.Variable(p1_pickup)"
                   ]
                 },
                 {
@@ -7241,6 +7308,17 @@
                     "ammo_pickup",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "p1_pickup",
+                    "=",
+                    "RandomInRange(1,3)"
+                  ]
                 }
               ]
             },
@@ -7252,10 +7330,10 @@
                     "value": "VarObjet"
                   },
                   "parameters": [
-                    "ammo_pickup",
-                    "pickup_weapon",
+                    "p1_hitbox",
+                    "p1_pickup",
                     "=",
-                    "0"
+                    "1"
                   ]
                 }
               ],
@@ -7279,17 +7357,11 @@
                     "value": "VarObjet"
                   },
                   "parameters": [
-                    "ammo_pickup",
-                    "pickup_weapon",
+                    "p1_hitbox",
+                    "p1_pickup",
                     "=",
-                    "1"
+                    "2"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [
@@ -7312,17 +7384,11 @@
                     "value": "VarObjet"
                   },
                   "parameters": [
-                    "ammo_pickup",
-                    "pickup_weapon",
+                    "p1_hitbox",
+                    "p1_pickup",
                     "=",
-                    "2"
+                    "3"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [
@@ -7345,7 +7411,7 @@
           "colorG": 199,
           "colorR": 243,
           "creationTime": 0,
-          "name": "2) Bullet Manager",
+          "name": "3) Bullet Manager",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -7651,7 +7717,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "C) Aiming",
+              "name": "C) Shock Rifle Aiming",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -7676,378 +7742,397 @@
                       },
                       "parameters": [
                         "p1_hitbox",
-                        "ammo",
-                        ">",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::And"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "value": "SystemInfo::HasTouchScreen"
-                              },
-                              "parameters": [
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
-                              },
-                              "parameters": [
-                                "ShootJoystick",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::And"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "SystemInfo::HasTouchScreen"
-                              },
-                              "parameters": [
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MouseButtonPressed"
-                              },
-                              "parameters": [
-                                "",
-                                "Left"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "holdAim",
-                        "+",
-                        "TimeDelta()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PrimitiveDrawing::LineV2"
-                      },
-                      "parameters": [
-                        "p1_aimLine",
-                        "p1_hitbox.X()",
-                        "p1_hitbox.Y()",
-                        "ui_crosshair.X()",
-                        "ui_crosshair.Y()",
+                        "p1_equipWeapon",
+                        "=",
                         "1"
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "TopDownMovementBehavior::MaxSpeed"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "TopDownMovement",
-                        "=",
-                        "128"
-                      ]
                     }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
+                  ],
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "ammo",
-                        ">",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::And"
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "ammo",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
                           },
                           "parameters": [],
                           "subInstructions": [
                             {
                               "type": {
-                                "value": "SystemInfo::HasTouchScreen"
+                                "value": "BuiltinCommonInstructions::And"
                               },
-                              "parameters": [
-                                ""
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "SystemInfo::HasTouchScreen"
+                                  },
+                                  "parameters": [
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                  },
+                                  "parameters": [
+                                    "ShootJoystick",
+                                    ""
+                                  ]
+                                }
                               ]
                             },
                             {
                               "type": {
-                                "inverted": true,
-                                "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                "value": "BuiltinCommonInstructions::And"
                               },
-                              "parameters": [
-                                "ShootJoystick",
-                                ""
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "SystemInfo::HasTouchScreen"
+                                  },
+                                  "parameters": [
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MouseButtonPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Left"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "holdAim",
+                            "+",
+                            "TimeDelta()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::LineV2"
+                          },
+                          "parameters": [
+                            "p1_aimLine",
+                            "p1_hitbox.X()",
+                            "p1_hitbox.Y()",
+                            "ui_crosshair.X()",
+                            "ui_crosshair.Y()",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TopDownMovementBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "TopDownMovement",
+                            "=",
+                            "128"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "ammo",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::And"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "SystemInfo::HasTouchScreen"
+                                  },
+                                  "parameters": [
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                  },
+                                  "parameters": [
+                                    "ShootJoystick",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::And"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "SystemInfo::HasTouchScreen"
+                                  },
+                                  "parameters": [
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "MouseButtonPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Left"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "holdAim",
+                            "-",
+                            "TimeDelta() * 10"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TopDownMovementBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "TopDownMovement",
+                            "=",
+                            "190"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "ammo",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "holdAim",
+                            ">=",
+                            "0.83"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::And"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "SystemInfo::HasTouchScreen"
+                                  },
+                                  "parameters": [
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                  },
+                                  "parameters": [
+                                    "ShootJoystick",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::And"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "SystemInfo::HasTouchScreen"
+                                  },
+                                  "parameters": [
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MouseButtonReleased"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Left"
+                                  ]
+                                }
                               ]
                             }
                           ]
                         },
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::And"
+                            "value": "BuiltinCommonInstructions::Once"
                           },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "SystemInfo::HasTouchScreen"
-                              },
-                              "parameters": [
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "MouseButtonPressed"
-                              },
-                              "parameters": [
-                                "",
-                                "Left"
-                              ]
-                            }
-                          ]
+                          "parameters": []
                         }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "holdAim",
-                        "-",
-                        "TimeDelta() * 10"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "TopDownMovementBehavior::MaxSpeed"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "TopDownMovement",
-                        "=",
-                        "190"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "ammo",
-                        ">",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "holdAim",
-                        ">=",
-                        "0.83"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
+                      ],
+                      "actions": [
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::And"
+                            "value": "FireBullet::FireBullet::FireTowardPosition"
                           },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "value": "SystemInfo::HasTouchScreen"
-                              },
-                              "parameters": [
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
-                              },
-                              "parameters": [
-                                "ShootJoystick",
-                                ""
-                              ]
-                            }
+                          "parameters": [
+                            "p1_hitbox",
+                            "FireBullet",
+                            "p1_hitbox.X()",
+                            "p1_hitbox.Y()",
+                            "p1_shockBullet",
+                            "ui_crosshair.X()",
+                            "ui_crosshair.Y()",
+                            "1280",
+                            ""
                           ]
                         },
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::And"
+                            "value": "ModVarObjet"
                           },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "SystemInfo::HasTouchScreen"
-                              },
-                              "parameters": [
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MouseButtonReleased"
-                              },
-                              "parameters": [
-                                "",
-                                "Left"
-                              ]
-                            }
+                          "parameters": [
+                            "p1_hitbox",
+                            "ammo",
+                            "-",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "bullet_trail",
+                            "=",
+                            "p1_shockBullet.Angle()"
                           ]
                         }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "FireBullet::FireBullet::FireTowardPosition"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "FireBullet",
-                        "p1_hitbox.X()",
-                        "p1_hitbox.Y()",
-                        "p1_shockBullet",
-                        "ui_crosshair.X()",
-                        "ui_crosshair.Y()",
-                        "1280",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "ammo",
-                        "-",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetAngle"
-                      },
-                      "parameters": [
-                        "bullet_trail",
-                        "=",
-                        "p1_shockBullet.Angle()"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "ammo",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "holdAim",
-                        ">=",
-                        "0.83"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "holdAim",
-                        "=",
-                        "0"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "ammo",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "holdAim",
+                            ">=",
+                            "0.83"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "holdAim",
+                            "=",
+                            "0"
+                          ]
+                        }
                       ]
                     }
                   ]
