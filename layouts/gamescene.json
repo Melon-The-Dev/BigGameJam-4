@@ -821,6 +821,8 @@
           "Alive": true
         },
         {
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
           "cellHeight": 16,
@@ -830,8 +832,6 @@
           "angleOffset": 0,
           "angularMaxSpeed": 180,
           "extraBorder": 4,
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
           "maxSpeed": 48,
           "rotateObject": false,
           "smoothingMaxCellGap": 1
@@ -1370,6 +1370,7 @@
           "Alive": true
         },
         {
+          "gridOffsetY": 0,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
           "cellHeight": 16,
@@ -1380,7 +1381,6 @@
           "angularMaxSpeed": 180,
           "extraBorder": 4,
           "gridOffsetX": 0,
-          "gridOffsetY": 0,
           "maxSpeed": 48,
           "rotateObject": false,
           "smoothingMaxCellGap": 1
@@ -5296,6 +5296,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Enemy",
           "conditions": [
@@ -5382,7 +5383,7 @@
                     "hazard_deathzone",
                     "",
                     "",
-                    ""
+                    "yes"
                   ]
                 },
                 {
@@ -5582,6 +5583,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "en_trapper_bullet",
           "conditions": [],
@@ -6463,7 +6465,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Change use in pathfinding based on activated state",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6547,7 +6548,6 @@
               "comment": "Start and stop path finding depending on whether an enemy is activated or not. Note that while the player is dead, that path finding of enemies stops"
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6704,62 +6704,335 @@
                       ],
                       "events": [
                         {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Grunt and Tank Logic",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
                             {
-                              "type": {
-                                "value": "PathfindingBehavior::SetDestination"
-                              },
-                              "parameters": [
-                                "Grunt",
-                                "Pathfinding",
-                                "",
-                                "p1_hitbox.X()",
-                                "p1_hitbox.Y()"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PathfindingBehavior::SetDestination"
+                                  },
+                                  "parameters": [
+                                    "Tank",
+                                    "Pathfinding",
+                                    "",
+                                    "p1_hitbox.X()",
+                                    "p1_hitbox.Y()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PathfindingBehavior::Speed"
+                                  },
+                                  "parameters": [
+                                    "Tank",
+                                    "Pathfinding",
+                                    "=",
+                                    "16"
+                                  ]
+                                }
                               ]
                             },
                             {
-                              "type": {
-                                "value": "PathfindingBehavior::Speed"
-                              },
-                              "parameters": [
-                                "Grunt",
-                                "Pathfinding",
-                                "=",
-                                "48"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PathfindingBehavior::SetDestination"
-                              },
-                              "parameters": [
-                                "Tank",
-                                "Pathfinding",
-                                "",
-                                "p1_hitbox.X()",
-                                "p1_hitbox.Y()"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PathfindingBehavior::SetDestination"
+                                  },
+                                  "parameters": [
+                                    "Grunt",
+                                    "Pathfinding",
+                                    "",
+                                    "p1_hitbox.CenterX()",
+                                    "p1_hitbox.CenterY()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PathfindingBehavior::Speed"
+                                  },
+                                  "parameters": [
+                                    "Grunt",
+                                    "Pathfinding",
+                                    "=",
+                                    "48"
+                                  ]
+                                }
                               ]
                             },
                             {
-                              "type": {
-                                "value": "PathfindingBehavior::Speed"
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
                               },
-                              "parameters": [
-                                "Tank",
-                                "Pathfinding",
-                                "=",
-                                "16"
+                              "comment": "Change the virtual grid offset to change what the enemy can target. Cycle through this until the correct cycle is found"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Arret"
+                                  },
+                                  "parameters": [
+                                    "Enemy"
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "VarObjet"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "OffsetCycle",
+                                        "=",
+                                        "3"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "PathfindingBehavior::PathfindingBehavior::SetGridOffsetY"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "Pathfinding",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PathfindingBehavior::PathfindingBehavior::SetGridOffsetX"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "Pathfinding",
+                                        "=",
+                                        "4"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ModVarObjet"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "OffsetCycle",
+                                        "+",
+                                        "1"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "VarObjet"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "OffsetCycle",
+                                        "=",
+                                        "2"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "PathfindingBehavior::PathfindingBehavior::SetGridOffsetY"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "Pathfinding",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PathfindingBehavior::PathfindingBehavior::SetGridOffsetX"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "Pathfinding",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ModVarObjet"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "OffsetCycle",
+                                        "+",
+                                        "1"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "VarObjet"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "OffsetCycle",
+                                        "=",
+                                        "1"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "PathfindingBehavior::PathfindingBehavior::SetGridOffsetY"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "Pathfinding",
+                                        "=",
+                                        "4"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PathfindingBehavior::PathfindingBehavior::SetGridOffsetX"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "Pathfinding",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ModVarObjet"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "OffsetCycle",
+                                        "+",
+                                        "1"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "VarObjet"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "OffsetCycle",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "PathfindingBehavior::PathfindingBehavior::SetGridOffsetY"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "Pathfinding",
+                                        "=",
+                                        "4"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PathfindingBehavior::PathfindingBehavior::SetGridOffsetX"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "Pathfinding",
+                                        "=",
+                                        "4"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ModVarObjet"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "OffsetCycle",
+                                        "+",
+                                        "1"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "VarObjet"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "OffsetCycle",
+                                        ">=",
+                                        "4"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "ModVarObjet"
+                                      },
+                                      "parameters": [
+                                        "Enemy",
+                                        "OffsetCycle",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ]
+                                }
                               ]
                             }
-                          ]
+                          ],
+                          "parameters": []
                         },
                         {
                           "colorB": 228,
