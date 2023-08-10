@@ -1520,7 +1520,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Active10",
+                  "image": "Active2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1556,7 +1556,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Active11",
+                  "image": "Active5",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1592,7 +1592,43 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Active12",
+                  "image": "Active6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 4,
+                    "y": 2
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 7,
+                        "y": 1
+                      },
+                      {
+                        "x": 7,
+                        "y": 3
+                      },
+                      {
+                        "x": 1,
+                        "y": 3
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Active7",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1896,7 +1932,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\2dSurvival\\en2_hitbox.png",
+                  "image": "Active8",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -6094,6 +6130,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Collision effects based on activated state",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7229,7 +7266,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Tank Health Bars",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7266,7 +7302,7 @@
                         "en_tank_healthbar",
                         "Tank.X()-4",
                         "Tank.Y()+16",
-                        "\"ui\""
+                        ""
                       ]
                     },
                     {
@@ -7536,6 +7572,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Enemy Spawning",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -7691,7 +7728,7 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Repeat",
-                  "repeatExpression": "5",
+                  "repeatExpression": "2",
                   "conditions": [],
                   "actions": [
                     {
@@ -7706,7 +7743,7 @@
                         "en1_grunt",
                         "en1_tank",
                         "en1_trapper",
-                        "200",
+                        "7",
                         "1",
                         "2",
                         ""
@@ -7733,7 +7770,7 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Repeat",
-                  "repeatExpression": "5",
+                  "repeatExpression": "2",
                   "conditions": [],
                   "actions": [
                     {
@@ -7748,7 +7785,7 @@
                         "en2_grunt",
                         "en2_tank",
                         "en2_trapper",
-                        "200",
+                        "7",
                         "1",
                         "2",
                         ""
