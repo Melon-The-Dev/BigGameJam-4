@@ -1857,6 +1857,21 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "ammo_pickup",
+      "persistentUuid": "75b1a7e1-4df4-4afb-8412-892d4973fc02",
+      "width": 0,
+      "x": 328,
+      "y": 248,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -1869,7 +1884,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.4260755261380824,
+    "zoomFactor": 0.896395609082073,
     "windowMask": false
   }
 }
