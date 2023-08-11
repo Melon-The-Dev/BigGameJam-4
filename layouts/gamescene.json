@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 0.993443349825959,
+    "zoomFactor": 1.3841198046306862,
     "windowMask": false
   },
   "objectsGroups": [
@@ -210,8 +210,8 @@
       "name": "ui_score",
       "persistentUuid": "40d061f3-bd7e-43da-a72c-b0597376fd2a",
       "width": 0,
-      "x": 4,
-      "y": 8,
+      "x": 16,
+      "y": 16,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -219,12 +219,13 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 16,
       "layer": "ui",
       "name": "dev_aim",
       "persistentUuid": "f84f25ff-26b5-48e7-9a7a-70e0f96475c5",
-      "width": 0,
+      "width": 48,
       "x": 16,
       "y": 288,
       "zOrder": 11,
@@ -389,13 +390,14 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
       "layer": "ui",
       "name": "dev_text",
       "persistentUuid": "9ca8b98b-8c22-478c-a2fe-8fb7437be1ea",
-      "width": 0,
-      "x": 3,
+      "width": 64,
+      "x": 16,
       "y": 320,
       "zOrder": 24,
       "numberProperties": [],
@@ -404,14 +406,15 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
       "layer": "ui",
       "name": "dev_text2",
       "persistentUuid": "403d160b-daac-4abf-9713-8318f2c575c9",
-      "width": 0,
-      "x": 483,
-      "y": 288,
+      "width": 61,
+      "x": 531,
+      "y": 304,
       "zOrder": 25,
       "numberProperties": [],
       "stringProperties": [],
@@ -506,10 +509,10 @@
         {
           "name": "SmoothCamera",
           "type": "SmoothCamera::SmoothCamera",
-          "LeftwardSpeed": 0.9,
-          "RightwardSpeed": 0.9,
-          "UpwardSpeed": 0.9,
-          "DownwardSpeed": 0.9,
+          "LeftwardSpeed": 0.99,
+          "RightwardSpeed": 0.99,
+          "UpwardSpeed": 0.99,
+          "DownwardSpeed": 0.99,
           "FollowOnX": true,
           "FollowOnY": true,
           "FollowFreeAreaLeft": 0,
@@ -2146,7 +2149,13 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "extraBorder": 0,
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside"
+        }
+      ],
       "animations": [
         {
           "name": "",
@@ -4132,6 +4141,135 @@
         "g": 211,
         "r": 126
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "bullet_grenadeBoom",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.05,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\bullet_grenadeBoom_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 24,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8,
+                        "y": 40
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 8,
+                        "y": 8
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 40,
+                        "y": 8
+                      },
+                      {
+                        "x": 48,
+                        "y": 24
+                      },
+                      {
+                        "x": 40,
+                        "y": 40
+                      },
+                      {
+                        "x": 24,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\bullet_grenadeBoom_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 24,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8,
+                        "y": 40
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 8,
+                        "y": 8
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 40,
+                        "y": 8
+                      },
+                      {
+                        "x": 48,
+                        "y": 24
+                      },
+                      {
+                        "x": 40,
+                        "y": 40
+                      },
+                      {
+                        "x": 24,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -4140,6 +4278,7 @@
       "colorG": 117,
       "colorR": 65,
       "creationTime": 0,
+      "folded": true,
       "name": "Dev Commands",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -6650,7 +6789,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "UI",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -6801,7 +6939,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Tank Health Bars",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7650,7 +7787,6 @@
                   "colorG": 144,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "1) Aiming and Shooting",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -7668,7 +7804,6 @@
                       "comment": "Also sets the Speed of P1, watch out!"
                     },
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -8141,6 +8276,7 @@
                   "colorG": 144,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "2) Bullet Collisions and Points",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8441,10 +8577,23 @@
               "colorG": 67,
               "colorR": 211,
               "creationTime": 0,
+              "folded": true,
               "name": "B) Grenade Launcher",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 31,
+                    "g": 85,
+                    "r": 223,
+                    "textB": 255,
+                    "textG": 255,
+                    "textR": 255
+                  },
+                  "comment": "* instant shot.\n* Travel force of the bullet diminishes the longer it goes.\n* Once in collision with a wall or enemy, the bullet sticks to it.\n* when the bullet has stopped, it flashes for 1/2 second and explodes, creating an increasing explosive radius of max 24px.\n* enemies within the radius take 2 hitpoints once, every killed enemy contributes to multiplier score by 1.5x"
+                },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
@@ -8455,53 +8604,54 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "* instant shot.\n* Travel force of the bullet diminishes the longer it goes.\n* Once in collision with a wall or enemy, the bullet sticks to it.\n* when the bullet has stopped, it flashes for 1/2 second and explodes, creating an increasing explosive radius of max 24px.\n* enemies within the radius take 2 hitpoints once, every killed enemy contributes to multiplier score by 1.5x"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "bullet_grenade",
-                        "bullet_terminalVelocity",
-                        "-",
-                        "1"
-                      ]
-                    }
-                  ]
+                  "comment": "Define initial properties"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "VarObjet"
+                        "value": "DepartScene"
                       },
                       "parameters": [
-                        "bullet_grenade",
-                        "bullet_terminalVelocity",
-                        "=",
-                        "0"
+                        ""
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "ModVarObjet"
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_hitbox",
+                        "p1_grenadeActive",
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
                       },
                       "parameters": [
                         "bullet_grenade",
-                        "bullet_terminalVelocity",
-                        "=",
-                        "0"
+                        "bullet_hasStopped",
+                        "False"
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Has active weapon"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -8521,6 +8671,18 @@
                   "actions": [],
                   "events": [
                     {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Press Fire button, create a Bullet object angled toward the Cursor"
+                    },
+                    {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -8539,9 +8701,9 @@
                             "value": "ObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "bullet_grenade",
-                            "bullet_canShootAnother",
-                            "True"
+                            "p1_hitbox",
+                            "p1_grenadeActive",
+                            "False"
                           ]
                         },
                         {
@@ -8613,32 +8775,53 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "ModVarObjet"
+                            "value": "PlaySound"
                           },
                           "parameters": [
-                            "bullet_grenade",
-                            "bullet_terminalVelocity",
-                            "=",
-                            "640"
+                            "",
+                            "grenadeShot",
+                            "",
+                            "50",
+                            "0.6"
                           ]
                         },
                         {
                           "type": {
-                            "value": "FireBullet::FireBullet::FireTowardPosition"
+                            "value": "Create"
                           },
                           "parameters": [
-                            "p1_hitbox",
-                            "FireBullet",
+                            "",
+                            "bullet_grenade",
                             "p1_hitbox.X()",
                             "p1_hitbox.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "RotateTowardPosition"
+                          },
+                          "parameters": [
                             "bullet_grenade",
-                            "ui_crosshair.X()",
-                            "ui_crosshair.Y()",
-                            "bullet_grenade.Variable(bullet_terminalVelocity)",
+                            "CursorX()",
+                            "CursorY()",
+                            "0",
                             ""
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Can have only ONE Bullet at a time, check is here"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -8661,9 +8844,9 @@
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "bullet_grenade",
-                            "bullet_canShootAnother",
-                            "True"
+                            "p1_hitbox",
+                            "p1_grenadeActive",
+                            "False"
                           ]
                         }
                       ]
@@ -8689,9 +8872,435 @@
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
+                            "p1_hitbox",
+                            "p1_grenadeActive",
+                            "True"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Two Steps/ticks for bullet travelling\n\n1) starts travelling at full speed, goes at 320px for 0.33 secs\n2) then, if no obstacles have been found, goes at 80px for 0.33 secs\n\n* whenever the bullet collides with a wall it should stop right away -- STICKY PART TO DO!"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "p1_grenadeActive",
+                            "True"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
                             "bullet_grenade",
-                            "bullet_canShootAnother",
+                            "bullet_hasStopped",
+                            "False"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AddForceVersPos"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "CursorX()",
+                            "CursorY()",
+                            "320",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.33"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "bullet_grenade"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_grenade.Angle()",
+                            "80",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.33"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_hasStopped",
+                            "True"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "bullet_grenade",
+                                "dev_wall",
+                                "",
+                                "",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "bullet_grenade",
+                                "Enemy",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "bullet_grenade"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_hasStopped",
+                            "True"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "* Bullet stops, then creates an Explosion object starting at 0% scale. When it reaches 100% destroys itself and can shoot again"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_hasStopped",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "grenade_stick",
+                                "",
+                                "50",
+                                "0.8"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Arreter"
+                              },
+                              "parameters": [
+                                "bullet_grenade"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Wait"
+                              },
+                              "parameters": [
+                                "0.33"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "bullet_grenadeBoom",
+                                "bullet_grenade.X()",
+                                "bullet_grenade.Y()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangeScale"
+                              },
+                              "parameters": [
+                                "bullet_grenadeBoom",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "grenade_boom",
+                                "",
+                                "100",
+                                "0.4"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ChangeScale"
+                              },
+                              "parameters": [
+                                "bullet_grenadeBoom",
+                                "+",
+                                "TimeDelta() * 2"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ScaleHeight"
+                          },
+                          "parameters": [
+                            "bullet_grenadeBoom",
+                            ">=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_hasStopped",
+                            "False"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_travelStep",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "bullet_grenadeBoom",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "LinkedObjects::RemoveLinkBetween"
+                          },
+                          "parameters": [
+                            "",
+                            "bullet_grenade",
+                            "Enemy"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "* Explosion hits enemies in radius"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "bullet_grenadeBoom",
+                            "Enemy",
+                            "",
+                            "",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Enemy::Enemy::HitEnemy"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "Enemy",
+                            "100",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionPoint"
+                          },
+                          "parameters": [
+                            "bullet_grenadeBoom",
+                            "p1_hitbox.CenterX()",
+                            "p1_hitbox.CenterY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "game_playerIsDead",
+                            "True"
                           ]
                         }
                       ]

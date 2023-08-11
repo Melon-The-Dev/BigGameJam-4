@@ -916,6 +916,92 @@
           "objectGroups": []
         },
         {
+          "description": "Fire bullets toward a position WITH DOWNRAMPING.",
+          "fullName": "Fire bullets toward a position WITH DOWN RAMPING",
+          "functionType": "Action",
+          "name": "FireTowardPosition2",
+          "sentence": "Fire _PARAM4_ from _PARAM0_, at position _PARAM2_; _PARAM3_, toward position _PARAM5_;_PARAM6_ with speed _PARAM7_ px/s",
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Calculate the trajectory angle and use the \"Fire bullets\" action",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "GetArgumentAsNumber(\"XPosition\")",
+                        "GetArgumentAsNumber(\"YPosition\")",
+                        "Bullet",
+                        "Object.AngleToPosition(GetArgumentAsNumber(\"TargetXPosition\"), GetArgumentAsNumber(\"TargetYPosition\"))",
+                        "GetArgumentAsNumber(\"Speed\")",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "FireBullet::FireBullet",
+              "type": "behavior"
+            },
+            {
+              "description": "X position, where to create the bullet",
+              "name": "XPosition",
+              "type": "expression"
+            },
+            {
+              "description": "Y position, where to create the bullet",
+              "name": "YPosition",
+              "type": "expression"
+            },
+            {
+              "description": "The bullet object",
+              "name": "Bullet",
+              "type": "objectListOrEmptyIfJustDeclared"
+            },
+            {
+              "description": "Target X position",
+              "name": "TargetXPosition",
+              "type": "expression"
+            },
+            {
+              "description": "Target Y position",
+              "name": "TargetYPosition",
+              "type": "expression"
+            },
+            {
+              "description": "Speed of the bullet, in pixels per second",
+              "name": "Speed",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
           "description": "Fire bullets in the direction of a given angle.",
           "fullName": "Fire bullets toward an angle",
           "functionType": "Action",
