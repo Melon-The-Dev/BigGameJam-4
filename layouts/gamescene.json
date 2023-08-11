@@ -821,10 +821,10 @@
           "Alive": true
         },
         {
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
           "cellHeight": 16,
           "cellWidth": 16,
           "acceleration": 0,
@@ -1370,9 +1370,9 @@
           "Alive": true
         },
         {
-          "gridOffsetY": 0,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
+          "gridOffsetY": 0,
           "cellHeight": 16,
           "cellWidth": 16,
           "acceleration": 0,
