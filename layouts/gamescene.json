@@ -4724,6 +4724,43 @@
             "textG": 0,
             "textR": 0
           },
+          "comment": "Reset Level XP"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "game_levelXp",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "Press ESC to get back to Main Menu."
         },
         {
@@ -5820,6 +5857,16 @@
                 "",
                 "\"ui\""
               ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "game_xp",
+                "+",
+                "Variable(game_levelXp)"
+              ]
             }
           ],
           "events": [
@@ -5885,7 +5932,7 @@
                       "parameters": [
                         "gameover_text",
                         "=",
-                        "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- TOUCH TO RESTART --\""
+                        "\"XP: \" + ToString(Variable(game_levelXp)) + NewLine() +\n\"Total XP: \" + ToString(GlobalVariable(game_xp)) + NewLine() +\nNewLine() +\n\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- TOUCH TO RESTART --\""
                       ]
                     }
                   ]
@@ -5911,7 +5958,7 @@
                       "parameters": [
                         "gameover_text",
                         "=",
-                        "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R OR CLICK TO RESTART --\" + NewLine() +\n\"-- PRESS ESC TO MAIN MENU --\""
+                        "\"XP: \" + ToString(Variable(game_levelXp)) + NewLine() +\n\"Total XP: \" + ToString(GlobalVariable(game_xp)) + NewLine() +\nNewLine() +\n\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R OR CLICK TO RESTART --\" + NewLine() +\n\"-- PRESS ESC TO MAIN MENU --\""
                       ]
                     }
                   ]
@@ -6037,6 +6084,18 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Switch, also add +100 XP to Player Progression"
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6058,6 +6117,16 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "game_levelXp",
+                "+",
+                "100"
+              ]
+            },
             {
               "type": {
                 "value": "ToggleSceneVariableAsBoolean"
@@ -6889,6 +6958,16 @@
                     "125",
                     "125"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "game_levelXp",
+                    "+",
+                    "10"
+                  ]
                 }
               ]
             },
@@ -6917,6 +6996,16 @@
                     "Enemy",
                     "200",
                     "200"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "game_levelXp",
+                    "+",
+                    "10"
                   ]
                 }
               ]
@@ -7903,7 +7992,6 @@
           "colorG": 199,
           "colorR": 243,
           "creationTime": 0,
-          "folded": true,
           "name": "3) Weapons",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7913,7 +8001,6 @@
               "colorG": 144,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "A) Shock Rifle",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8462,7 +8549,6 @@
                   "colorG": 144,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "2) Bullet Collisions and Points",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -9522,7 +9608,6 @@
               "colorG": 209,
               "colorR": 162,
               "creationTime": 0,
-              "folded": true,
               "name": "C) Scattershot",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -10555,6 +10640,16 @@
                     "Enemy",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "game_levelXp",
+                    "+",
+                    "10"
+                  ]
                 }
               ]
             }
@@ -11348,6 +11443,16 @@
               "parameters": [
                 "Enemy",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "game_levelXp",
+                "+",
+                "10"
               ]
             }
           ]
