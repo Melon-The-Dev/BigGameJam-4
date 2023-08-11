@@ -6789,6 +6789,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "UI",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -6939,6 +6940,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Tank Health Bars",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7765,7 +7767,6 @@
               "colorG": 144,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "A) Shock Rifle",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -7787,6 +7788,7 @@
                   "colorG": 144,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "1) Aiming and Shooting",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8577,7 +8579,6 @@
               "colorG": 67,
               "colorR": 211,
               "creationTime": 0,
-              "folded": true,
               "name": "B) Grenade Launcher",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8807,6 +8808,17 @@
                             "CursorY()",
                             "0",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "ammo",
+                            "-",
+                            "1"
                           ]
                         }
                       ]
@@ -9235,7 +9247,7 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "* Explosion hits enemies in radius"
+                      "comment": "* Explosion hits enemies and player in radius"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
