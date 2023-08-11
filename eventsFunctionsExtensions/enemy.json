@@ -75,7 +75,7 @@
           "fullName": "Hit enemy",
           "functionType": "Action",
           "name": "HitEnemy",
-          "sentence": "Hit _PARAM0_ and add a score of _PARAM2_",
+          "sentence": "Hit _PARAM0_ for _PARAM3_ damage, and add a score of _PARAM2_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -89,7 +89,7 @@
                     "Object",
                     "Behavior",
                     "-",
-                    "1"
+                    "GetArgumentAsNumber(\"Damage\")"
                   ]
                 },
                 {
@@ -121,6 +121,11 @@
             {
               "description": "Score",
               "name": "Score",
+              "type": "expression"
+            },
+            {
+              "description": "Damage per bullet",
+              "name": "Damage",
               "type": "expression"
             }
           ],
