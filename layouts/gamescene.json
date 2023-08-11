@@ -7614,6 +7614,7 @@
       "colorG": 166,
       "colorR": 245,
       "creationTime": 0,
+      "folded": true,
       "name": "Weapon Manager",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -7623,6 +7624,7 @@
           "colorG": 199,
           "colorR": 243,
           "creationTime": 0,
+          "folded": true,
           "name": "1) Start with Weapon Loadout",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7673,6 +7675,7 @@
           "colorG": 199,
           "colorR": 243,
           "creationTime": 0,
+          "folded": true,
           "name": "2) Weapon Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7900,6 +7903,7 @@
           "colorG": 199,
           "colorR": 243,
           "creationTime": 0,
+          "folded": true,
           "name": "3) Weapons",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7909,6 +7913,7 @@
               "colorG": 144,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "A) Shock Rifle",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8747,7 +8752,6 @@
               "colorG": 67,
               "colorR": 211,
               "creationTime": 0,
-              "folded": true,
               "name": "B) Grenade Launcher",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -9316,7 +9320,7 @@
                                 "",
                                 "grenade_boom",
                                 "",
-                                "60",
+                                "50",
                                 "0.4"
                               ]
                             }
@@ -9518,6 +9522,7 @@
               "colorG": 209,
               "colorR": 162,
               "creationTime": 0,
+              "folded": true,
               "name": "C) Scattershot",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -10169,7 +10174,8 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Enemy",
                       "conditions": [
                         {
                           "type": {
@@ -10180,6 +10186,16 @@
                             "Enemy",
                             "",
                             "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Activatable::Activatable::IsActivated"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "Activatable",
                             ""
                           ]
                         }
@@ -10193,7 +10209,7 @@
                             "Enemy",
                             "Enemy",
                             "100",
-                            "0.5",
+                            "0.2",
                             ""
                           ]
                         }
