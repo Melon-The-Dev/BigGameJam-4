@@ -7614,7 +7614,6 @@
       "colorG": 166,
       "colorR": 245,
       "creationTime": 0,
-      "folded": true,
       "name": "Weapon Manager",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -7910,7 +7909,6 @@
               "colorG": 144,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "A) Shock Rifle",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -7932,7 +7930,6 @@
                   "colorG": 144,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "1) Aiming and Shooting",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8749,7 +8746,6 @@
               "colorG": 67,
               "colorR": 211,
               "creationTime": 0,
-              "folded": true,
               "name": "B) Grenade Launcher",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -9302,18 +9298,6 @@
                             },
                             {
                               "type": {
-                                "value": "CameraShake::ShakeCamera"
-                              },
-                              "parameters": [
-                                "",
-                                "TimeDelta() * 2",
-                                "TimeDelta() * 2",
-                                "TimeDelta() * 2",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
                                 "value": "ChangeScale"
                               },
                               "parameters": [
@@ -9330,7 +9314,7 @@
                                 "",
                                 "grenade_boom",
                                 "",
-                                "70",
+                                "60",
                                 "0.4"
                               ]
                             }
@@ -9348,6 +9332,37 @@
                                 "bullet_grenadeBoom",
                                 "+",
                                 "TimeDelta() * 2"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 27,
+                            "g": 2,
+                            "r": 208,
+                            "textB": 255,
+                            "textG": 255,
+                            "textR": 255
+                          },
+                          "comment": "Should also shake the camera, currently bugged"
+                        },
+                        {
+                          "disabled": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "CameraShake::ShakeCamera"
+                              },
+                              "parameters": [
+                                "",
+                                "TimeDelta() * 2",
+                                "TimeDelta() * 2",
+                                "TimeDelta() * 2",
+                                ""
                               ]
                             }
                           ]
@@ -9406,16 +9421,6 @@
                           "parameters": [
                             "bullet_grenadeBoom",
                             ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "LinkedObjects::RemoveLinkBetween"
-                          },
-                          "parameters": [
-                            "",
-                            "bullet_grenade",
-                            "Enemy"
                           ]
                         }
                       ]
@@ -9511,7 +9516,6 @@
               "colorG": 209,
               "colorR": 162,
               "creationTime": 0,
-              "folded": true,
               "name": "C) Scattershot",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
