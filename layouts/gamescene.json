@@ -7930,6 +7930,7 @@
                   "colorG": 144,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "1) Aiming and Shooting",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8746,6 +8747,7 @@
               "colorG": 67,
               "colorR": 211,
               "creationTime": 0,
+              "folded": true,
               "name": "B) Grenade Launcher",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -9331,7 +9333,7 @@
                               "parameters": [
                                 "bullet_grenadeBoom",
                                 "+",
-                                "TimeDelta() * 2"
+                                "TimeDelta() * 4"
                               ]
                             }
                           ]
@@ -9621,7 +9623,7 @@
                         "p1_hitbox",
                         "FireBullet",
                         "=",
-                        "6",
+                        "8",
                         ""
                       ]
                     }
@@ -9644,6 +9646,18 @@
                       ],
                       "actions": [],
                       "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Shooting goes by Ticks:\n\n1) On first click: shoot the bullets;\n2) On first release: goes into reloading state;\n3) On second click: reloads the rifle;\n4) On second release: goes back to first state, ready to shoot again"
+                        },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
@@ -10168,12 +10182,6 @@
                             "",
                             ""
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
                         }
                       ],
                       "actions": [

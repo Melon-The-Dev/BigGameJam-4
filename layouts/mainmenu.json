@@ -858,6 +858,14 @@
       "actions": [
         {
           "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            "0.2"
+          ]
+        },
+        {
+          "type": {
             "value": "Scene"
           },
           "parameters": [
