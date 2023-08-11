@@ -16,7 +16,7 @@
     "pixelsRounding": true,
     "projectUuid": "a0a29ed9-ed75-45bc-97e3-d49f4cf29dac",
     "scaleMode": "nearest",
-    "sizeOnStartupMode": "adaptWidth",
+    "sizeOnStartupMode": "",
     "templateSlug": "",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
@@ -708,6 +708,270 @@
         "name": "assets\\Grey Button With Shadow_Pressed.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2d_tile.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2d_tile.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/bullet_grenade_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\bullet_grenade_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/bullet_grenade_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\bullet_grenade_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/bullet_grenadeBoom_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\bullet_grenadeBoom_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/bullet_grenadeBoom_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\bullet_grenadeBoom_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/bullet_scatter_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\bullet_scatter_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/bullet_scatter_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\bullet_scatter_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/en1_spawn.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\en1_spawn.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/lvl_layout00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\lvl_layout00.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Active2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Active2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold Coin.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Gold Coin.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Inactive3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Inactive3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lev_layout.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lev_layout.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/p1_stand.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\p1_stand.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/platform_player.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\platform_player.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/platform_player2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\platform_player2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tv_front.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tv_front.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tv_part.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tv_part.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "dev_floorTexture.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "dev_floorTexture.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "dev_wallTexture.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "dev_wallTexture.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/grenade_boom.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\grenade_boom.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/grenade_stick.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\grenade_stick.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/grenadeShot.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\grenadeShot.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/scatter_reload.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\scatter_reload.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/scatter_shot.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\scatter_shot.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/shockCharge.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\shockCharge.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/weapon_shockShot.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\weapon_shockShot.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/CantoraOne-Regular.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "assets\\CantoraOne-Regular.ttf",
+        "userAdded": true
+      },
+      {
+        "file": "assets/Roboto-Regular.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "assets\\Roboto-Regular.ttf",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -745,11 +1009,11 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/leaderboards"
+      "referenceTo": "/layouts/gamescene"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/gamescene"
+      "referenceTo": "/layouts/leaderboards"
     }
   ],
   "externalEvents": [],
@@ -793,14 +1057,6 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/dev_debugbehavior"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/eventsFunctionsExtensions/mousepointerlock"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/eventsFunctionsExtensions/withthreejs"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

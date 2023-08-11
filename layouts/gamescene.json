@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 0.6672773998329988,
+    "zoomFactor": 0.6897782140104511,
     "windowMask": false
   },
   "objectsGroups": [
@@ -659,7 +659,7 @@
     {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "p1_bullet",
+      "name": "bullet_shock",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -1236,7 +1236,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "en1_spawn",
+      "name": "en_spawn",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -1306,7 +1306,7 @@
       "flow": 45,
       "jumpForwardInTimeOnCreation": 0,
       "maxParticleNb": 128,
-      "name": "en1_spawnParticles",
+      "name": "en_spawnParticles",
       "particleAlpha1": 204,
       "particleAlpha2": 0,
       "particleAlphaRandomness1": 0,
@@ -2061,67 +2061,6 @@
                 {
                   "hasCustomCollisionMask": true,
                   "image": "assets\\2dSurvival\\en_inactive.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 8,
-                    "y": 8
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 16,
-                        "y": 0
-                      },
-                      {
-                        "x": 16,
-                        "y": 16
-                      },
-                      {
-                        "x": 0,
-                        "y": 16
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "adaptCollisionMaskAutomatically": true,
-      "assetStoreId": "",
-      "name": "en2_spawn",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets\\2dSurvival\\en2_spawn.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3268,9 +3207,9 @@
       "textAlignment": "center",
       "characterSize": 16,
       "color": {
-        "b": 33,
-        "g": 211,
-        "r": 126
+        "b": 27,
+        "g": 2,
+        "r": 208
       }
     },
     {
@@ -4349,9 +4288,688 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "dev_text",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Text",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 24,
+      "color": {
+        "b": 33,
+        "g": 211,
+        "r": 126
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "dev_text2",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Text",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 24,
+      "color": {
+        "b": 33,
+        "g": 211,
+        "r": 126
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "bullet_grenade",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.05,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\bullet_grenade_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 2,
+                    "y": 2
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 4
+                      },
+                      {
+                        "x": 0,
+                        "y": 4
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\bullet_grenade_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 2,
+                    "y": 2
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 4
+                      },
+                      {
+                        "x": 0,
+                        "y": 4
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "bullet_grenadeBoom",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.05,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\bullet_grenadeBoom_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 24,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8,
+                        "y": 40
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 8,
+                        "y": 8
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 40,
+                        "y": 8
+                      },
+                      {
+                        "x": 48,
+                        "y": 24
+                      },
+                      {
+                        "x": 40,
+                        "y": 40
+                      },
+                      {
+                        "x": 24,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\bullet_grenadeBoom_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 24,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8,
+                        "y": 40
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 8,
+                        "y": 8
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 40,
+                        "y": 8
+                      },
+                      {
+                        "x": 48,
+                        "y": 24
+                      },
+                      {
+                        "x": 40,
+                        "y": 40
+                      },
+                      {
+                        "x": 24,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "bullet_scatter",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.05,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\bullet_scatter_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 2,
+                        "y": 0
+                      },
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 0,
+                        "y": 2
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\bullet_scatter_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 2,
+                        "y": 0
+                      },
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 0,
+                        "y": 2
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
+    {
+      "colorB": 5,
+      "colorG": 117,
+      "colorR": 65,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Dev Commands",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "God Mode"
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "dev_godMode",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "dev_text"
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "F8"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "dev_godMode",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "dev_text",
+                "=",
+                "\"dev_godMode ON\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "dev_text",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "dev_text"
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Infinite Ammo"
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "GlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "dev_godMode",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "ammo",
+                "=",
+                "9999"
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Change Weapons"
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "GlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "dev_godMode",
+                "True"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Num1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "p1_equipWeapon",
+                    "=",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Num2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "p1_equipWeapon",
+                    "=",
+                    "2"
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Num3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "p1_equipWeapon",
+                    "=",
+                    "3"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
     {
       "colorB": 228,
       "colorG": 176,
@@ -4363,6 +4981,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -4375,6 +4994,7 @@
           "comment": "Load Level from External Layout, using the Global Variable from scene \"mainMenu\""
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4401,6 +5021,46 @@
           ]
         },
         {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Reset level XP"
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "game_levelXp",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -4413,6 +5073,7 @@
           "comment": "Press ESC to get back to Main Menu."
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4445,6 +5106,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -4457,6 +5119,7 @@
           "comment": "Camera behavior: If it's level 1, de-activate it since it's single-screen; on level 2, activate it within the right range"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4490,6 +5153,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4523,6 +5187,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4564,6 +5229,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -4666,6 +5332,7 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4691,6 +5358,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4722,6 +5390,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4817,6 +5486,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -4829,6 +5499,7 @@
           "comment": "Set the activated variable to false for all hazards"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4854,6 +5525,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -4866,6 +5538,7 @@
           "comment": "Set the type variable of traps to their respective values"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4903,6 +5576,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -4915,6 +5589,7 @@
           "comment": "Customise pitch for the hitsound to be played for each enemy group"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4976,18 +5651,20 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
+            "b": 27,
+            "g": 2,
+            "r": 208,
+            "textB": 255,
+            "textG": 255,
+            "textR": 255
           },
-          "comment": "Restart game when r is pressed or a new touch is started to prevent accidentally starting the level again"
+          "comment": "Restart game when r is pressed or a new touch is started to prevent accidentally starting the level again - REMIND TO REMOVE THIS BEHAVIOR FROM THE DEV_DEBUG OBJECT"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5052,6 +5729,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -5064,6 +5742,7 @@
           "comment": "Up to refactor for multiple inputs"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5108,6 +5787,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5152,6 +5832,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5196,6 +5877,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5253,6 +5935,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -5269,6 +5952,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5316,6 +6000,7 @@
           "actions": [],
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5345,6 +6030,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5372,6 +6058,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5454,12 +6141,14 @@
                     "Enemy",
                     "Enemy",
                     "50",
+                    "100",
                     ""
                   ]
                 }
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5487,6 +6176,7 @@
               ],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5533,6 +6223,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5590,6 +6281,7 @@
           "actions": [],
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5651,8 +6343,31 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Also adds cumulative XP from the round with global var \"game_xp\""
+        },
+        {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
+            {
+              "type": {
+                "value": "GlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "dev_godMode",
+                "False"
+              ]
+            },
             {
               "type": {
                 "value": "SceneVariableAsBoolean"
@@ -5711,7 +6426,7 @@
               },
               "parameters": [
                 "",
-                "en1_spawnParticles",
+                "en_spawnParticles",
                 "p1_hitbox.X()",
                 "p1_hitbox.Y()",
                 ""
@@ -5722,7 +6437,7 @@
                 "value": "SetAngle"
               },
               "parameters": [
-                "en1_spawnParticles",
+                "en_spawnParticles",
                 "=",
                 "270"
               ]
@@ -5763,10 +6478,21 @@
                 "",
                 "\"ui\""
               ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "game_xp",
+                "+",
+                "Variable(game_levelXp)"
+              ]
             }
           ],
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5804,11 +6530,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Display gameOver layer",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5828,12 +6556,13 @@
                       "parameters": [
                         "gameover_text",
                         "=",
-                        "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- TOUCH TO RESTART --\""
+                        "\"XP: \" + ToString(Variable(game_levelXp)) + NewLine() +\n\"Total XP: \" + ToString(GlobalVariable(game_xp)) + NewLine() +\nNewLine() +\n\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- TOUCH TO RESTART --\""
                       ]
                     }
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5854,12 +6583,13 @@
                       "parameters": [
                         "gameover_text",
                         "=",
-                        "\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R OR CLICK TO RESTART --\" + NewLine() +\n\"-- PRESS ESC TO MAIN MENU --\""
+                        "\"XP: \" + ToString(Variable(game_levelXp)) + NewLine() +\n\"Total XP: \" + ToString(GlobalVariable(game_xp)) + NewLine() +\nNewLine() +\n\"-- GAME OVER --\" + NewLine() +\nNewLine() +\n\"Your score: \" + ToString(Variable(game_totalScore)) + NewLine() +\n\"Highest Score: \" + ToString(GlobalVariable(game_highScore)) + NewLine() +\nNewLine() +\n\"-- PRESS R OR CLICK TO RESTART --\" + NewLine() +\n\"-- PRESS ESC TO MAIN MENU --\""
                       ]
                     }
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -5878,6 +6608,7 @@
               "parameters": []
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -5890,6 +6621,7 @@
               "comment": "Delete particles after processing highscore and gameOver layer to make the transition to gameOver look more smooth"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -5906,7 +6638,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "en1_spawnParticles",
+                    "en_spawnParticles",
                     ""
                   ]
                 }
@@ -5928,6 +6660,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -5940,6 +6673,7 @@
           "comment": "Initialise changeState timer when game starts"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5980,6 +6714,20 @@
           ]
         },
         {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Switch, also add +100 XP to Player Progression"
+        },
+        {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6003,6 +6751,16 @@
           "actions": [
             {
               "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "game_levelXp",
+                "+",
+                "100"
+              ]
+            },
+            {
+              "type": {
                 "value": "ToggleSceneVariableAsBoolean"
               },
               "parameters": [
@@ -6021,6 +6779,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -6033,6 +6792,7 @@
           "comment": "Toggle active states when needed"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6069,6 +6829,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6105,6 +6866,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -6117,6 +6879,7 @@
           "comment": "UI Bar"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -6133,6 +6896,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6164,6 +6928,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6236,6 +7001,7 @@
               "actions": [],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
                     "b": 109,
@@ -6248,6 +7014,7 @@
                   "comment": "Push inactive enemies"
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -6277,6 +7044,7 @@
                   ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -6344,6 +7112,7 @@
               "actions": [],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
                     "b": 109,
@@ -6356,6 +7125,7 @@
                   "comment": "Trigger death when Player Center is in collision with an active hazard"
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -6406,6 +7176,7 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6432,6 +7203,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6465,11 +7237,13 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Change use in pathfinding based on activated state",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -6482,6 +7256,7 @@
               "comment": "Start and stop path obstacle behaviour of a trap depending on whether is it active or not"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6509,6 +7284,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6536,6 +7312,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -6548,6 +7325,7 @@
               "comment": "Start and stop path finding depending on whether an enemy is activated or not. Note that while the player is dead, that path finding of enemies stops"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6563,12 +7341,14 @@
               "actions": [],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "Enemy",
                   "conditions": [],
                   "actions": [],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -6606,6 +7386,7 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Comment",
                           "color": {
                             "b": 109,
@@ -6618,6 +7399,7 @@
                           "comment": "Stop trappers when inactive and pause their move charge cycle"
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -6667,6 +7449,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -6708,11 +7491,13 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Grunt and Tank Logic",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -6742,6 +7527,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -6771,6 +7557,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Comment",
                               "color": {
                                 "b": 109,
@@ -6783,6 +7570,7 @@
                               "comment": "Change the virtual grid offset to change what the enemy can target. Cycle through this until the correct cycle is found"
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -6797,6 +7585,7 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -6848,6 +7637,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -6899,6 +7689,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -6950,6 +7741,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -7001,6 +7793,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -7039,11 +7832,13 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Trapper Logic",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Comment",
                               "color": {
                                 "b": 109,
@@ -7056,6 +7851,7 @@
                               "comment": "Initialiase Trapper with a random direction and given them a timer for their move charge cycle"
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -7116,6 +7912,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -7141,6 +7938,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -7170,6 +7968,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -7256,6 +8055,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7268,6 +8068,7 @@
           "comment": "Trigger both traps when play is on trap button"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -7293,7 +8094,7 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
-                    "p1_bullet",
+                    "bullet_shock",
                     "dev_trap_button",
                     "",
                     "",
@@ -7359,6 +8160,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Trap",
           "conditions": [
@@ -7401,6 +8203,7 @@
           ],
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7424,12 +8227,14 @@
                     "Enemy",
                     "Enemy",
                     "125",
-                    "125"
+                    "100",
+                    ""
                   ]
                 }
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7453,7 +8258,8 @@
                     "Enemy",
                     "Enemy",
                     "200",
-                    "200"
+                    "100",
+                    ""
                   ]
                 }
               ]
@@ -7474,6 +8280,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7486,6 +8293,7 @@
           "comment": "mobilecontrols\n"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -7530,6 +8338,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7542,6 +8351,7 @@
           "comment": "Crosshair"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -7587,6 +8397,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7599,6 +8410,7 @@
           "comment": "Score"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -7619,17 +8431,20 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Tank Health Bars",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Tank",
               "conditions": [],
               "actions": [],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -7671,6 +8486,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
                     "b": 109,
@@ -7683,6 +8499,7 @@
                   "comment": "Change the animation of the healthbar to match that of the tank"
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -7748,6 +8565,7 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -7764,6 +8582,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -7792,6 +8611,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7819,6 +8639,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7845,6 +8666,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -7857,6 +8679,7 @@
               "comment": "Limit size of holdAim so the max width of bulletReady looks nice"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7886,6 +8709,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7931,6 +8755,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -7948,7 +8773,7 @@
                 "value": "Cache"
               },
               "parameters": [
-                "en1_spawn"
+                "en_spawn"
               ]
             },
             {
@@ -7982,6 +8807,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -8034,6 +8860,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -8065,6 +8892,7 @@
           ],
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8080,6 +8908,7 @@
               "actions": [],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Repeat",
                   "repeatExpression": "2",
                   "conditions": [],
@@ -8090,8 +8919,8 @@
                       },
                       "parameters": [
                         "",
-                        "en1_spawn",
-                        "en1_spawnParticles",
+                        "en_spawn",
+                        "en_spawnParticles",
                         "2",
                         "en1_grunt",
                         "en1_tank",
@@ -8107,6 +8936,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8122,6 +8952,7 @@
               "actions": [],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Repeat",
                   "repeatExpression": "2",
                   "conditions": [],
@@ -8132,7 +8963,7 @@
                       },
                       "parameters": [
                         "",
-                        "en1_spawn",
+                        "en_spawn",
                         "en2_spawnParticles",
                         "2",
                         "en2_grunt",
@@ -8154,437 +8985,27 @@
       "parameters": []
     },
     {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
+      "colorB": 35,
+      "colorG": 166,
+      "colorR": 245,
       "creationTime": 0,
       "folded": true,
-      "name": "Ammo Spawning",
+      "name": "Weapon Manager",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Ammo spawn"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "ammo_spawn"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "ammo_pickup",
-                "",
-                "",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "ammo",
-                "+",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "ammo_pickup",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "5"
-              ]
-            },
-            {
-              "type": {
-                "value": "Spawning::Spawn"
-              },
-              "parameters": [
-                "",
-                "ammo_spawn",
-                "ammo_spawnParticles",
-                "1",
-                "ammo_pickup",
-                ""
-              ]
-            }
-          ]
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "folded": true,
-      "name": "Bullet",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Bullet Collisions",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "p1_bullet",
-                    "dev_wall",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "p1_bullet",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ModVarObjet"
-                  },
-                  "parameters": [
-                    "p1_bullet",
-                    "bullet_multiplier",
-                    "=",
-                    "0"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "Enemy",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "p1_bullet",
-                    "Enemy",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Calculate Score by adding +1 for every Enemy hit, then multiply 100 by that number."
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "Activatable::Activatable::IsActivated"
-                      },
-                      "parameters": [
-                        "Enemy",
-                        "Activatable",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "p1_bullet",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "Activatable::Activatable::IsActivated"
-                      },
-                      "parameters": [
-                        "Enemy",
-                        "Activatable",
-                        "True"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "CameraShake::ShakeCamera"
-                      },
-                      "parameters": [
-                        "",
-                        "TimeDelta() * 2",
-                        "TimeDelta() * 2",
-                        "TimeDelta() * 2",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "p1_bullet",
-                        "bullet_multiplier",
-                        "+",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySound"
-                      },
-                      "parameters": [
-                        "",
-                        "hitsound",
-                        "",
-                        "66",
-                        "Enemy.Variable(PITCH)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Enemy::Enemy::HitEnemy"
-                      },
-                      "parameters": [
-                        "Enemy",
-                        "Enemy",
-                        "Enemy.Enemy::Score()*p1_bullet.Variable(bullet_multiplier)",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "p1_bullet",
-                    "Wall",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Activatable::Activatable::IsActivated"
-                  },
-                  "parameters": [
-                    "Wall",
-                    "Activatable",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "p1_bullet",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
+          "colorB": 126,
+          "colorG": 199,
+          "colorR": 243,
           "creationTime": 0,
           "folded": true,
-          "name": "Bullet Trail",
+          "name": "1) Start with Weapon Loadout",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "",
-                    "p1_bullet",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "bullet_trail",
-                    "=",
-                    "-128",
-                    "=",
-                    "-128"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneInstancesCount"
-                  },
-                  "parameters": [
-                    "",
-                    "p1_bullet",
-                    ">=",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "bullet_trail",
-                    "=",
-                    "p1_bullet.X()",
-                    "=",
-                    "p1_bullet.Y()"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Aiming",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -8594,79 +9015,18 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Also sets the Speed of P1, watch out!"
+              "comment": "Give Starting Weapon from loadouts"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "VarObjet"
+                    "value": "DepartScene"
                   },
                   "parameters": [
-                    "p1_hitbox",
-                    "ammo",
-                    ">",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "SystemInfo::HasTouchScreen"
-                          },
-                          "parameters": [
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
-                          },
-                          "parameters": [
-                            "ShootJoystick",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "SystemInfo::HasTouchScreen"
-                          },
-                          "parameters": [
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "MouseButtonPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ]
-                        }
-                      ]
-                    }
+                    ""
                   ]
                 }
               ],
@@ -8677,221 +9037,88 @@
                   },
                   "parameters": [
                     "p1_hitbox",
-                    "holdAim",
-                    "+",
-                    "TimeDelta()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PrimitiveDrawing::LineV2"
-                  },
-                  "parameters": [
-                    "p1_aimLine",
-                    "p1_hitbox.X()",
-                    "p1_hitbox.Y()",
-                    "ui_crosshair.X()",
-                    "ui_crosshair.Y()",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TopDownMovementBehavior::MaxSpeed"
-                  },
-                  "parameters": [
-                    "p1_hitbox",
-                    "TopDownMovement",
+                    "p1_equipWeapon",
                     "=",
-                    "128"
+                    "GlobalVariable(game_weaponStart)"
                   ]
                 }
               ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 126,
+          "colorG": 199,
+          "colorR": 243,
+          "creationTime": 0,
+          "folded": true,
+          "name": "2) Weapon Spawning",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Weapon spawn object - give +3 ammo, pick a random weapon"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "VarObjet"
+                    "value": "DepartScene"
                   },
                   "parameters": [
-                    "p1_hitbox",
-                    "ammo",
-                    ">",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "SystemInfo::HasTouchScreen"
-                          },
-                          "parameters": [
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
-                          },
-                          "parameters": [
-                            "ShootJoystick",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "SystemInfo::HasTouchScreen"
-                          },
-                          "parameters": [
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "MouseButtonPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ]
-                        }
-                      ]
-                    }
+                    ""
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "ModVarObjet"
+                    "value": "Cache"
                   },
                   "parameters": [
-                    "p1_hitbox",
-                    "holdAim",
-                    "-",
-                    "TimeDelta() * 10"
+                    "ammo_spawn"
                   ]
                 },
                 {
                   "type": {
-                    "value": "TopDownMovementBehavior::MaxSpeed"
+                    "value": "ModVarObjet"
                   },
                   "parameters": [
                     "p1_hitbox",
-                    "TopDownMovement",
+                    "p1_pickup",
                     "=",
-                    "190"
+                    "RandomInRange(1,3)"
                   ]
                 }
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "VarObjet"
+                    "value": "CollisionNP"
                   },
                   "parameters": [
                     "p1_hitbox",
-                    "ammo",
-                    ">",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "p1_hitbox",
-                    "holdAim",
-                    ">=",
-                    "0.83"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "SystemInfo::HasTouchScreen"
-                          },
-                          "parameters": [
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
-                          },
-                          "parameters": [
-                            "ShootJoystick",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::And"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "SystemInfo::HasTouchScreen"
-                          },
-                          "parameters": [
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ]
-                        }
-                      ]
-                    }
+                    "ammo_pickup",
+                    "",
+                    "",
+                    "yes"
                   ]
                 },
                 {
@@ -8904,17 +9131,53 @@
               "actions": [
                 {
                   "type": {
-                    "value": "FireBullet::FireBullet::FireTowardPosition"
+                    "value": "ModVarObjet"
                   },
                   "parameters": [
                     "p1_hitbox",
-                    "FireBullet",
-                    "p1_hitbox.X()",
-                    "p1_hitbox.Y()",
-                    "p1_bullet",
-                    "ui_crosshair.X()",
-                    "ui_crosshair.Y()",
-                    "1280",
+                    "p1_equipWeapon",
+                    "=",
+                    "p1_hitbox.Variable(p1_pickup)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "ammo",
+                    "+",
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "ammo_pickup",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Spawning::Spawn"
+                  },
+                  "parameters": [
+                    "",
+                    "ammo_spawn",
+                    "ammo_spawnParticles",
+                    "1",
+                    "ammo_pickup",
                     ""
                   ]
                 },
@@ -8924,24 +9187,15 @@
                   },
                   "parameters": [
                     "p1_hitbox",
-                    "ammo",
-                    "-",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetAngle"
-                  },
-                  "parameters": [
-                    "bullet_trail",
+                    "p1_pickup",
                     "=",
-                    "p1_bullet.Angle()"
+                    "RandomInRange(1,3)"
                   ]
                 }
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8950,36 +9204,2433 @@
                   },
                   "parameters": [
                     "p1_hitbox",
-                    "ammo",
+                    "p1_pickup",
                     "=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "p1_hitbox",
-                    "holdAim",
-                    ">=",
-                    "0.83"
+                    "1"
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "ModVarObjet"
+                    "value": "ChangeColor"
                   },
                   "parameters": [
-                    "p1_hitbox",
-                    "holdAim",
-                    "=",
-                    "0"
+                    "ammo_pickup",
+                    "\"74;144;226\""
                   ]
                 }
               ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "p1_pickup",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "ammo_pickup",
+                    "\"255;0;0\""
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "p1_pickup",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "ammo_pickup",
+                    "\"126;211;33\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 126,
+          "colorG": 199,
+          "colorR": 243,
+          "creationTime": 0,
+          "folded": true,
+          "name": "3) Weapons",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "colorB": 226,
+              "colorG": 144,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "A) Shock Rifle",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "* charged single shot.\n* can pierce though enemies, +1 multiplier for every killed one."
+                },
+                {
+                  "colorB": 226,
+                  "colorG": 144,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "1) Aiming and Shooting",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Also sets the Speed of P1, watch out!"
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "p1_equipWeapon",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::SetFiringArcOp"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "FireBullet",
+                            "=",
+                            "0",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::SetBulletSpeedVarianceOp"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "FireBullet",
+                            "=",
+                            "0",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::SetBulletQuantityOp"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "FireBullet",
+                            "=",
+                            "1",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "ammo",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                      },
+                                      "parameters": [
+                                        "ShootJoystick",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "MouseButtonPressed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Left"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "holdAim",
+                                "+",
+                                "TimeDelta()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "bullet_shock",
+                                "bullet_soundPitch",
+                                "+",
+                                "TimeDelta() * 0.2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::LineV2"
+                              },
+                              "parameters": [
+                                "p1_aimLine",
+                                "p1_hitbox.X()",
+                                "p1_hitbox.Y()",
+                                "ui_crosshair.X()",
+                                "ui_crosshair.Y()",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "TopDownMovementBehavior::MaxSpeed"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "TopDownMovement",
+                                "=",
+                                "128"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PlaySound"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "assets\\shockCharge.wav",
+                                    "no",
+                                    "50",
+                                    "bullet_shock.Variable(bullet_soundPitch)"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "ammo",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                      },
+                                      "parameters": [
+                                        "ShootJoystick",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "MouseButtonPressed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Left"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "holdAim",
+                                "-",
+                                "TimeDelta() * 10"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "bullet_shock",
+                                "bullet_soundPitch",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "TopDownMovementBehavior::MaxSpeed"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "TopDownMovement",
+                                "=",
+                                "190"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "ammo",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "holdAim",
+                                ">=",
+                                "0.83"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                      },
+                                      "parameters": [
+                                        "ShootJoystick",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "MouseButtonReleased"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Left"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::FireTowardPosition"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "FireBullet",
+                                "p1_hitbox.X()",
+                                "p1_hitbox.Y()",
+                                "bullet_shock",
+                                "ui_crosshair.X()",
+                                "ui_crosshair.Y()",
+                                "1280",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\weapon_shockShot.wav",
+                                "",
+                                "50",
+                                "0.6"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "ammo",
+                                "-",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "bullet_trail",
+                                "=",
+                                "bullet_shock.Angle()"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "ammo",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "holdAim",
+                                ">=",
+                                "0.83"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "holdAim",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 226,
+                  "colorG": 144,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "2) Bullet Collisions and Points",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "bullet_shock",
+                            "dev_wall",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "bullet_shock",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "bullet_shock",
+                            "bullet_multiplier",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Enemy",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "bullet_shock",
+                            "Enemy",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Calculate Score by adding +1 for every Enemy hit, then multiply 100 by that number."
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "Activatable::Activatable::IsActivated"
+                              },
+                              "parameters": [
+                                "Enemy",
+                                "Activatable",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "bullet_shock",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Activatable::Activatable::IsActivated"
+                              },
+                              "parameters": [
+                                "Enemy",
+                                "Activatable",
+                                "True"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "CameraShake::ShakeCamera"
+                              },
+                              "parameters": [
+                                "",
+                                "TimeDelta() * 2",
+                                "TimeDelta() * 2",
+                                "TimeDelta() * 2",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "bullet_shock",
+                                "bullet_multiplier",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Enemy::Enemy::HitEnemy"
+                              },
+                              "parameters": [
+                                "Enemy",
+                                "Enemy",
+                                "Enemy.Enemy::Score() * bullet_shock.Variable(bullet_multiplier)",
+                                "1",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "bullet_shock",
+                            "Wall",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Activatable::Activatable::IsActivated"
+                          },
+                          "parameters": [
+                            "Wall",
+                            "Activatable",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "bullet_shock",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 226,
+                  "colorG": 144,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "3) Shock Bullet Trail",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "",
+                            "bullet_shock",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "bullet_trail",
+                            "=",
+                            "-128",
+                            "=",
+                            "-128"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "",
+                            "bullet_shock",
+                            ">=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "bullet_trail",
+                            "=",
+                            "bullet_shock.X()",
+                            "=",
+                            "bullet_shock.Y()"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 86,
+              "colorG": 67,
+              "colorR": 211,
+              "creationTime": 0,
+              "folded": true,
+              "name": "B) Grenade Launcher",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 31,
+                    "g": 85,
+                    "r": 223,
+                    "textB": 255,
+                    "textG": 255,
+                    "textR": 255
+                  },
+                  "comment": "* instant shot.\n* Travel force of the bullet diminishes the longer it goes.\n* Once in collision with a wall or enemy, the bullet sticks to it.\n* when the bullet has stopped, it flashes for 1/2 second and explodes, creating an increasing explosive radius of max 24px.\n* enemies within the radius take 2 hitpoints once, every killed enemy contributes to multiplier score by 1.5x"
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Define initial properties"
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "p1_hitbox",
+                        "p1_grenadeActive",
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "bullet_grenade",
+                        "bullet_hasStopped",
+                        "False"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Has active weapon"
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "p1_hitbox",
+                        "p1_equipWeapon",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Press Fire button, create a Bullet object angled toward the Cursor"
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "ammo",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "p1_grenadeActive",
+                            "False"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::And"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "SystemInfo::HasTouchScreen"
+                                  },
+                                  "parameters": [
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                  },
+                                  "parameters": [
+                                    "ShootJoystick",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::And"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "SystemInfo::HasTouchScreen"
+                                  },
+                                  "parameters": [
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MouseButtonPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Left"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\grenadeShot.wav",
+                            "",
+                            "50",
+                            "0.6"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "bullet_grenade",
+                            "p1_hitbox.X()",
+                            "p1_hitbox.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "RotateTowardPosition"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "CursorX()",
+                            "CursorY()",
+                            "0",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "ammo",
+                            "-",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Can have only ONE Bullet at a time, check is here"
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "",
+                            "bullet_grenade",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "p1_grenadeActive",
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "",
+                            "bullet_grenade",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "p1_grenadeActive",
+                            "True"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Two Steps/ticks for bullet travelling\n\n1) starts travelling at full speed, goes at 320px for 0.33 secs\n2) then, if no obstacles have been found, goes at 80px for 0.33 secs\n\n* whenever the bullet collides with a wall it should stop right away -- STICKY PART TO DO!"
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "p1_grenadeActive",
+                            "True"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_hasStopped",
+                            "False"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AddForceVersPos"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "CursorX()",
+                            "CursorY()",
+                            "320",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.33"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "bullet_grenade"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_grenade.Angle()",
+                            "80",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.33"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_hasStopped",
+                            "True"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "bullet_grenade",
+                                "dev_wall",
+                                "",
+                                "",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "bullet_grenade",
+                                "Enemy",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "bullet_grenade"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_hasStopped",
+                            "True"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "* Bullet stops, then creates an Explosion object starting at 0% scale. When it reaches 100% destroys itself and can shoot again"
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_hasStopped",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\grenade_stick.wav",
+                                "",
+                                "50",
+                                "0.8"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Arreter"
+                              },
+                              "parameters": [
+                                "bullet_grenade"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Wait"
+                              },
+                              "parameters": [
+                                "0.33"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "bullet_grenadeBoom",
+                                "bullet_grenade.X()",
+                                "bullet_grenade.Y()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangeScale"
+                              },
+                              "parameters": [
+                                "bullet_grenadeBoom",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\grenade_boom.wav",
+                                "",
+                                "50",
+                                "0.4"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ChangeScale"
+                              },
+                              "parameters": [
+                                "bullet_grenadeBoom",
+                                "+",
+                                "TimeDelta() * 4"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 27,
+                            "g": 2,
+                            "r": 208,
+                            "textB": 255,
+                            "textG": 255,
+                            "textR": 255
+                          },
+                          "comment": "Should also shake the camera, currently bugged"
+                        },
+                        {
+                          "disabled": true,
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "CameraShake::ShakeCamera"
+                              },
+                              "parameters": [
+                                "",
+                                "TimeDelta() * 2",
+                                "TimeDelta() * 2",
+                                "TimeDelta() * 2",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ScaleHeight"
+                          },
+                          "parameters": [
+                            "bullet_grenadeBoom",
+                            ">=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_hasStopped",
+                            "False"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_travelStep",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "bullet_grenadeBoom",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "* Explosion hits enemies and player in radius"
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "bullet_grenadeBoom",
+                            "Enemy",
+                            "",
+                            "",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Enemy::Enemy::HitEnemy"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "Enemy",
+                            "100",
+                            "1",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionPoint"
+                          },
+                          "parameters": [
+                            "bullet_grenadeBoom",
+                            "p1_hitbox.CenterX()",
+                            "p1_hitbox.CenterY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "game_playerIsDead",
+                            "True"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 114,
+              "colorG": 209,
+              "colorR": 162,
+              "creationTime": 0,
+              "folded": true,
+              "name": "C) Scattershot",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "* instant shot.\n* short range weapon, needs reloading for every shot by pressing Fire again.\n* shoots a spread of mini-bullets in a cone radius at once, 5-6 pellets.\n* every pellet has a different direction and force, they should be able to be edited from the Bullet behavior.\n* every pellet deals 0.5 hitpoints, so in order to kill a grunt you need to hit with at least 2 pellets."
+                },
+                {
+                  "disabled": true,
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "dev_text2",
+                        "=",
+                        "ToString(p1_hitbox.Variable(scatter_reload))"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "p1_hitbox",
+                        "p1_equipWeapon",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::SetFiringArcOp"
+                      },
+                      "parameters": [
+                        "p1_hitbox",
+                        "FireBullet",
+                        "=",
+                        "30",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::SetBulletSpeedVarianceOp"
+                      },
+                      "parameters": [
+                        "p1_hitbox",
+                        "FireBullet",
+                        "=",
+                        "48",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::SetBulletQuantityOp"
+                      },
+                      "parameters": [
+                        "p1_hitbox",
+                        "FireBullet",
+                        "=",
+                        "8",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "ammo",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Shooting goes by Ticks:\n\n1) On first click: shoot the bullets;\n2) On first release: goes into reloading state;\n3) On second click: reloads the rifle;\n4) On second release: goes back to first state, ready to shoot again"
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "scatter_reload",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                      },
+                                      "parameters": [
+                                        "ShootJoystick",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "MouseButtonPressed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Left"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\scatter_shot.wav",
+                                "",
+                                "50",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::FireTowardPosition"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "FireBullet",
+                                "p1_hitbox.X()",
+                                "p1_hitbox.Y()",
+                                "bullet_scatter",
+                                "CursorX()",
+                                "CursorY()",
+                                "256",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CameraShake::ShakeCamera"
+                              },
+                              "parameters": [
+                                "",
+                                "TimeDelta() * 2",
+                                "TimeDelta() * 2",
+                                "TimeDelta() * 2",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "scatter_reload",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "scatter_reload",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                      },
+                                      "parameters": [
+                                        "ShootJoystick",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "MouseButtonReleased"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Left"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "scatter_reload",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "scatter_reload",
+                                "=",
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                      },
+                                      "parameters": [
+                                        "ShootJoystick",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "MouseButtonPressed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Left"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\scatter_reload.wav",
+                                "",
+                                "50",
+                                "0.8"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "scatter_reload",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "scatter_reload",
+                                "=",
+                                "3"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed"
+                                      },
+                                      "parameters": [
+                                        "ShootJoystick",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "SystemInfo::HasTouchScreen"
+                                      },
+                                      "parameters": [
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "MouseButtonReleased"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Left"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "scatter_reload",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "scatter_reload",
+                                "=",
+                                "4"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "ammo",
+                                "-",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "scatter_reload",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Collisions"
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "bullet_scatter",
+                            "dev_wall",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "bullet_scatter",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Enemy",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "bullet_scatter",
+                            "Enemy",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Activatable::Activatable::IsActivated"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "Activatable",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Enemy::Enemy::HitEnemy"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "Enemy",
+                            "100",
+                            "0.2",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
@@ -8998,6 +11649,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9034,6 +11686,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9070,6 +11723,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9124,6 +11778,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Enemy",
           "conditions": [
@@ -9141,6 +11796,7 @@
           "actions": [],
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -9153,6 +11809,7 @@
               "comment": "Add to total score the score of the enemy"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -9169,6 +11826,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -9181,6 +11839,7 @@
               "comment": "Remove health bars for dead enemies"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9208,6 +11867,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -9220,6 +11880,7 @@
               "comment": "Display score after enemy dies"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9280,6 +11941,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -9289,12 +11951,25 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Finally, delete enemy"
+              "comment": "Play an hitsound, delete the Enemy, add +10XP for each kill"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "hitsound",
+                    "",
+                    "100",
+                    "Enemy.Variable(PITCH)"
+                  ]
+                },
                 {
                   "type": {
                     "value": "Delete"
@@ -9302,6 +11977,16 @@
                   "parameters": [
                     "Enemy",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "game_levelXp",
+                    "+",
+                    "10"
                   ]
                 }
               ]
@@ -9322,6 +12007,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -9334,6 +12020,7 @@
           "comment": "Initial Properties"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9360,6 +12047,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -9372,12 +12060,14 @@
           "comment": "Create a Tiled Belt Object on top of every single one, defined by its \"belt_direction\" variable placed in-editor, and use the function to define the movement. ( Angles: East=0°; South=90°; West=180°; North=270° )"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "hazard_belt",
           "conditions": [],
           "actions": [],
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9414,6 +12104,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9450,6 +12141,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9486,6 +12178,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9524,6 +12217,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -9536,6 +12230,7 @@
           "comment": "Move the Offset of the Tiled objects, giving the illusion of movement"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -9562,6 +12257,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -9574,6 +12270,7 @@
           "comment": "Collision with Belts, move Player and Enemies"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9592,6 +12289,7 @@
           "actions": [],
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9621,6 +12319,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9650,6 +12349,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9679,6 +12379,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9710,6 +12411,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9728,6 +12430,7 @@
           "actions": [],
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9757,6 +12460,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9786,6 +12490,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9815,6 +12520,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9846,6 +12552,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -9858,6 +12565,7 @@
           "comment": "Change Belt Direction every time there's a Switch State: from East to West, From South to North."
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9896,6 +12604,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9934,6 +12643,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9972,6 +12682,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -10023,6 +12734,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -10035,6 +12747,7 @@
           "comment": "Tiles that kills Player/Enemies. Useful for boundaries and pits."
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -10065,6 +12778,41 @@
               ]
             }
           ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Enemy",
+                "hazard_deathzone",
+                "Enemy.CenterY()",
+                "",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Enemy",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "parameters": []
@@ -10080,16 +12828,86 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "Activatable::Activatable::IsActivated"
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
               },
               "parameters": [
                 "hazard_teleportRed",
-                "Activatable",
-                ""
+                "\"Active\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "hazard_teleportBlu",
+                "\"Inactive\""
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "enRedState",
+                "False"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "hazard_teleportRed",
+                "\"Inactive\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "hazard_teleportBlu",
+                "\"Active\""
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimationName"
+              },
+              "parameters": [
+                "hazard_teleportRed",
+                "\"Active\""
               ]
             },
             {
@@ -10134,20 +12952,32 @@
                 "=",
                 "hazard_teleportBlu.Y()"
               ]
+            },
+            {
+              "type": {
+                "value": "CentreCamera"
+              },
+              "parameters": [
+                "",
+                "p1_hitbox",
+                "",
+                "",
+                ""
+              ]
             }
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "Activatable::Activatable::IsActivated"
+                "value": "AnimationName"
               },
               "parameters": [
                 "hazard_teleportBlu",
-                "Activatable",
-                ""
+                "\"Active\""
               ]
             },
             {
@@ -10192,11 +13022,29 @@
                 "=",
                 "hazard_teleportRed.Y()"
               ]
+            },
+            {
+              "type": {
+                "value": "CentreCamera"
+              },
+              "parameters": [
+                "",
+                "p1_hitbox",
+                "",
+                "",
+                ""
+              ]
             }
           ]
         }
       ],
       "parameters": []
+    },
+    {
+      "folded": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ],
   "layers": [
