@@ -1,13 +1,13 @@
 {
-  "b": 209,
+  "b": 0,
   "disableInputWhenNotFocused": true,
   "mangledName": "gameScene",
   "name": "gameScene",
-  "r": 209,
+  "r": 0,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 209,
+  "v": 0,
   "uiSettings": {
     "grid": true,
     "gridType": "rectangular",
@@ -5107,7 +5107,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Initialise game",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5279,7 +5278,7 @@
               "parameters": [
                 "p1_hitbox",
                 "SmoothCamera",
-                ""
+                "yes"
               ]
             }
           ]
@@ -5354,6 +5353,17 @@
                 "0",
                 "800",
                 "560",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ZoomCamera"
+              },
+              "parameters": [
+                "",
+                "1.25",
                 "",
                 ""
               ]
