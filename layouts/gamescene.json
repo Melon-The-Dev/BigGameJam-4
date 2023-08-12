@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 0.6897782140104511,
+    "zoomFactor": 1.5289132892233266,
     "windowMask": false
   },
   "objectsGroups": [
@@ -336,7 +336,7 @@
       "width": 0,
       "x": 320,
       "y": 4,
-      "zOrder": 16,
+      "zOrder": 10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -447,6 +447,37 @@
       "x": 368,
       "y": -112,
       "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "ammo_indicator",
+      "persistentUuid": "8b5140d5-e932-4286-bb22-95332229daac",
+      "width": 0,
+      "x": 451,
+      "y": -62,
+      "zOrder": 200,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "ui",
+      "name": "ui_levelProgress",
+      "persistentUuid": "2799fb4c-718f-4837-af21-c4eff9a1ed55",
+      "width": 320,
+      "x": 160,
+      "y": 0,
+      "zOrder": 15,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -4334,6 +4365,28 @@
       }
     },
     {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "ui_levelProgress",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "levelProgress",
+      "font": "",
+      "textAlignment": "center",
+      "characterSize": 24,
+      "color": {
+        "b": 33,
+        "g": 211,
+        "r": 126
+      }
+    },
+    {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "bullet_grenade",
@@ -4347,6 +4400,11 @@
           "name": "DestroyOutside",
           "type": "DestroyOutsideBehavior::DestroyOutside",
           "extraBorder": 0
+        },
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": true
         }
       ],
       "animations": [
@@ -4652,6 +4710,80 @@
                       {
                         "x": 0,
                         "y": 2
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "ammo_indicator",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "StayOnScreen",
+          "type": "StayOnScreen::StayOnScreen",
+          "MarginTop": 16,
+          "MarginBottom": 16,
+          "MarginLeft": 16,
+          "MarginRight": 16
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\ammo_indicator.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 2,
+                    "y": 3
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
                       }
                     ]
                   ]
@@ -6724,7 +6856,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Switch, also add +100 XP to Player Progression"
+          "comment": "Switch, add +100 XP to Player Progression and +1 to Level Progression"
         },
         {
           "folded": true,
@@ -6757,6 +6889,16 @@
                 "game_levelXp",
                 "+",
                 "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "game_levelProgress",
+                "+",
+                "1"
               ]
             },
             {
@@ -6977,13 +7119,11 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Collision effects based on activated state",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Enemy",
               "conditions": [
@@ -7039,6 +7179,18 @@
                         "p1_hitbox",
                         "Enemy",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "p1_moveEnemy",
+                        "",
+                        "25",
+                        "1"
                       ]
                     }
                   ],
@@ -8122,6 +8274,18 @@
             },
             {
               "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "trap_activate",
+                "",
+                "50",
+                "0.9"
+              ]
+            },
+            {
+              "type": {
                 "value": "Activatable::Activatable::Activate"
               },
               "parameters": [
@@ -8145,6 +8309,18 @@
               "parameters": [
                 "dev_trap_button",
                 "\"trapButton_off\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "trap_deactivate",
+                "",
+                "50",
+                "0.9"
               ]
             },
             {
@@ -8740,6 +8916,572 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "colorB": 35,
+          "colorG": 166,
+          "colorR": 245,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Ammo Indicator",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Initialize pulsate tween."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::AddObjectScaleTween"
+                  },
+                  "parameters": [
+                    "ammo_indicator",
+                    "Tween",
+                    "\"indicator_pulsate1\"",
+                    "2",
+                    "2",
+                    "\"easeInOutSine\"",
+                    "250",
+                    "",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "No pickups in the scene: hide the indicator."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "ammo_pickup",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "ammo_indicator"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "At least one pickup in the scene: start the behavior."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "ammo_pickup",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Pickup is far away: show the Indicator, move it to the Pickup with the right angle."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "p1_hitbox",
+                        "ammo_pickup",
+                        "128",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "ammo_indicator",
+                        "=",
+                        "p1_hitbox.X()",
+                        "=",
+                        "p1_hitbox.Y()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "RotateTowardPosition"
+                      },
+                      "parameters": [
+                        "ammo_indicator",
+                        "ammo_pickup.X()",
+                        "ammo_pickup.Y()",
+                        "0",
+                        "ammo_pickup.Y()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "ammo_indicator",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::AddObjectPositionTween"
+                      },
+                      "parameters": [
+                        "ammo_indicator",
+                        "Tween",
+                        "\"indicator_move\"",
+                        "ammo_pickup.X()",
+                        "ammo_pickup.Y()",
+                        "\"easeOutCirc\"",
+                        "500",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Pickup is below a distance treshold: the Indicator is placed on top of the Pickup, angled downward."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "p1_hitbox",
+                        "ammo_pickup",
+                        "128",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "ammo_indicator",
+                        "=",
+                        "90"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "ammo_indicator",
+                        "=",
+                        "ammo_pickup.X()",
+                        "=",
+                        "ammo_pickup.Y() - 8"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Indicator has a behavior to always show on screen, even if out of camera."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::Exists"
+                      },
+                      "parameters": [
+                        "ammo_indicator",
+                        "Tween",
+                        "\"indicator_move\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "ammo_indicator",
+                        "StayOnScreen",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "ammo_indicator",
+                        "Tween",
+                        "\"indicator_move\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "ammo_indicator",
+                        "StayOnScreen",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "ammo_indicator",
+                        "=",
+                        "ammo_pickup.X()",
+                        "=",
+                        "ammo_pickup.Y()"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Pulsating tween loop."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "ammo_indicator",
+                    "Tween",
+                    "\"indicator_pulsate1\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::AddObjectScaleTween"
+                  },
+                  "parameters": [
+                    "ammo_indicator",
+                    "Tween",
+                    "\"indicator_pulsate2\"",
+                    "1",
+                    "1",
+                    "\"easeInOutSine\"",
+                    "250",
+                    "",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "ammo_indicator",
+                    "Tween",
+                    "\"indicator_pulsate2\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::AddObjectScaleTween"
+                  },
+                  "parameters": [
+                    "ammo_indicator",
+                    "Tween",
+                    "\"indicator_pulsate1\"",
+                    "2",
+                    "2",
+                    "\"easeInOutSine\"",
+                    "250",
+                    "",
+                    "yes"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 35,
+          "colorG": 166,
+          "colorR": 245,
+          "creationTime": 0,
+          "name": "Level Progress UI",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "ui_levelProgress",
+                    "=",
+                    "ToString(Variable(game_levelProgress))"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "enRedState",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "ui_levelProgress",
+                        "\"208;2;27\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::SetOutline"
+                      },
+                      "parameters": [
+                        "ui_levelProgress",
+                        "\"255;255;255\"",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "enRedState",
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "ui_levelProgress",
+                        "\"74;144;226\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextObject::SetOutline"
+                      },
+                      "parameters": [
+                        "ui_levelProgress",
+                        "\"255;255;255\"",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
         }
       ],
       "parameters": []
@@ -9149,6 +9891,18 @@
                     "ammo",
                     "+",
                     "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "pickup_sound",
+                    "",
+                    "50",
+                    "1"
                   ]
                 },
                 {
@@ -10584,34 +11338,14 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::Or"
+                            "value": "CollisionNP"
                           },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "value": "CollisionNP"
-                              },
-                              "parameters": [
-                                "bullet_grenade",
-                                "dev_wall",
-                                "",
-                                "",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "CollisionNP"
-                              },
-                              "parameters": [
-                                "bullet_grenade",
-                                "Enemy",
-                                "",
-                                "",
-                                ""
-                              ]
-                            }
+                          "parameters": [
+                            "bullet_grenade",
+                            "dev_wall",
+                            "",
+                            "",
+                            ""
                           ]
                         }
                       ],
@@ -10622,6 +11356,66 @@
                           },
                           "parameters": [
                             "bullet_grenade"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Sticker::Sticker::Stick"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "Sticker",
+                            "Wall",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "bullet_hasStopped",
+                            "True"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "Enemy",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "bullet_grenade"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Sticker::Sticker::Stick"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "Sticker",
+                            "Enemy",
+                            ""
                           ]
                         },
                         {
@@ -10829,6 +11623,16 @@
                             "bullet_travelStep",
                             "=",
                             "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Sticker::Sticker::Unstick"
+                          },
+                          "parameters": [
+                            "bullet_grenade",
+                            "Sticker",
+                            ""
                           ]
                         },
                         {
@@ -11621,7 +12425,7 @@
                             "Enemy",
                             "Enemy",
                             "100",
-                            "0.2",
+                            "0.33",
                             ""
                           ]
                         }
@@ -13087,7 +13891,7 @@
       "isLocked": false,
       "name": "ui",
       "renderingType": "",
-      "visibility": false,
+      "visibility": true,
       "cameras": [],
       "effects": []
     },
@@ -13188,6 +13992,14 @@
     {
       "name": "SmoothCamera",
       "type": "SmoothCamera::SmoothCamera"
+    },
+    {
+      "name": "StayOnScreen",
+      "type": "StayOnScreen::StayOnScreen"
+    },
+    {
+      "name": "Sticker",
+      "type": "Sticker::Sticker"
     },
     {
       "name": "TopDownMovement",
