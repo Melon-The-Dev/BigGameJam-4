@@ -1021,6 +1021,78 @@
         "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/p1_animation_idle_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\p1_animation_idle_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/p1_animation_idle_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\p1_animation_idle_2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/p1_animation_run_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\p1_animation_run_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/p1_animation_run_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\p1_animation_run_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/p1_animation_run_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\p1_animation_run_3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/p1_animation_run_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\p1_animation_run_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/level1_blu.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\level1_blu.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/level1_bluTop.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\level1_bluTop.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1065,7 +1137,12 @@
       "referenceTo": "/layouts/leaderboards"
     }
   ],
-  "externalEvents": [],
+  "externalEvents": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/game_animations"
+    }
+  ],
   "eventsFunctionsExtensions": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
