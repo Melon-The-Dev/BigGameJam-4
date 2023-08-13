@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.4790395861757406,
+    "zoomFactor": 1.6337626779315035,
     "windowMask": false
   },
   "objectsGroups": [
@@ -7178,18 +7178,10 @@
       "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Link",
-      "include": {
-        "includeConfig": 0
-      },
-      "target": "game_animations"
-    },
-    {
       "colorB": 228,
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Initialise game",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -7347,7 +7339,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Camera behavior"
+          "comment": "Camera behavior and animations"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -7385,6 +7377,15 @@
               "parameters": [
                 "dev_stuff"
               ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Link",
+              "include": {
+                "includeConfig": 0
+              },
+              "target": "game_animations"
             }
           ]
         },

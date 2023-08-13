@@ -424,10 +424,10 @@
           "italic": false,
           "smoothed": true,
           "underlined": false,
-          "string": "Level 2",
+          "string": "Level 2 (prototype)",
           "font": "Kenney Mini Square.ttf",
           "textAlignment": "center",
-          "characterSize": 45,
+          "characterSize": 25,
           "color": {
             "b": 255,
             "g": 255,

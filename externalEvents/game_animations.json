@@ -393,12 +393,32 @@
       "conditions": [
         {
           "type": {
-            "inverted": true,
-            "value": "TopDownMovementBehavior::IsMoving"
+            "value": "BuiltinCommonInstructions::And"
           },
-          "parameters": [
-            "p1_hitbox",
-            "TopDownMovement"
+          "parameters": [],
+          "subInstructions": [
+            {
+              "type": {
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "moveToX",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "moveToY",
+                "=",
+                "0"
+              ]
+            }
           ]
         },
         {
@@ -425,11 +445,32 @@
       "conditions": [
         {
           "type": {
-            "value": "TopDownMovementBehavior::IsMoving"
+            "value": "BuiltinCommonInstructions::Or"
           },
-          "parameters": [
-            "p1_hitbox",
-            "TopDownMovement"
+          "parameters": [],
+          "subInstructions": [
+            {
+              "type": {
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "moveToX",
+                "!=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "moveToY",
+                "!=",
+                "0"
+              ]
+            }
           ]
         },
         {
