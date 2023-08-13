@@ -7685,6 +7685,17 @@
                 "",
                 "\"ui\""
               ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "maxSpeed",
+                "=",
+                "120"
+              ]
             }
           ]
         },
@@ -7996,23 +8007,98 @@
           "conditions": [
             {
               "type": {
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "s"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "moveToY",
+                "-",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "KeyPressed"
               },
               "parameters": [
                 "",
                 "w"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "TopDownMovementBehavior::SimulateControl"
+                "value": "ModVarObjet"
               },
               "parameters": [
                 "p1_hitbox",
-                "TopDownMovement",
-                "\"Up\""
+                "moveToY",
+                "-",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "d"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "moveToX",
+                "-",
+                "1"
               ]
             }
           ]
@@ -8029,17 +8115,24 @@
                 "",
                 "a"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "TopDownMovementBehavior::SimulateControl"
+                "value": "ModVarObjet"
               },
               "parameters": [
                 "p1_hitbox",
-                "TopDownMovement",
-                "\"Left\""
+                "moveToX",
+                "-",
+                "1"
               ]
             }
           ]
@@ -8056,17 +8149,92 @@
                 "",
                 "s"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "TopDownMovementBehavior::SimulateControl"
+                "value": "ModVarObjet"
               },
               "parameters": [
                 "p1_hitbox",
-                "TopDownMovement",
-                "\"Down\""
+                "moveToY",
+                "+",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "w"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "moveToY",
+                "+",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "a"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "moveToX",
+                "+",
+                "1"
               ]
             }
           ]
@@ -8083,17 +8251,90 @@
                 "",
                 "d"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "TopDownMovementBehavior::SimulateControl"
+                "value": "ModVarObjet"
               },
               "parameters": [
                 "p1_hitbox",
-                "TopDownMovement",
-                "\"Right\""
+                "moveToX",
+                "+",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SystemInfo::HasTouchScreen"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "p1_hitbox",
+                        "moveToX",
+                        "!=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "p1_hitbox",
+                        "moveToY",
+                        "!=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceVersPos"
+                  },
+                  "parameters": [
+                    "p1_hitbox",
+                    "p1_hitbox.X()+p1_hitbox.Variable(moveToX)",
+                    "p1_hitbox.Y()+p1_hitbox.Variable(moveToY)",
+                    "p1_hitbox.Variable(maxSpeed)",
+                    ""
+                  ]
+                }
               ]
             }
           ]
@@ -8120,7 +8361,7 @@
               "parameters": [
                 "p1_hitbox",
                 "MovementJoystick.StickAngle()",
-                "MovementJoystick.StickForce()*96",
+                "MovementJoystick.StickForce()*p1_hitbox.Variable(maxSpeed)",
                 ""
               ]
             }
@@ -9310,8 +9551,8 @@
                           },
                           "parameters": [
                             "Enemy",
-                            "p1_hitbox.TopDownMovement::Angle()",
-                            "p1_hitbox.TopDownMovement::Speed()",
+                            "p1_hitbox.ForceAngle()",
+                            "p1_hitbox.ForceLength()",
                             ""
                           ]
                         }
@@ -10644,6 +10885,24 @@
               "parameters": [
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "ShootJoystick",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "MovementJoystick",
+                ""
+              ]
             }
           ]
         },
@@ -11826,7 +12085,6 @@
       "colorG": 166,
       "colorR": 245,
       "creationTime": 0,
-      "folded": true,
       "name": "Weapon Manager",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -12135,7 +12393,6 @@
           "colorG": 199,
           "colorR": 243,
           "creationTime": 0,
-          "folded": true,
           "name": "3) Weapons",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12353,13 +12610,13 @@
                             },
                             {
                               "type": {
-                                "value": "TopDownMovementBehavior::MaxSpeed"
+                                "value": "ModVarObjet"
                               },
                               "parameters": [
                                 "p1_hitbox",
-                                "TopDownMovement",
+                                "maxSpeed",
                                 "=",
-                                "128"
+                                "60"
                               ]
                             }
                           ],
@@ -12639,13 +12896,13 @@
                             },
                             {
                               "type": {
-                                "value": "TopDownMovementBehavior::MaxSpeed"
+                                "value": "ModVarObjet"
                               },
                               "parameters": [
                                 "p1_hitbox",
-                                "TopDownMovement",
+                                "maxSpeed",
                                 "=",
-                                "190"
+                                "120"
                               ]
                             }
                           ]
@@ -13080,7 +13337,6 @@
                   "comment": "Has active weapon"
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -13186,13 +13442,13 @@
                         },
                         {
                           "type": {
-                            "value": "TopDownMovementBehavior::MaxSpeed"
+                            "value": "ModVarObjet"
                           },
                           "parameters": [
                             "p1_hitbox",
-                            "TopDownMovement",
+                            "maxSpeed",
                             "=",
-                            "128"
+                            "60"
                           ]
                         }
                       ],
@@ -13459,13 +13715,13 @@
                         },
                         {
                           "type": {
-                            "value": "TopDownMovementBehavior::MaxSpeed"
+                            "value": "ModVarObjet"
                           },
                           "parameters": [
                             "p1_hitbox",
-                            "TopDownMovement",
+                            "maxSpeed",
                             "=",
-                            "190"
+                            "120"
                           ]
                         }
                       ]
@@ -14103,7 +14359,6 @@
               "colorG": 209,
               "colorR": 162,
               "creationTime": 0,
-              "folded": true,
               "name": "C) Scattershot",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -14140,7 +14395,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -14195,7 +14449,6 @@
                   ],
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -14464,6 +14717,15 @@
                                 "-",
                                 "1"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "bullet_scatter",
+                                "\"lifetime\""
+                              ]
                             }
                           ]
                         },
@@ -14605,6 +14867,46 @@
                             "Enemy",
                             "100",
                             "0.33",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Delete bullet_scatter after a short duration"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "bullet_scatter",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "bullet_scatter",
+                            "\"lifetime\"",
+                            ">=",
+                            "0.5"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "bullet_scatter",
                             ""
                           ]
                         }
