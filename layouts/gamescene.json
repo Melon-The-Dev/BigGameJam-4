@@ -7182,6 +7182,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Initialise game",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -12428,7 +12429,6 @@
               "colorG": 144,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "A) Shock Rifle",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -12451,7 +12451,6 @@
                   "colorG": 144,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "1) Aiming and Shooting",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -12970,6 +12969,17 @@
                                 "holdAim",
                                 "=",
                                 "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "p1_hitbox",
+                                "maxSpeed",
+                                "=",
+                                "120"
                               ]
                             }
                           ]
@@ -13789,6 +13799,17 @@
                             "holdAim",
                             "=",
                             "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "p1_hitbox",
+                            "maxSpeed",
+                            "=",
+                            "120"
                           ]
                         }
                       ]
