@@ -3820,9 +3820,9 @@
       "textAlignment": "center",
       "characterSize": 16,
       "color": {
-        "b": 33,
-        "g": 211,
-        "r": 126
+        "b": 0,
+        "g": 0,
+        "r": 0
       }
     },
     {
@@ -3855,9 +3855,9 @@
       "textAlignment": "center",
       "characterSize": 16,
       "color": {
-        "b": 27,
-        "g": 2,
-        "r": 208
+        "b": 0,
+        "g": 0,
+        "r": 0
       }
     },
     {
@@ -8042,7 +8042,6 @@
           "comment": "At the beginning of the game, hide unused layers, freeze game in background and display game info."
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -8126,7 +8125,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Change info texts depending on device",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8152,7 +8150,7 @@
                       "parameters": [
                         "start_text",
                         "=",
-                        "\"-- GameThingPrototype --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with the left touchpad, hold the right touchpad button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- TOUCH TO CONTINUE --\""
+                        "\"-- Switch Survivor --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with the left touchpad, hold the right touchpad button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- TOUCH TO CONTINUE --\""
                       ]
                     }
                   ]
@@ -8179,7 +8177,7 @@
                       "parameters": [
                         "start_text",
                         "=",
-                        "\"-- GameThingPrototype --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with WASD, hold the Mouse left button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- PRESS ANY KEY OR CLICK TO CONTINUE --\""
+                        "\"-- Switch Survivor --\" + NewLine() \n+ NewLine() +\n\"Survive the hordes of robots! Every ten seconds a switch activates a different group of enemies, stay sharp!\" + NewLine()\n+ NewLine() +\n\"Move with WASD, hold the Mouse left button to aim and release it for shooting.\" + NewLine()\n+ NewLine() +\n\"Press or shoot the Floor buttons to activate traps. You can even push unactive enemies onto them!\" + NewLine()\n+ NewLine() +\n\"-- PRESS ANY KEY OR CLICK TO CONTINUE --\""
                       ]
                     }
                   ]
@@ -8612,334 +8610,108 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyReleased"
-              },
-              "parameters": [
-                "",
-                "s"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "moveToY",
-                "-",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
                 "value": "KeyPressed"
               },
               "parameters": [
                 "",
                 "w"
               ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "ModVarObjet"
+                "value": "AddForceXY"
               },
               "parameters": [
                 "p1_hitbox",
-                "moveToY",
-                "-",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyReleased"
-              },
-              "parameters": [
-                "",
-                "d"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "moveToX",
-                "-",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "a"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "moveToX",
-                "-",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "s"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "moveToY",
-                "+",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyReleased"
-              },
-              "parameters": [
-                "",
-                "w"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "moveToY",
-                "+",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyReleased"
-              },
-              "parameters": [
-                "",
-                "a"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "moveToX",
-                "+",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "d"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "p1_hitbox",
-                "moveToX",
-                "+",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "SystemInfo::HasTouchScreen"
-              },
-              "parameters": [
+                "0",
+                "-p1_hitbox.Variable(maxSpeed)",
                 ""
               ]
             }
-          ],
-          "actions": [],
-          "events": [
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "moveToX",
-                        "!=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "p1_hitbox",
-                        "moveToY",
-                        "!=",
-                        "0"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AddForceVersPos"
-                  },
-                  "parameters": [
-                    "p1_hitbox",
-                    "p1_hitbox.X()+p1_hitbox.Variable(moveToX)",
-                    "p1_hitbox.Y()+p1_hitbox.Variable(moveToY)",
-                    "p1_hitbox.Variable(maxSpeed)",
-                    ""
-                  ]
-                }
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "a"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AddForceXY"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "-p1_hitbox.Variable(maxSpeed)",
+                "0",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "s"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AddForceXY"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "0",
+                "p1_hitbox.Variable(maxSpeed)",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "d"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AddForceXY"
+              },
+              "parameters": [
+                "p1_hitbox",
+                "p1_hitbox.Variable(maxSpeed)",
+                "0",
+                ""
               ]
             }
           ]
@@ -12448,6 +12220,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Enemy Spawning",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
