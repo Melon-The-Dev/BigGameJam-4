@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.785032235097645,
+    "zoomFactor": 1.5238725354395208,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -33,7 +33,7 @@
       "name": "menu_levelSelect1",
       "persistentUuid": "790ff3e0-7630-49fa-8459-134a85b262e1",
       "width": 192,
-      "x": 96,
+      "x": 32,
       "y": 32,
       "zOrder": 1,
       "numberProperties": [],
@@ -49,7 +49,7 @@
       "name": "menu_levelSelect2",
       "persistentUuid": "05a48e24-82e6-4101-9da5-1cc2c25b0217",
       "width": 192,
-      "x": 352,
+      "x": 288,
       "y": 32,
       "zOrder": 2,
       "numberProperties": [],
@@ -64,7 +64,7 @@
       "layer": "",
       "name": "text_levelSelect",
       "persistentUuid": "4e7db255-f700-4739-8513-b2876ac0200c",
-      "width": 640,
+      "width": 512,
       "x": 0,
       "y": 0,
       "zOrder": 3,
@@ -95,9 +95,9 @@
       "layer": "",
       "name": "text_loadout",
       "persistentUuid": "e18f6632-5a9c-49a7-8266-0298ad6da611",
-      "width": 640,
+      "width": 512,
       "x": 0,
-      "y": 128,
+      "y": 96,
       "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
@@ -112,8 +112,8 @@
       "name": "menu_loadout1",
       "persistentUuid": "4ccabf58-7cab-4260-b7d7-f9d2e1a79999",
       "width": 128,
-      "x": 96,
-      "y": 160,
+      "x": 32,
+      "y": 128,
       "zOrder": 6,
       "numberProperties": [],
       "stringProperties": [],
@@ -128,8 +128,8 @@
       "name": "menu_loadout2",
       "persistentUuid": "9ee0022b-9711-4c83-957d-a7ca6846c31f",
       "width": 128,
-      "x": 256,
-      "y": 160,
+      "x": 192,
+      "y": 128,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -144,8 +144,8 @@
       "name": "menu_loadout3",
       "persistentUuid": "ec92adb2-ab20-45a0-9188-f7df289b43a2",
       "width": 128,
-      "x": 416,
-      "y": 160,
+      "x": 352,
+      "y": 128,
       "zOrder": 8,
       "numberProperties": [],
       "stringProperties": [],
@@ -160,9 +160,25 @@
       "name": "menu_start",
       "persistentUuid": "f4405055-c802-4836-9d57-b4d53b610c24",
       "width": 192,
-      "x": 224,
-      "y": 256,
+      "x": 160,
+      "y": 224,
       "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 32,
+      "height": 64,
+      "layer": "",
+      "name": "menu_fullscreen",
+      "persistentUuid": "09b7d2c0-16c9-4697-b355-2c47585a92b5",
+      "width": 64,
+      "x": 32,
+      "y": 224,
+      "zOrder": 10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -237,6 +253,70 @@
         "b": 0,
         "g": 0,
         "r": 0
+      }
+    },
+    {
+      "assetStoreId": "f0c3d7ae6099e3b9b8beed4e30b555107550b4fb2a5879e984a014b1e06865bf",
+      "name": "menu_fullscreen",
+      "tags": "",
+      "type": "PanelSpriteButton::PanelSpriteButton",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "LeftPadding": 0,
+        "RightPadding": 0,
+        "PressedLabelOffsetY": 4,
+        "BottomPadding": 6,
+        "TopPadding": 0,
+        "HoveredFadeOutDuration": 0
+      },
+      "childrenContent": {
+        "Hovered": {
+          "bottomMargin": 10,
+          "height": 64,
+          "leftMargin": 6,
+          "rightMargin": 6,
+          "texture": "Transparent Button With White Blue Border_Hovered.png",
+          "tiled": false,
+          "topMargin": 10,
+          "width": 192
+        },
+        "Idle": {
+          "bottomMargin": 10,
+          "height": 64,
+          "leftMargin": 6,
+          "rightMargin": 6,
+          "texture": "Transparent Button With White Blue Border_Idle.png",
+          "tiled": false,
+          "topMargin": 10,
+          "width": 192
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "[ ]",
+          "font": "Kenney Mini Square.ttf",
+          "textAlignment": "center",
+          "characterSize": 32,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        "Pressed": {
+          "bottomMargin": 10,
+          "height": 64,
+          "leftMargin": 6,
+          "rightMargin": 6,
+          "texture": "Transparent Button With White Blue Border_Pressed.png",
+          "tiled": false,
+          "topMargin": 10,
+          "width": 192
+        }
       }
     },
     {
@@ -643,6 +723,38 @@
             "value": "MontreSouris"
           },
           "parameters": [
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+          },
+          "parameters": [
+            "menu_fullscreen",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetFullScreen"
+          },
+          "parameters": [
+            "",
+            "yes",
             ""
           ]
         }

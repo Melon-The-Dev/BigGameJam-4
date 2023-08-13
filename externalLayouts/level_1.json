@@ -976,7 +976,14 @@
       "zOrder": -1,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "size_4x4",
+          "type": "boolean",
+          "value": true
+        }
+      ]
     },
     {
       "angle": 0,
@@ -1127,8 +1134,8 @@
       "name": "wall_blu",
       "persistentUuid": "a03822d9-71f1-41b4-9c63-f26a2f666265",
       "width": 48,
-      "x": 224,
-      "y": 176,
+      "x": 248,
+      "y": 184,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -1321,6 +1328,40 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": true,
+      "name": "level_draw",
+      "persistentUuid": "6763b799-e84f-489e-9dcb-6ed5ce26dfaa",
+      "sealed": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "zOrder": -5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": true,
+      "name": "level_drawTop",
+      "persistentUuid": "e459ec8e-4285-4f68-813c-dd9961de7cbb",
+      "sealed": true,
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -1333,7 +1374,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.4741632635988073,
+    "zoomFactor": 1.7400465719714597,
     "windowMask": false
   }
 }
