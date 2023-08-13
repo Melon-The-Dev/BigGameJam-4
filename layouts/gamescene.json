@@ -7320,6 +7320,23 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Hide Dev Objects"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
+        {
           "folded": true,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
@@ -7359,6 +7376,14 @@
                 "360",
                 "",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "dev_stuff"
               ]
             }
           ]
@@ -12085,6 +12110,7 @@
       "colorG": 166,
       "colorR": 245,
       "creationTime": 0,
+      "folded": true,
       "name": "Weapon Manager",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
