@@ -477,9 +477,11 @@
       "conditions": [
         {
           "type": {
-            "value": "BuiltinCommonInstructions::And"
+            "value": "Arret"
           },
-          "parameters": [],
+          "parameters": [
+            "p1_hitbox"
+          ],
           "subInstructions": [
             {
               "type": {
@@ -504,12 +506,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
         }
       ],
       "actions": [
@@ -529,9 +525,12 @@
       "conditions": [
         {
           "type": {
-            "value": "BuiltinCommonInstructions::Or"
+            "inverted": true,
+            "value": "Arret"
           },
-          "parameters": [],
+          "parameters": [
+            "p1_hitbox"
+          ],
           "subInstructions": [
             {
               "type": {
@@ -556,12 +555,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
         }
       ],
       "actions": [

@@ -8629,6 +8629,15 @@
                 "-p1_hitbox.Variable(maxSpeed)",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "p1_animations",
+                "\"p1_run\""
+              ]
             }
           ]
         },
@@ -8656,6 +8665,15 @@
                 "-p1_hitbox.Variable(maxSpeed)",
                 "0",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "p1_animations",
+                "\"p1_run\""
               ]
             }
           ]
@@ -8685,6 +8703,15 @@
                 "p1_hitbox.Variable(maxSpeed)",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "p1_animations",
+                "\"p1_run\""
+              ]
             }
           ]
         },
@@ -8713,6 +8740,15 @@
                 "0",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "p1_animations",
+                "\"p1_run\""
+              ]
             }
           ]
         },
@@ -8740,6 +8776,15 @@
                 "MovementJoystick.StickAngle()",
                 "MovementJoystick.StickForce()*p1_hitbox.Variable(maxSpeed)",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "p1_animations",
+                "\"p1_run\""
               ]
             }
           ]
