@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.3841198046306862,
+    "zoomFactor": 1.4790395861757406,
     "windowMask": false
   },
   "objectsGroups": [
@@ -12110,7 +12110,6 @@
       "colorG": 166,
       "colorR": 245,
       "creationTime": 0,
-      "folded": true,
       "name": "Weapon Manager",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -14385,6 +14384,7 @@
               "colorG": 209,
               "colorR": 162,
               "creationTime": 0,
+              "folded": true,
               "name": "C) Scattershot",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",

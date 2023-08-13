@@ -1345,6 +1345,193 @@
         "name": "assets\\2dSurvival\\animation_doorHazardRed_5.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_9.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_10.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_11.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_12.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_13.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/startMenu_14.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/startMenu_14.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Charm-Regular.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "668523d3d2bb73faa358e1ebafa55f43d2760f8abbe99aa15476121c1bcc7eb6_Charm-Regular.ttf",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/668523d3d2bb73faa358e1ebafa55f43d2760f8abbe99aa15476121c1bcc7eb6_Charm-Regular.ttf",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Roboto-Regular.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "assets/Roboto-Regular.ttf",
+        "userAdded": false
+      },
+      {
+        "file": "assets/Kenney Mini Square.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "assets/Kenney Mini Square.ttf",
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Transparent Button With White Blue Border_Pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Transparent Button With White Blue Border_Pressed.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Transparent Button With White Blue Border_Idle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Transparent Button With White Blue Border_Idle.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_Transparent Button With White Blue Border_Pressed.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets/Transparent Button With White Blue Border_Pressed",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Transparent Button With White Blue Border_Hovered.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Transparent Button With White Blue Border_Hovered.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
