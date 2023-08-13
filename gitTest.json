@@ -542,7 +542,7 @@
         "alwaysLoaded": false,
         "file": "assets/2dSurvival/hazard_deathzone.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/2dSurvival/hazard_deathzone.png\",\"extension\":\".png\",\"pskl\":{}}",
         "name": "assets\\2dSurvival\\hazard_deathzone.png",
         "smoothed": false,
         "userAdded": true
