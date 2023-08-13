@@ -25,8 +25,8 @@
       "name": "ammo_pickup",
       "persistentUuid": "287147d7-c427-4935-8296-8e3f2a0f146c",
       "width": 0,
-      "x": 264,
-      "y": 152,
+      "x": 520,
+      "y": 72,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -1374,7 +1374,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.7400465719714597,
+    "zoomFactor": 1.5238725354395213,
     "windowMask": false
   }
 }
