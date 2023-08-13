@@ -23,8 +23,8 @@
     "name": "gitTest",
     "description": "",
     "author": "",
-    "windowWidth": 640,
-    "windowHeight": 360,
+    "windowWidth": 512,
+    "windowHeight": 288,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
     "minFPS": 20,
@@ -1093,6 +1093,258 @@
         "name": "assets\\2dSurvival\\level1_bluTop.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/trap_animation_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\trap_animation_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/trap_animation_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\trap_animation_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/trap_animation_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\trap_animation_3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/trap_animation_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\trap_animation_4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/trap_animation_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\trap_animation_5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/bar_red.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "bar_red",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/bar_blu.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "bar_blu",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_trapButton_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_trapButton_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_trapButton_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_trapButton_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_trapButton_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_trapButton_3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_trapButton_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_trapButton_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_trapButton_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_trapButton_5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/p1_weaponAnimation_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\p1_weaponAnimation_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/p1_weaponAnimation_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\p1_weaponAnimation_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/p1_weaponAnimation_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\p1_weaponAnimation_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/level1_red.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\level1_red.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/level1_redTop.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\level1_redTop.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_doorHazard_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_doorHazard_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_doorHazard_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_doorHazard_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_doorHazard_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_doorHazard_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_doorHazard_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_doorHazard_4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_doorHazard_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_doorHazard_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_doorHazard_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_doorHazard_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_doorHazardRed_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_doorHazardRed_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_doorHazardRed_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_doorHazardRed_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_doorHazardRed_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_doorHazardRed_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_doorHazardRed_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_doorHazardRed_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2dSurvival/animation_doorHazardRed_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\2dSurvival\\animation_doorHazardRed_5.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

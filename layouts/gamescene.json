@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.4790395861757406,
+    "zoomFactor": 1.3841198046306862,
     "windowMask": false
   },
   "objectsGroups": [
@@ -232,6 +232,35 @@
           "name": "wall_blu"
         }
       ]
+    },
+    {
+      "name": "dev_stuff",
+      "objects": [
+        {
+          "name": "p1_hitbox"
+        },
+        {
+          "name": "dev_floor"
+        },
+        {
+          "name": "dev_wall"
+        },
+        {
+          "name": "dev_trap"
+        },
+        {
+          "name": "dev_trap_button"
+        },
+        {
+          "name": "wall_red"
+        },
+        {
+          "name": "wall_blu"
+        },
+        {
+          "name": "hazard_belt"
+        }
+      ]
     }
   ],
   "variables": [],
@@ -290,7 +319,7 @@
       "persistentUuid": "f84f25ff-26b5-48e7-9a7a-70e0f96475c5",
       "width": 0,
       "x": 16,
-      "y": 288,
+      "y": 256,
       "zOrder": 11,
       "numberProperties": [],
       "stringProperties": [],
@@ -328,13 +357,14 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 8,
       "layer": "ui",
       "name": "ui_stateBar",
       "persistentUuid": "0fd906d2-cac8-4838-a951-3302813ddb03",
-      "width": 0,
-      "x": 320,
+      "width": 512,
+      "x": 256,
       "y": 4,
       "zOrder": 10,
       "numberProperties": [],
@@ -364,7 +394,7 @@
       "layer": "start",
       "name": "start_text",
       "persistentUuid": "3e9f5d5f-7ad7-4b57-80b1-0ee1c8ee8f8a",
-      "width": 640,
+      "width": 512,
       "x": 0,
       "y": 32,
       "zOrder": 18,
@@ -376,11 +406,11 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 400,
+      "height": 320,
       "layer": "flash",
       "name": "layer_flash",
       "persistentUuid": "6736a0e7-56ff-47d9-80c3-833d29e035d3",
-      "width": 672,
+      "width": 544,
       "x": -16,
       "y": -16,
       "zOrder": 19,
@@ -392,13 +422,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 190,
+      "height": 192,
       "layer": "gameOver",
       "name": "gameover_text",
       "persistentUuid": "aa084b8e-ad2d-4545-9046-8beb064031c6",
-      "width": 400,
-      "x": 112,
-      "y": 34,
+      "width": 512,
+      "x": 0,
+      "y": 32,
       "zOrder": 20,
       "numberProperties": [],
       "stringProperties": [],
@@ -408,13 +438,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 32,
-      "height": 100,
+      "height": 96,
       "layer": "MobileControls",
       "name": "MovementJoystick",
       "persistentUuid": "e2280d93-82f9-44b3-879c-f286a5578310",
-      "width": 100,
-      "x": 56,
-      "y": 296,
+      "width": 96,
+      "x": 80,
+      "y": 224,
       "zOrder": 21,
       "numberProperties": [],
       "stringProperties": [],
@@ -424,13 +454,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 32,
-      "height": 100,
+      "height": 96,
       "layer": "MobileControls",
       "name": "ShootJoystick",
       "persistentUuid": "11254bd4-aafc-4ff5-85f0-f3b739bd5268",
-      "width": 100,
-      "x": 584,
-      "y": 296,
+      "width": 96,
+      "x": 432,
+      "y": 224,
       "zOrder": 22,
       "numberProperties": [],
       "stringProperties": [],
@@ -474,8 +504,8 @@
       "layer": "ui",
       "name": "ui_levelProgress",
       "persistentUuid": "2799fb4c-718f-4837-af21-c4eff9a1ed55",
-      "width": 320,
-      "x": 160,
+      "width": 512,
+      "x": 0,
       "y": 0,
       "zOrder": 15,
       "numberProperties": [],
@@ -2453,7 +2483,14 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "size_4x4",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -2924,15 +2961,16 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\2dSurvival\\ui_stateBar_1.png",
+                  "image": "bar_red",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 320,
+                    "x": 256,
                     "y": 4
                   },
                   "centerPoint": {
@@ -2948,11 +2986,11 @@
                         "y": 0
                       },
                       {
-                        "x": 640,
+                        "x": 512,
                         "y": 0
                       },
                       {
-                        "x": 640,
+                        "x": 512,
                         "y": 8
                       },
                       {
@@ -2972,15 +3010,16 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\2dSurvival\\ui_stateBar_2.png",
+                  "image": "bar_blu",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 320,
+                    "x": 256,
                     "y": 4
                   },
                   "centerPoint": {
@@ -2996,11 +3035,11 @@
                         "y": 0
                       },
                       {
-                        "x": 640,
+                        "x": 512,
                         "y": 0
                       },
                       {
-                        "x": 640,
+                        "x": 512,
                         "y": 8
                       },
                       {
@@ -3413,8 +3452,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 8,
+                    "y": 8
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -3461,8 +3500,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 8,
+                    "y": 8
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -5059,7 +5098,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "blu",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -5069,6 +5108,54 @@
                 {
                   "hasCustomCollisionMask": true,
                   "image": "assets\\2dSurvival\\level1_blu.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 640,
+                        "y": 0
+                      },
+                      {
+                        "x": 640,
+                        "y": 360
+                      },
+                      {
+                        "x": 0,
+                        "y": 360
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "red",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\level1_red.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -5120,7 +5207,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "blu",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -5159,6 +5246,1619 @@
                       {
                         "x": 67,
                         "y": 336
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "red",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\level1_redTop.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 67,
+                        "y": 87
+                      },
+                      {
+                        "x": 573,
+                        "y": 87
+                      },
+                      {
+                        "x": 573,
+                        "y": 336
+                      },
+                      {
+                        "x": 67,
+                        "y": 336
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "floorTrap_animation",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.03333333333333333,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\trap_animation_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 48
+                      },
+                      {
+                        "x": 0,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\trap_animation_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 48
+                      },
+                      {
+                        "x": 0,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\trap_animation_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 48
+                      },
+                      {
+                        "x": 0,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\trap_animation_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 48
+                      },
+                      {
+                        "x": 0,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\trap_animation_5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 48
+                      },
+                      {
+                        "x": 0,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.03333333333333333,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\trap_animation_5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 48
+                      },
+                      {
+                        "x": 0,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\trap_animation_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 48
+                      },
+                      {
+                        "x": 0,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\trap_animation_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 48
+                      },
+                      {
+                        "x": 0,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\trap_animation_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 48
+                      },
+                      {
+                        "x": 0,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\trap_animation_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 24
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 48
+                      },
+                      {
+                        "x": 0,
+                        "y": 48
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "button_animation",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Inactive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.03333333333333333,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_trapButton_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 10
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 13
+                      },
+                      {
+                        "x": 2,
+                        "y": 13
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.05,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_trapButton_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 10
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 13
+                      },
+                      {
+                        "x": 2,
+                        "y": 13
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_trapButton_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 10
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 13
+                      },
+                      {
+                        "x": 2,
+                        "y": 13
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_trapButton_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 10
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 13
+                      },
+                      {
+                        "x": 2,
+                        "y": 13
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_trapButton_5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 10
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 13
+                      },
+                      {
+                        "x": 2,
+                        "y": 13
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "weapon_animation",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "shock",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\p1_weaponAnimation_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 1,
+                    "y": 3
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "launcher",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\p1_weaponAnimation_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 1,
+                    "y": 3
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "scatter",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\p1_weaponAnimation_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 1,
+                    "y": 3
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "doorBlu_anim",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "open",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazard_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazard_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazard_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazard_5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazard_6.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "close",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazard_6.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazard_5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazard_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazard_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazard_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "doorRed_anim",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "open",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.03333333333333333,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazardRed_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazardRed_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazardRed_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazardRed_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazardRed_5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "close",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.03333333333333333,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazardRed_5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazardRed_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazardRed_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazardRed_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\2dSurvival\\animation_doorHazardRed_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 9
+                      },
+                      {
+                        "x": 54,
+                        "y": 28
+                      },
+                      {
+                        "x": 0,
+                        "y": 28
                       }
                     ]
                   ]
@@ -5478,10 +7178,18 @@
       "parameters": []
     },
     {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "game_animations"
+    },
+    {
       "colorB": 228,
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Initialise game",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5622,10 +7330,9 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Camera behavior: If it's level 1, de-activate it since it's single-screen; on level 2, activate it within the right range"
+          "comment": "Camera behavior"
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5637,29 +7344,26 @@
                 "=",
                 "\"level_1\""
               ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "ActivateBehavior"
+                "value": "ClampCamera"
               },
               "parameters": [
-                "p1_hitbox",
-                "SmoothCamera",
-                "yes"
+                "",
+                "0",
+                "0",
+                "640",
+                "360",
+                "",
+                ""
               ]
             }
           ]
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5671,28 +7375,27 @@
                 "=",
                 "\"level_2\""
               ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "ActivateBehavior"
+                "value": "ClampCamera"
               },
               "parameters": [
-                "p1_hitbox",
-                "SmoothCamera",
-                "yes"
+                "",
+                "0",
+                "0",
+                "800",
+                "560",
+                "",
+                ""
               ]
             }
           ]
         },
         {
+          "disabled": true,
           "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -5715,31 +7418,6 @@
                 "p1_hitbox",
                 "SmoothCamera",
                 "dev_camera",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ClampCamera"
-              },
-              "parameters": [
-                "",
-                "0",
-                "0",
-                "800",
-                "560",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ZoomCamera"
-              },
-              "parameters": [
-                "",
-                "1.25",
-                "",
                 ""
               ]
             }
@@ -10457,6 +12135,7 @@
           "colorG": 199,
           "colorR": 243,
           "creationTime": 0,
+          "folded": true,
           "name": "3) Weapons",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10508,7 +12187,6 @@
                       "comment": "Also sets the Speed of P1, watch out!"
                     },
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -14344,19 +16022,6 @@
         }
       ],
       "parameters": []
-    },
-    {
-      "folded": true,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
-    },
-    {
-      "type": "BuiltinCommonInstructions::Link",
-      "include": {
-        "includeConfig": 0
-      },
-      "target": "game_animations"
     }
   ],
   "layers": [

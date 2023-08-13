@@ -976,7 +976,14 @@
       "zOrder": -1,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "size_4x4",
+          "type": "boolean",
+          "value": true
+        }
+      ]
     },
     {
       "angle": 0,
@@ -1127,8 +1134,8 @@
       "name": "wall_blu",
       "persistentUuid": "a03822d9-71f1-41b4-9c63-f26a2f666265",
       "width": 48,
-      "x": 224,
-      "y": 176,
+      "x": 248,
+      "y": 184,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -1367,7 +1374,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.4,
     "snap": true,
-    "zoomFactor": 1.2489075653199992,
+    "zoomFactor": 1.7400465719714597,
     "windowMask": false
   }
 }
